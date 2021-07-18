@@ -6,7 +6,7 @@ module.exports = [
 			transformer: (timestamp) => {
 				const moment = require("moment");
 				moment.locale("zh-cn");
-				return moment(timestamp).fromNow('LLLL');
+				return moment(timestamp).format('LLLL');
 			},
 		},
 	],

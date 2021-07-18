@@ -3,8 +3,9 @@ const sidebar = require("./sidebar.config.json");
 module.exports = {
 	base: "/",
 	title: "胡萝卜菜",
-	// plugins: pluginConf,
+	plugins: pluginConf,
 	themeConfig: {
+		base:'/documents/',
 		logo: "/logo.png",
 		lastUpdated: "更新时间",
 		nav: [
