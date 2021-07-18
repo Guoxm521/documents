@@ -16,7 +16,7 @@ module.exports = {
 		},
 		nav: [
 			{ text: "✨css", link: "/css/" },
-			{ text: "js", link: "/js/" },
+			{ text: "✨js", link: "/js/" },
 			{
 				text: "Languages",
 				ariaLabel: "Language Menu",
