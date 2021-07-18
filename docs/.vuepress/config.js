@@ -1,13 +1,19 @@
 const pluginConf = require("./config/pluginConf.js");
 const sidebar = require("./sidebar.config.json");
 module.exports = {
-	base: "/",
+	// theme: "vdoing",
 	title: "胡萝卜菜",
 	plugins: pluginConf,
 	themeConfig: {
-		base:'/documents/',
+		base: "/documents/",
 		logo: "/logo.png",
 		lastUpdated: "更新时间",
+		category:false,
+		tag:false,
+		archive:false,
+		updateBar:{
+			showToArticle:false
+		},
 		nav: [
 			{ text: "css", link: "/css/" },
 			{ text: "js", link: "/js/" },

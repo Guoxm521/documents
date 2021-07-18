@@ -8,13 +8,15 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "docs:nav": "vuepress nav docs",
-    "deploy":"bash deploy.sh"
+    "deploy": "bash deploy.sh",
+    "cname": "bash cname.sh"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "vuepress": "^1.8.2",
-    "vuepress-plugin-auto-sidebar": "^2.3.2"
+    "vuepress-plugin-auto-sidebar": "^2.3.2",
+    "vuepress-theme-vdoing": "^1.8.3"
   },
   "dependencies": {
     "moment": "^2.29.1"

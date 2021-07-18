@@ -1,3 +1,12 @@
+---
+title: js2
+date: 2021-07-17 21:20:36
+permalink: /pages/493c68/
+categories:
+  - js
+tags:
+  - 
+---
 ## 一级标题 1
 
 js2

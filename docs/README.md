@@ -5,6 +5,8 @@ heroText: 胡萝卜菜 学习笔记
 tagline: 日拱一卒，功不唐捐
 actionText: 快速上手 →
 actionLink: /zh/guide/
+bannerBg: none
+postList: none
 features:
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
