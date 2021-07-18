@@ -15,7 +15,7 @@ module.exports = {
 			showToArticle:false
 		},
 		nav: [
-			{ text: "css", link: "/css/" },
+			{ text: "✨css", link: "/css/" },
 			{ text: "js", link: "/js/" },
 			{
 				text: "Languages",

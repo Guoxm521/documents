@@ -6,8 +6,17 @@ module.exports = [
 			transformer: (timestamp) => {
 				const moment = require("moment");
 				moment.locale("zh-cn");
-				return moment(timestamp).format('LLLL');
+				return moment(timestamp).format("YYYY/MM/DD dddd  hh:mm:ss");
 			},
+		},
+	],
+	["@vuepress/back-to-top"],
+	["@vuepress/medium-zoom"],
+	["one-click-copy"],
+	[
+		"@vuepress/search",
+		{
+			searchMaxSuggestions: 10,
 		},
 	],
 ];
