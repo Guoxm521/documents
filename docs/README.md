@@ -4,7 +4,7 @@ heroImage: /main.png
 heroText: 胡萝卜菜 学习笔记
 tagline: 日拱一卒，功不唐捐
 actionText: 快速上手 →
-actionLink: /zh/guide/
+actionLink: /前端/vue/
 bannerBg: none
 postList: none
 features:

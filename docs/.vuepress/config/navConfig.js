@@ -6,15 +6,12 @@ module.exports = [
 		items: [
 			{ text: "vue笔记", link: "/前端/vue/" },
 			{ text: "JavaScript笔记", link: "/前端/Javascript/" },
+			{ text: "Css", link: "/前端/Css/css常用命名" },
 		],
 	},
 	{
 		text: "更多",
-		link: "/更多/",
-	},
-    {
-		text: "测试",
-		link: "/测试/",
+		link: "/更多/Canvas",
 	},
 	{
 		text: "收藏",
