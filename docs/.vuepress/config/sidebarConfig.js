@@ -27,10 +27,24 @@ module.exports = {
 			path: "packageJson",
 		},
 	],
+	"/前端/Css/": [
+		{
+			title: "css常用命名",
+			path: "css常用命名",
+		},
+		{
+			title: "css合集",
+			path: "css合集",
+		},
+	],
 	"/更多/": [
 		{
 			title: "Canvas",
 			path: "Canvas",
+		},
+		{
+			title: "杂七杂八",
+			path: "杂七杂八",
 		},
 	],
 };
