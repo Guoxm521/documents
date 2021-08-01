@@ -13,8 +13,8 @@ module.exports = {
 			path: "MVVM模式",
 		},
 		{
-			title: "生命周期",
-			path: "生命周期",
+			title: "vue知识点",
+			path: "vue知识点",
 		},
 	],
 	"/前端/JavaScript/": [
