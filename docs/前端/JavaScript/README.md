@@ -1,3 +1,10 @@
+
+
+## 基础知识
+
+- 基本数据类型    `String`，`Number`,`unll`,`undefind`,`Boolean`,`symbol`
+- 引用数据类型     `object`，``array`，`function`
+
 ##  节流与防抖
 
 - **函数防抖** ：指的是事件被触发 n 秒后再执行回调，如果在这 n 秒内事件又被触发，则重新计时。这可以使用在一些点击请求的事件上，避免因为用户的多次点击向后端发送多次请求。
@@ -209,4 +216,236 @@ const deepClone = function (obj, hash = new WeakMap()) {
 - `Object.getOwnPropertyDescriptors()` 方法用来获取一个对象的所有自身属性的描述符。
 
 - 静态方法 `Reflect.ownKeys()`返回一个由目标对象自身的属性键组成的数组。
+
+**文章** [WeakMap and WeakSet（弱映射和弱集合）](https://zh.javascript.info/weakmap-weakset)
+
+## 数组方法
+
+### 基本方法
+
+- 添加/删除元素：
+
+  - `push(...items)` —— 向尾端添加元素，
+  - `pop()` —— 从尾端提取一个元素，
+  - `shift()` —— 从首端提取一个元素，
+  - `unshift(...items)` —— 向首端添加元素，
+  - `splice(pos, deleteCount, ...items)` —— 从 `pos` 开始删除 `deleteCount` 个元素，并插入 `items`。
+  - `slice(start, end)` —— 创建一个新数组，将从索引 `start` 到索引 `end`（但不包括 `end`）的元素复制进去。
+  - `concat(...items)` —— 返回一个新数组：复制当前数组的所有元素，并向其中添加 `items`。如果 `items` 中的任意一项是一个数组，那么就取其元素。
+
+- 搜索元素：
+
+  - `indexOf/lastIndexOf(item, pos)` —— 从索引 `pos` 开始搜索 `item`，搜索到则返回该项的索引，否则返回 `-1`。
+  - `includes(value)` —— 如果数组有 `value`，则返回 `true`，否则返回 `false`。
+  - `find/filter(func)` —— 通过 `func` 过滤元素，返回使 `func` 返回 `true` 的第一个值/所有值。
+  - `findIndex` 和 `find` 类似，但返回索引而不是值。
+
+- 遍历元素：
+
+  - `forEach(func)` —— 对每个元素都调用 `func`，不返回任何内容。
+
+- 转换数组：
+
+  - `map(func)` —— 根据对每个元素调用 `func` 的结果创建一个新数组。
+  - `sort(func)` —— 对数组进行原位（in-place）排序，然后返回它。
+  - `reverse()` —— 原位（in-place）反转数组，然后返回它。
+  - `split/join` —— 将字符串转换为数组并返回。
+  - `reduce/reduceRight(func, initial)` —— 通过对每个元素调用 `func` 计算数组上的单个值，并在调用之间传递中间结果。
+
+- 其他：
+
+  - `Array.isArray(arr)` 检查 `arr` 是否是一个数组。
+
+  - `some\every` 检查数组。
+  - `flat\flatMap`从多维数组创建一个新的扁平数组。
+
+- 不改变自身的方法
+
+  `concat`、`join`、`slice`、`toString`、`toLocaleString`、`indexOf`、`lastIndexOf`、`includes`
+
+- 不会改变自身的数组遍历方法
+
+  `forEach`、`every`、`some`、`filter`、`map`、`reduce`、`reduceRight`、`entries`、`find`、`findIndex`、`keys`、`values`
+
+**总结：**
+
+- 所有插入元素的方法，比如 `push、unshift` 一律返回数组新的长度；
+- 所有删除元素的方法，比如 `pop、shift、splice` 一律返回删除的元素，或者返回删除的多个元素组成的数组；
+- 部分遍历方法，比如 `forEach、every、some、filter、map、find、findIndex`，它们都包含 `function(value,index,array){}` 和 `thisArg` 这样两个形参。
+
+### 数组扁平化
+
+- 数组自带方法`Array.prototype.flat()`
+
+  `flat()` 方法会按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回。
+
+  ```js
+  var newArray = arr.flat([depth])
+  ```
+
+  >当`depth`大于数组自身深度时，则会自动展开为一维数组，
+  >
+  >所以使用` Infinity`，可展开任意深度的嵌套数组
+
+- 案例
+
+  ```js
+  const arr1 = [0, 1, 2, [3, 4]];
+  console.log(arr1.flat()); //[1,2,3,4]
+  const arr2 = [0, 1, 2, [[[3, 4]]]];
+  console.log(arr2.flat(4));//[1,2,3,4]
+  ```
+
+  
+
+- 手写替代方案
+
+  - **`reduce`+`contact`**
+
+  ```js
+  arr.reduce((acc, val) => acc.concat(val), []);
+  ```
+
+  ```js
+  const arr1 = [0, 1, 2, [3, 4]];
+  const arr2 = [0, 1, 2, [[[3, 4]]]];
+  let arr4 = arr1.reduce((acc, val) => acc.concat(val), []);//[ 0, 1, 2, 3, 4 ]
+  let arr5 = arr2.reduce((acc, val) => acc.concat(val), []);//[ 0, 1, 2, [ [ 3, 4 ] ] ]
+  ```
+
+  从上面可以看到直接使用的话，只能实现二级数组扁平化，当数组嵌套层数过多，就无法得到想要的结果
+
+  
+
+  - **`reduce`+`contact`+递归**
+
+  ```js
+  const arr2 = [0, 1, 2, [[[3, 4]]]];
+  
+  //写法一
+  function flatDeep(arr, d = 1) {
+  	return d > 0
+  		? arr.reduce((acc, val) => {
+  				if (Array.isArray(val)) {
+  					return acc.concat(flatDeep(val,d - 1));
+  				} else {
+  					return acc.concat(val);
+  				}
+  		  }, [])
+  		: arr.slice();
+  }
+  
+  
+  //写法二
+  function flatDeep(arr, d = 1) {
+  	return d > 0
+  		? arr.reduce(
+  				(acc, val) =>
+  					acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val),
+  				[]
+  		  )
+  		: arr.slice();
+  }
+  
+  console.log(flatDeep(arr2, Infinity));//[ 0, 1, 2, 3, 4 ]
+  ```
+
+  - **`forEach+push+递归`**
+
+  ```js
+  function flatDeep2(arr = [], d = 1) {
+  	let result = [];
+  	(function flat(arr, d) {
+  		arr.forEach((item) => {
+  			if (Array.isArray(item) && d > 0) {
+  				flat(item, d - 1);
+  			} else {
+  				result.push(item);
+  			}
+  		});
+  	})(arr, d);
+  	return result;
+  }
+  
+  console.log(flatDeep2(arr2, Infinity));//[ 0, 1, 2, 3, 4 ]
+  ```
+
+  - **`Generator`函数实现**
+
+  >常规函数只会返回一个单一值（或者不返回任何值）。
+  >
+  >而 `Generator `可以按需一个接一个地返回（`yield`）多个值。它们可与 [iterable](https://zh.javascript.info/iterable) 完美配合使用，从而可以轻松地创建数据流。
+  >
+  >一个 generator 的主要方法就是 `next()`。当`next()`被调用时，它会恢复上图所示的运行，执行直到最近的 `yield  语句`。然后函数执行暂停，并将产出的（yielded）值返回到外部代码。
+
+  ```js
+  const arr2 = [0, 1, 2, [[[3, 4]]]];
+  function* flatGenerator(arr) {
+  	for (var value of arr) {
+  		if (Array.isArray(value)) {
+  			yield* flatGenerator(value); 
+              // yield* 这个特殊的语法来将一个 generator “嵌入”（组合）到另一个 generator 
+  		} else {
+  			yield value;
+  		}
+  	}
+  }
+  
+  let newarr = [...flatGenerator(arr2)];
+  console.log(newarr);//[ 0, 1, 2, 3, 4 ]
+  ```
+
+  
+
+## 格式化日期
+
+```js
+function parseTime(time, cformat) {
+	if (arguments.length == 0) {
+		return null;
+	}
+	const format = cformat || "{y}-{m}-{d} {h}:{i}:{s} 星期{a}";
+	let date;
+	if (typeof time === "object" && time instanceof Date) {
+		date = time;
+	} else {
+		if (typeof time === "string" && /^[0-9]+$/.test(time)) {
+			time = parseInt(time);
+		}
+		if (typeof time === "number" && time.toString().length === 10) {
+			time = time * 1000;
+		}
+		date = new Date(time);
+	}
+	const formatObj = {
+		y: date.getFullYear(),
+		m: date.getMonth() + 1,
+		d: date.getDate(),
+		h: date.getHours(),
+		i: date.getMinutes(),
+		s: date.getSeconds(),
+		a: date.getDay(),
+	};
+
+	const time_str = format.replace(/{([ymdhisa])+}/g, (result, key) => {
+		let value = formatObj[key];
+		if (key === "a") {
+			return ["日", "一", "二", "三", "四", "五", "六"][value];
+		}
+		return value.toString().padStart(2, "0");
+	});
+	return time_str;
+}
+```
+
+**注意:**
+
+>ES2017 引入了字符串补全长度的功能。如果某个字符串不够指定长度，会在头部或尾部补全。`padStart()`用于头部补全，`padEnd()`用于尾部补全
+
+```js
+'x'.padStart(5, 'ab') // 'ababx'
+'x'.padStart(4, 'ab') // 'abax'
+'x'.padEnd(5, 'ab') // 'xabab'
+'x'.padEnd(4, 'ab') // 'xaba'
+```
 
