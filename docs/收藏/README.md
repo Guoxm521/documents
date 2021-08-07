@@ -44,12 +44,7 @@
 
 - [Docker 从入门到实践](https://vuepress.mirror.docker-practice.com/) docker 学习网站
 
-## 文章
 
-- [Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html) 阮一峰关于 flex 布局的教程
-
-- [灵活运用CSS开发技巧](https://juejin.cn/post/6844903926110617613)  掘金一篇关于Css的各种书写小技巧
-- [33-js-concepts](https://github.com/stephentian/33-js-concepts) JavaScript开发者应懂的33个概念
 
 ## 编程工具
 
