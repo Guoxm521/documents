@@ -11,6 +11,115 @@
 
 假如 `JavaScript`有A和B两个线程，A线程在DOM节点上添加了内容，B线程删除了这个节点， 所以为了避免复杂性，所以设计成了单线程。
 
+## Promise
+
+### 简介
+
+Promise 对象的构造器（constructor）语法如下：
+
+```javascript
+let promise = new Promise(function(resolve, reject) {
+  // executor（生产者代码，“歌手”）
+});
+```
+
+传递给 `new Promise` 的函数被称为 `executor`。当 `new Promise` 被创建，executor 会自动运行。它包含最终应产出结果的生产者代码。
+
+它的参数 `resolve` 和 `reject` 是由 JavaScript 自身提供的回调。我们的代码仅在 executor 的内部。
+
+当 executor 获得了结果，无论是早还是晚都没关系，它应该调用以下回调之一：
+
+- `resolve(value)` — 如果任务成功完成并带有结果 `value`。
+- `reject(error)` — 如果出现了 error，`error` 即为 error 对象。
+
+由 `new Promise` 构造器返回的 `promise` 对象具有以下内部属性：
+
+- `state` 
+  - pending: 初始状态，不是成功或失败状态。
+  - fulfilled: 意味着操作成功完成。
+  - rejected: 意味着操作失败。
+- `result`
+
+`promise`对象初始状态为`pending`,然后在 `resolve` 被调用时变为 `"fulfilled"`，或者在 `reject` 被调用时变为 `"rejected"`。
+
+### then，catch，finally
+
+`.then` 的第一个参数是一个函数，该函数将在 promise resolved 后运行并接收结果。
+
+`.then` 的第二个参数也是一个函数，该函数将在 promise rejected 后运行并接收 error。
+
+```js
+promise.then(
+  function(result) { /* handle a successful result */ },
+  function(error) { /* handle an error */ }
+);
+```
+
+`catch`对 `error` 感兴趣，那么我们可以使用 `null` 作为第一个参数：`.then(null, errorHandlingFunction)`。或者我们也可以使用 `.catch(errorHandlingFunction)`，其实是一样的：
+
+```javascript
+let promise = new Promise((resolve, reject) => {
+  setTimeout(() => reject(new Error("Whoops!")), 1000);
+});
+
+// .catch(f) 与 promise.then(null, f) 一样
+promise.catch(alert); // 1 秒后显示 "Error: Whoops!"
+```
+
+`.catch(f)` 调用是 `.then(null, f)` 的完全的模拟，它只是一个简写形式。
+
+在promise 中也有 `finally`，`.finally(f)` 调用与 `.then(f, f)` 类似，在某种意义上，`f` 总是在 promise 被 settled 时运行：即 promise 被 resolve 或 reject。
+
+### Promise API
+
+在`Promise`类当中，里面有五个静态方法
+
+- `Promise.all`
+
+  `Promise.all`接受一个`promise`数组作为参数并返回一个新的promise，当所有给定的 promise 都被 settled 时，新的 promise 才会 resolve，并且其结果数组将成为新的 promise 的结果。
+
+  ```js
+  Promise.all([
+    new Promise(resolve => setTimeout(() => resolve(1), 3000)), // 1
+    new Promise(resolve => setTimeout(() => resolve(2), 2000)), // 2
+    new Promise(resolve => setTimeout(() => resolve(3), 1000))  // 3
+  ]).then(alert); // 1,2,3 当上面这些 promise 准备好时：每个 promise 都贡献了数组中的一个元素
+  ```
+
+  结果数组中元素的顺序与其在源 promise 中的顺序相同。即使第一个 promise 花费了最长的时间才 resolve，但它仍是结果数组中的第一个。
+
+  **如果任意一个 promise 被 reject，由 `Promise.all` 返回的 promise 就会立即 reject，并且带有的就是这个 error。**
+
+- `Promise.allSellted`
+
+  `Promise.allSettled` 等待所有的 promise 都被 settle，无论结果如何。结果数组具有：
+
+  - `{status:"fulfilled", value:result}` 对于成功的响应，
+  - `{status:"rejected", reason:error}` 对于 error。
+
+  
+
+- `Promise.race`
+
+  与 `Promise.all` 类似，但只等待第一个 settled 的 promise 并获取其结果（或 error）。
+
+  ```js
+  Promise.race([
+    new Promise((resolve, reject) => setTimeout(() => resolve(1), 1000)),
+    new Promise((resolve, reject) => setTimeout(() => reject(new Error("Whoops!")), 2000)),
+    new Promise((resolve, reject) => setTimeout(() => resolve(3), 3000))
+  ]).then(alert); // 1
+  ```
+
+  
+
+- `promise.reslove/reject`
+
+  `Promise.resolve(value)` —— 使用给定 value 创建一个 resolved 的 promise。
+
+  `Promise.reject(error)` —— 使用给定 error 创建一个 rejected 的 promise。
+
+
 
 ##  节流与防抖
 
@@ -403,56 +512,4 @@ const deepClone = function (obj, hash = new WeakMap()) {
   ```
 
   
-
-## 格式化日期
-
-```js
-function parseTime(time, cformat) {
-	if (arguments.length == 0) {
-		return null;
-	}
-	const format = cformat || "{y}-{m}-{d} {h}:{i}:{s} 星期{a}";
-	let date;
-	if (typeof time === "object" && time instanceof Date) {
-		date = time;
-	} else {
-		if (typeof time === "string" && /^[0-9]+$/.test(time)) {
-			time = parseInt(time);
-		}
-		if (typeof time === "number" && time.toString().length === 10) {
-			time = time * 1000;
-		}
-		date = new Date(time);
-	}
-	const formatObj = {
-		y: date.getFullYear(),
-		m: date.getMonth() + 1,
-		d: date.getDate(),
-		h: date.getHours(),
-		i: date.getMinutes(),
-		s: date.getSeconds(),
-		a: date.getDay(),
-	};
-
-	const time_str = format.replace(/{([ymdhisa])+}/g, (result, key) => {
-		let value = formatObj[key];
-		if (key === "a") {
-			return ["日", "一", "二", "三", "四", "五", "六"][value];
-		}
-		return value.toString().padStart(2, "0");
-	});
-	return time_str;
-}
-```
-
-**注意:**
-
->ES2017 引入了字符串补全长度的功能。如果某个字符串不够指定长度，会在头部或尾部补全。`padStart()`用于头部补全，`padEnd()`用于尾部补全
-
-```js
-'x'.padStart(5, 'ab') // 'ababx'
-'x'.padStart(4, 'ab') // 'abax'
-'x'.padEnd(5, 'ab') // 'xabab'
-'x'.padEnd(4, 'ab') // 'xaba'
-```
 

@@ -23,6 +23,11 @@ module.exports = {
 			path: "/前端/JavaScript/",
 		},
 		{
+			title: "代码片段",
+			path: "codeSnippet",
+		},
+
+		{
 			title: "packageJson文件",
 			path: "packageJson",
 		},
@@ -45,6 +50,20 @@ module.exports = {
 		{
 			title: "杂七杂八",
 			path: "杂七杂八",
+		},
+		{
+			title: "Git",
+			path: "Git操作",
+		},
+	],
+	"/收藏/": [
+		{
+			title: "网站",
+			path: "/收藏/",
+		},
+		{
+			title: "文章",
+			path: "article",
 		},
 	],
 };
