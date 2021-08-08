@@ -51,3 +51,40 @@ function parseTime(time, cformat) {
 'x'.padEnd(5, 'ab') // 'xabab'
 'x'.padEnd(4, 'ab') // 'xaba'
 ```
+
+## 后端导出文件流
+
+>该方法只是自己在特定的情况中用到了   就自己处理了一下，思路可以参考一下，等以后再碰到类似的需求，就再进行改进
+
+```js
+/*
+  导出封装
+*/
+export function exportMethod(res, name) {
+  let fileReader = new FileReader();
+  fileReader.readAsText(res, "utf-8");
+  fileReader.onload = function() {
+    try {
+      let jsonData = JSON.parse(this.result); // 说明是普通对象数据，后台转换失败+
+      if (jsonData.errcode) {
+        Message.error(jsonData.errmsg);
+      }
+    } catch (err) {
+      const link = document.createElement("a");
+      let blob = new Blob([res], {
+        type:
+          "application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      });
+      link.style.display = "none";
+      link.href = URL.createObjectURL(blob);
+      link.download = name;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+}
+```
+
+
+

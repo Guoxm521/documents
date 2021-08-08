@@ -7,6 +7,14 @@
   
 
 - [Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html) 阮一峰关于 flex 布局的教程
+
 - [灵活运用CSS开发技巧](https://juejin.cn/post/6844903926110617613)  掘金一篇关于Css的各种书写小技巧
+
 - [30 seconds of code](http://www.html.cn/30-seconds-of-code/) 中文翻译过来的30s就能理解的JavaScript代码片段
+
+
+
+​	
+
+- [高颜值的第三方网易云播放器](https://github.com/qier222/YesPlayMusic) GitHub上的一个vue项目
 

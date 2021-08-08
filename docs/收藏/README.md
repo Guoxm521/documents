@@ -4,16 +4,27 @@
 
 - [码力全开资源库](https://maliquankai.com/designnav/) 独立开发者/设计干货/优质利器/工具资源...
 
-## CSS
+  ## CSS
 
 - [YOU-nedd-to-know-css](https://lhammer.cn/You-need-to-know-css/#/zh-cn/) CSS 的各种效果
+
 - [animista](https://animista.net/) 不错的 css 动画库 方便直接复制代码
+
 - [css tricks](https://qishaoxuan.github.io/css_tricks/) 该项目总结了一些常用的 CSS 样式
+
 - [chokcoco](https://chokcoco.github.io/CSS-Inspiration/#/./init) 该项目总结了一些常用的 CSS 样式
+
 - [spinkit](https://tobiasahlin.com/spinkit/) 加载动画
+
 - [animate](https://animate.style/) 跨浏览器的 Css3 动画库
+
 - [贝塞尔曲线生成器](https://cubic-bezier.com/#.17,.67,.83,.67)  实时调节生成贝塞尔曲线参数
+
 - [css-triangle generator](http://apps.eky.hk/css-triangle-generator/)  帮你快速用 css 做出三角形
+
+- [nenumorphism](https://neumorphism.io/#823a3a)  手动调节生成css阴影样式
+
+- [shapedivider](https://www.shapedivider.app/) 自定义形状分割背景图案
 
 ## 颜色
 
