@@ -100,6 +100,9 @@ $ git log -p [file]
 # 显示过去5次提交
 $ git log -5 --pretty --oneline
 
+# 显示本地commit  但是未推送到远程的commit信息
+$ git branchname ^origin/branchname
+
 # 显示所有提交过的用户，按提交次数排序
 $ git shortlog -sn
 
