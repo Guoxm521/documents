@@ -513,3 +513,66 @@ const deepClone = function (obj, hash = new WeakMap()) {
 
   
 
+## apply、bind、call
+
+| 方法/特征 |       call       |      apply       |       bind       |
+| :-------: | :--------------: | :--------------: | :--------------: |
+| 方法参数  |       多个       |     单个数组     |       多个       |
+| 方法功能  | 函数调用改变this | 函数调用改变this | 函数调用改变this |
+| 返回结果  |     直接执行     |     直接执行     |   返回执行函数   |
+
+```js
+Function.prototype.myApply = function (context, args = []) {
+	let ctx = context || window;
+	let func = Symbol();
+	ctx[func] = this;
+	const res = args.length > 0 ? ctx[func](...args) : ctx[func]();
+	delete ctx[func];
+	return res;
+};
+
+Function.prototype.myCall = function (context, ...args) {
+	let cxt = context || window;
+    // 在context上加一个唯一值不影响context上的属性
+	let func = Symbol();
+	cxt[func] = this;
+	args = args ? args : [];
+	const res = args.length > 0 ? cxt[func](...args) : cxt[func]();
+	delete cxt[func];
+	return res;
+};
+
+Function.prototype.myBind = function (context, ...args) {
+	const fn = this;
+	args = args ? args : [];
+	return function newFn(...newFnArgs) {
+		if (this instanceof newFn) {
+			return new fn(...args, ...newFnArgs);
+		}
+		return fn.apply(context, [...args, ...newFnArgs]);
+	};
+};
+
+```
+
+## 原型链
+
+>构造函数、原型和实例的关系：每个构造函数都有一个原型对象，原型有 一个属性指回构造函数，而实例有一个内部指针指向原型。如果原型是另一个类型的实例呢？那就意味 着这个原型本身有一个内部指针指向另一个原型，相应地另一个原型也有一个指针指向另一个构造函 数。这样就在实例和原型之间构造了一条原型链。这就是原型链的基本构想。
+
+以`Object`为例，我们常用的`Object`便是一个构造函数
+
+```js
+//实例
+const instance = new Object()
+//原型
+const prototype = Object.prototype
+```
+
+三者的关系
+
+- `实例.__proto__ === 原型`
+- `原型.constructor === 构造函数`
+- `构造函数.prototype === 原型`
+
+![](https://poetries1.gitee.io/img-repo/2020/09/112.png)
+
