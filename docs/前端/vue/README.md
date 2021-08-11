@@ -1,54 +1,317 @@
+## MVVM
 
-## 准备：简历编写和面试前准备
+>`MVVM`是`Model-View-ViewModel`缩写，也就是把MVC中的Controller演变成`ViewModel`。Model层代表数据模型，`View`代表UI组件，`ViewModel`是`View`和`Model`层的桥梁，数据会绑定到viewModel层并自动将数据渲染到页面中，视图变化的时候会通知viewModel层更新数据。
 
+## Vue 响应式原理
 
+> Vue 的响应式原理是核心是通过 ES5 的保护对象的 `Object.defindeProperty` 中的访问器属性中的 get 和 set 方法，data 中声明的属性都被添加了访问器属性，当读取 data 中的数据时自动调用 get 方法，当修改 data 中的数据时，自动调用 set 方法，检测到数据的变化，会通知观察者 Wacher，观察者 Wacher自动触发重新render 当前组件（子组件不会重新渲染）,生成新的虚拟 DOM 树，Vue 框架会遍历并对比新虚拟 DOM 树和旧虚拟 DOM 树中每个节点的差别，并记录下来，最后，加载操作，将所有记录的不同点，局部修改到真实 DOM树上。
 
-> 一般来说，跳槽找工作要经历投递简历、准备面试、面试和谈 offer 四个阶段。其中面试题目会因你的等级和职位而异，从入门级到专家级，广度和深度都会有所增加。不过，不管什么级别和职位，面试题目一般都可以分类为理论知识、算法、项目细节、技术视野、开放性题、工作案例等内容。接下来重点来说下简历和知识点梳理的方法。
+## 组件通讯
 
-## 准备一份合适的简历
+### props
 
-> 首先，什么样子的简历更加容易拿到面试邀请？笔者作为一名在 BAT 中待过两家的面试官，见过各种各样的简历，先说一下一些比较不受欢迎的简历：
+这个应该非常属性,就是父传子的属性; props 值可以是一个数组或对象;
 
-- 招聘网站上的简历：有些简历是 HR 直接从某招聘网站直接下载下来的，格式统一，而且对于自己的技能还有自己打分，这类简历有可能是候选人根本就没自己精心准备简历，而是网站根据他填写的内容自动生成的，遇到这样的简历笔者一定会让 HR 或者候选人更新一份简历给我。
-- 太花俏的简历：有人觉得简历花俏一点会让人眼前一亮，但是公司招聘的是前端不是视觉设计，所以如果找的不是视觉设计工作，还是工工整整的简历会比较受欢迎，而且太花俏的简历有可能让人第一感觉是华而不实，并不是关注候选人的技能。 造假或者描述太出格的简历：看到你简历的人可能是不懂技术的 HR，也可能是专业领域的大牛，如果数据造假或者夸大其实，这样很容易就让人给卡掉。
+```js
+// 数组
+props:[]
 
-**那么，怎样的简历才是好的简历呢？**
+// 对象
+props:{
+ inpVal:{
+  type:Number, //传入值限定类型
+  // type 值可为String,Number,Boolean,Array,Object,Date,Function,Symbol
+  // type 还可以是一个自定义的构造函数，并且通过 instanceof 来进行检查确认
+  required: true, //是否必传
+  default:200,  //默认值,对象或数组默认值必须从一个工厂函数获取如 default:()=>[]
+  validator:(value) {
+    // 这个值必须匹配下列字符串中的一个
+    return ['success', 'warning', 'danger'].indexOf(value) !== -1
+  }
+ }
+}
+```
 
-> 一份合适的技术型简历最重要的三部分是：
+### $emit   和  $on
 
-- 个人掌握的技能，是否有岗位需要用到的技能，及其技能掌握的熟练程度：熟悉、了解还是精通
-- **项目经历**，项目经历是否对现在岗位有用或者有重叠，是否能够驾驭大型项目
-- **实习经历**，对于没有经验的应届生来说，实习经历是很重要的部分，是否有大公司或者具体项目的实习经历是筛选简历的重要参考
+触发子组件触发父组件给自己绑定的事件,其实就是子传父的方法
 
-> 技术型简历一般不要太花俏，关键要语言表达通顺清楚，让语言准确和容易理解，在 HR 筛选简历的时候，可以瞬间抓住他的眼球。另外如果有一些特殊奖项，也可以在简历中突出出来，比如：季度之星、最佳个人之类的奖项，应届生会有优秀毕业生、全额奖学金等。
+```js
+// 父组件
+<home @title="title">
+// 子组件
+this.$emit('title',[{title:'这是title'}])
+```
 
-### 推荐使用 PDF 版本的简历
+### vuex
 
-> 一般来说简历会有 Word、Markdown 等版本，这里笔者推荐使用 PDF 版本的简历，主要原因如下：
+```js
+state:定义存贮数据的仓库 ,可通过this.$store.state 或mapState访问
+getter:获取 store 值,可认为是 store 的计算属性,可通过this.$store.getter 或
+       mapGetters访问
+mutation:同步改变 store 值,为什么会设计成同步,因为mutation是直接改变 store 值,
+         vue 对操作进行了记录,如果是异步无法追踪改变.可通过mapMutations调用
+action:异步调用函数执行mutation,进而改变 store 值,可通过 this.$dispatch或mapActions
+       访问
+modules:模块,如果状态过多,可以拆分成模块,最后在入口通过...解构引入
+```
 
-- 内容丰富，布局调整方便
-- 字体等格式有保障，你不知道收到你简历的人用的是什么环境，PDF 版本不会因为不同操作系统等原因而受限
-- 便于携带和传播，始终存一份简历在手机或者邮箱内，随时发送
-- 不容易被涂改
-- 一般 Windows 系统的 Word、Mac 系统的 Pages 都支持导出 PDF 格式的文件，原稿可以保存到云端或者 iCloud，方便以后修改。
+### *a**t**t**r**s*和 listeners
 
-虽然我们是 Web 前端工程师，笔者还是不推荐使用 HTML 格式的简历，HTML 版本的简历容易受浏览器等环境因素影响，而且接收方不一定是技术人员，你做的炫酷的效果也不一定会被看到。
+> `attrs` 包含了父作用域中不作为 `prop` 被识别 (且获取) 的 attribute 绑定 (`class` 和 `style` 除外)。当一个组件没有声明任何 `prop` 时，这里会包含所有父作用域的绑定 (`class` 和 `style` 除外),  即`attrs`可以获取子传父中未在 `props` 定义的值
+>
+> `listeners`  包含了父作用域中的 (不含 `.native` 修饰器的) `v-on` 事件监听器。可以通过 `v-on="$listeners"` 传入内部组件
 
-### 简历最好要有针对性地来写
+```js
+// 父组件
+<father title="这是标题" width="80" height="80" imgUrl="imgUrl"/>
 
-简历是「敲门砖」，笔者建议根据你想要找的公司、岗位和职位描述来有针对性地写简历。尤其是个人技能和项目（实习）经验部分，要根据岗位要求来写，这样才能增加受邀面试的机会。
+// 子组件
+mounted() {
+  console.log(this.$attrs) //{title: "这是标题", width: "80", height: "80", imgUrl: "imgUrl"}
+},
+```
 
-> 举个例子：好友给你推荐了百度地图部门的一个高级 Web 前端工程师工作，并且把职位描述（JD）发给你了，里面有要求哪些技能，用到哪些技术，还有加分项。那么你写简历就应该思考自己有没有这些技能。如果没有 JD，那么至少你应该知道：地图部门肯定做一些跟地图相关的工作，如果恰巧你之前研究过地图定位，了解 `HTML5 Geolocation` 定位接口，那么你可以在简历里提一下。
+```js
+//父组件
+<son
+	name="name"
+	age="18"
+	gender="666"
+	sdf="asd"
+	@click="isClick"
+	@change="asd"
+	v-bind="$attrs"
+	v-on="$listeners"
+></son>
 
-- 很多时候我们并不知道简历会被谁看到，也不知道简历会被朋友/猎头投递到什么公司或者职位，那么这样的简历应该是一种「通用简历」。所谓通用简历，应该是与你找的职位和期望的级别相匹配的简历，比如想找大概 T4 水平的 Web 前端工作，那么你就应该在简历体现出来自己的技能能够达到 T4 的水平。不要拿着一两年前的简历去找工作，前端这两年发展速度很快，只靠一两年前简历上面「精通、熟悉」的库和框架，可能已经找不到工作了。
+//子组件
+mounted() {
+	console.log(this.$attrs);
+	console.log(this.$listeners);
+	this.$listeners.isClick();
+	this.$listeners.asd();
+},
+```
 
-所以，写简历也是个技术活，而且是一个辛苦活！不要用千篇一律的模板！
+**补充**:  `inheritAttrs`
 
-### 简历是面试时「点菜」用的菜单
+默认情况下父作用域的不被认作 props 的 attribute 绑定将会“回退”且作为普通的 HTML attribute 应用在子组件的根元素上。通过设置 `inheritAttrs` 到 `false`，这些默认行为将会被去掉。
 
-> 简历除了是「敲门砖」之外，还是供面试官提问用的「菜单」。面试官会从你简历上面写的技能、项目进行提问。所以简历是候选人「反客为主」的重要工具，这也是笔者一直提到的：不要造假或者描述太出格，而应该实事求是地写简历。简历中的技能和项目都要做好知识点梳理，尽量多地梳理出面试官可能问到的问题，并且想出怎么回答应对，千万不要在简历上自己给自己挖坑。
+**默认值**：`true`
 
-- 案例：记得有一个候选人，写的工作时间段有问题，简历上写在 2015 年 3 月到 2017 年 4 月在 A 公司工作，但是面试自我介绍的时候说自己在 A 公司工作了一年，这就有可能让面试官认为个人工作经历存在造假可能。不要小看细节！
-- 另外简历中不要出现错误的单词拼写，注意单词的大小写，比如jQuery之类
+**示例**
 
-> 前端
+```js
+//  父组件调用子组件
+<child-component aaa="1111"></child-component>
+```
+
+```js
+//子组件
+  <div class="child">子组件</div>
+
+export default {
+  inheritAttrs: true,
+  mounted() {
+    console.log('this.$attrs', this.$attrs)
+  }
+}
+</script>
+```
+
+ 设置 `inheritAttrs: true`（默认）
+
+![](https://gxming.oss-cn-shenzhen.aliyuncs.com/my_study_notes20210801101120.png)
+
+ 设置 `inheritAttrs: false`
+
+![](https://gxming.oss-cn-shenzhen.aliyuncs.com/my_study_notes20210801101354.png)
+
+不管`inheritAttrs`为`true`或者`false`，子组件中都能通过`$attrs`属性获取到父组件中传递过来的属性。
+
+### provide和inject
+
+> `provide`和 `inject` 主要为高阶插件/组件库提供用例。并不推荐直接用于应用程序代码中; 并且这对选项需要一起使用; 以允许一个祖先组件向其所有子孙后代注入一个依赖，不论组件层次有多深，并在起上下游关系成立的时间里始终生效
+>
+> `provide` 和 `inject` 绑定并不是可响应的。这是官方刻意为之的。然而，如果你传入了一个可监听的对象，那么其对象的 property 还是可响应的。
+
+```js
+//父组件:
+provide: { //provide 是一个对象,提供一个属性或方法
+  foo: '这是 foo',
+  fooMethod:()=>{
+    console.log('父组件 fooMethod 被调用')
+  }
+},
+
+// 子或者孙子组件
+inject: ['foo','fooMethod'], //数组或者对象,注入到子组件
+mounted() {
+  this.fooMethod()
+  console.log(this.foo)
+}
+
+```
+
+### parent和children
+
+> 指定已创建的实例之父实例，在两者之间建立父子关系。子实例可以用 `this.$parent` 访问父实例，子实例被推入父实例的 `$children` 数组中。
+
+```js
+//父组件
+mounted(){
+  console.log(this.$children) 
+  //可以拿到 一级子组件的属性和方法
+  //所以就可以直接改变 data,或者调用 methods 方法
+}
+
+//子组件
+mounted(){
+  console.log(this.$parent) //可以拿到 parent 的属性和方法
+}
+```
+
+### $refs
+
+```js
+// 父组件
+<home ref="home"/>
+
+mounted(){
+  console.log(this.$refs.home) //即可拿到子组件的实例,就可以直接操作 data 和 methods
+}
+```
+
+### $root
+
+> 当前组件树的根 Vue 实例。如果当前实例没有父实例，此实例将会是其自己。
+
+```js
+// 父组件
+mounted(){
+  console.log(this.$root) //获取根实例,最后所有组件都是挂载到根实例上
+  console.log(this.$root.$children[0]) //获取根实例的一级子组件
+  console.log(this.$root.$children[0].$children[0]) //获取根实例的二级子组件
+}
+```
+
+### .sync
+
+```js
+// 父组件
+<home :title.sync="title" />
+//编译时会被扩展为
+<home :title="title"  @update:title="val => title = val"/>
+
+// 子组件
+// 所以子组件可以通过$emit 触发 update 方法改变
+mounted(){
+  this.$emit("update:title", '这是新的title')
+}
+```
+
+### EventBus
+
+> 1. 声明一个全局Vue实例变量 EventBus , 把所有的通信数据，事件监听都存储到这个变量上; 
+> 2. 类似于 Vuex。但这种方式只适用于极小的项目 
+> 3. 原理就是利用on和*o**n*和emit 并实例化一个全局 vue 实现数据共享
+
+```js
+// 在 main.js
+Vue.prototype.$eventBus=new Vue()
+
+// 传值组件
+this.$eventBus.$emit('eventTarget','这是eventTarget传过来的值')
+
+// 接收组件
+this.$eventBus.$on("eventTarget",v=>{
+  console.log('eventTarget',v);//这是eventTarget传过来的值
+})
+
+```
+
+**注释：**对应的事件名eventTarget必须是全局唯一的
+
+### 路由传参
+
+1.方案一
+
+```js
+// 路由定义
+{
+  path: '/describe/:id',
+  name: 'Describe',
+  component: Describe
+}
+// 页面传参
+this.$router.push({
+  path: `/describe/${id}`,
+})
+// 页面获取
+this.$route.params.id
+```
+
+2.方案二
+
+```js
+// 路由定义
+{
+  path: '/describe',
+  name: 'Describe',
+  component: Describe
+}
+// 页面传参
+this.$router.push({
+  name: 'Describe',
+  params: {
+    id: id
+  }
+})
+// 页面获取
+this.$route.params.id
+```
+
+3.方案三
+
+```js
+// 路由定义
+{
+  path: '/describe',
+  name: 'Describe',
+  component: Describe
+}
+// 页面传参
+this.$router.push({
+  path: '/describe',
+    query: {
+      id: id
+  `}
+)
+// 页面获取
+this.$route.query.id
+```
+
+三种方案对比 方案二参数不会拼接在路由后面,页面刷新参数会丢失
+
+### observable
+
+> 让一个对象可响应。Vue 内部会用它来处理 `data` 函数返回的对象。
+>
+> 返回的对象可以直接用于[渲染函数](https://cn.vuejs.org/v2/guide/render-function.html)和[计算属性](https://cn.vuejs.org/v2/guide/computed.html)内，并且会在发生变更时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景；
+
+## 生命周期
+
+|   生命周期    | 详解                                                         |
+| :-----------: | ------------------------------------------------------------ |
+| breforeCreate | 在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。 |
+|    created    | 创建完毕，data中有值，未挂载                                 |
+|  beforeMount  | 在挂载开始之前被调用：相关的 `render` 函数首次被调用。       |
+|    mounted    | 实例被挂载后调用，这时 `el` 被新创建的 `vm.$el` 替换了,此时才可以操作DOM |
+| beforeUpdate  | 数据更新时调用，发生在虚拟 DOM 打补丁之前。这里适合在更新之前访问现有的 DOM，比如手动移除已添加的事件监听器。 |
+|    updated    | 由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。该钩子函数不会保证所有的子组件也对会被一起重绘，可以调用`$nextTick` |
+|   activated   | 被 keep-alive 缓存的组件激活时调用。                         |
+|   deactived   | 被 keep-alive 缓存的组件停用时调用。                         |
+| beforeDestroy | 实例销毁之前调用。在这一步，实例仍然完全可用。               |
+|   destroyed   | 实例销毁后调用。该钩子被调用后，对应 Vue 实例的所有指令都被解绑，所有的事件监听器被移除，所有的子实例也都被销毁。 |
+

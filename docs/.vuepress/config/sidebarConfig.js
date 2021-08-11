@@ -8,14 +8,6 @@ module.exports = {
 			title: "vue开发规范",
 			path: "vue开发规范",
 		},
-		{
-			title: "MVVM模式",
-			path: "MVVM模式",
-		},
-		{
-			title: "vue知识点",
-			path: "vue知识点",
-		},
 	],
 	"/前端/JavaScript/": [
 		{
