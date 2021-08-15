@@ -315,3 +315,33 @@ this.$route.query.id
 | beforeDestroy | 实例销毁之前调用。在这一步，实例仍然完全可用。               |
 |   destroyed   | 实例销毁后调用。该钩子被调用后，对应 Vue 实例的所有指令都被解绑，所有的事件监听器被移除，所有的子实例也都被销毁。 |
 
+
+
+## 开发技巧
+
+>记录一些平时积累的开发小技巧
+
+### 登录验证
+
+前景介绍：有多个按钮给添加点击事件，但是需要对这些进行登录验证，登录的情况下正常执行事件，未登录则执行跳转事件。
+
+技巧：使用函数闭包，和函数方法`apply`
+
+```js
+<div class="demo" @click="$method(handleClick2, 12, 'zhangsan ')"></div>
+handleClick2(type, name) {
+    console.log("子级点击事件", type);
+    console.log("名字", name);
+    console.log(this.info);
+},
+    
+//注册全局事件
+Vue.prototype.$method = function(fn, ...args) {
+	if (true) {
+		return fn.apply(this, args);
+	} else {
+		console.log("登录失败");
+	}
+};
+```
+
