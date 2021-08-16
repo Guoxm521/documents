@@ -20,7 +20,11 @@
 
 ### 2021-08-15
 
-- [HTTP强缓存和协商缓存](https://segmentfault.com/a/1190000008956069) 一篇关于HTTP缓存的博文
+- [ ] [HTTP强缓存和协商缓存](https://segmentfault.com/a/1190000008956069) 一篇关于HTTP缓存的博文
+
+### 2021-08-16
+
+- [ ] [echart迁徙地图](https://blog.csdn.net/m0_49304996/article/details/118702290?spm=1001.2014.3001.5501)  在vue当中使用echart实现迁徙地图的功能
 
 
 
