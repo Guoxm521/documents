@@ -15,10 +15,13 @@ module.exports = {
 			path: "/前端/JavaScript/",
 		},
 		{
+			title: "常用Api",
+			path: "常用Api",
+		},
+		{
 			title: "代码片段",
 			path: "codeSnippet",
 		},
-
 		{
 			title: "packageJson文件",
 			path: "packageJson",
