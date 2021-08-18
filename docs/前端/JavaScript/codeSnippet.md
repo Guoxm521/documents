@@ -86,5 +86,16 @@ export function exportMethod(res, name) {
 }
 ```
 
+## 分割数组
 
+```js
+function group(array, subGroupLength) {
+      let index = 0;
+      let newArray = [];
+      while(index < array.length) {
+          newArray.push(array.slice(index, index += subGroupLength));
+      }
+      return newArray;
+  }
+```
 

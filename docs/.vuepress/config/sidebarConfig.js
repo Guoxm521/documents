@@ -8,6 +8,10 @@ module.exports = {
 			title: "vue开发规范",
 			path: "vue开发规范",
 		},
+		{
+			title: "自定义指令",
+			path: "vue自定义指令",
+		},
 	],
 	"/前端/JavaScript/": [
 		{
