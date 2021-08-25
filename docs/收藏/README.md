@@ -1,10 +1,13 @@
 ## 大佬的收藏夹
 
 - [awesome-bookmarks](https://panjiachen.github.io/awesome-bookmarks/) 一位大佬的收藏夹网站
-
 - [码力全开资源库](https://maliquankai.com/designnav/) 独立开发者/设计干货/优质利器/工具资源...
 
-  ## CSS
+## JS插件
+
+- [decimal](https://mikemcl.github.io/decimal.js/#toFixed) JavaScript的任意精度Decimal类型。
+
+## CSS
 
 - [YOU-nedd-to-know-css](https://lhammer.cn/You-need-to-know-css/#/zh-cn/) CSS 的各种效果
 
@@ -42,13 +45,22 @@
 ## 工具
 
 - [tinypng](https://tinypng.com/) PNG 图片和 JPEG 图片的压缩
+
 - [Cool Backgrounds](https://coolbackgrounds.io/) 好看的背景图片生成下载网站
+
 - [菜鸟工具](https://c.runoob.com/) 为开发人员提供的在线工具
+
 - [IPAddress](https://www.ipaddress.com/) 查询 ip 地址
+
 - [谷粒-Chrome 插件英雄榜](https://zhaoolee.gitbooks.io/chrome/content/) 谷歌浏览器插件排行榜
+
 - [彼岸图网](https://pic.netbian.com/) 图片素材下载
+
 - [Wallroom](https://wallroom.io/) 图片素材下载
+
 - [npkill](https://npkill.js.org/) 快速查找和轻松删除 node*modules 文件夹的工具*
+
+  
 
 ## 教程网站
 
