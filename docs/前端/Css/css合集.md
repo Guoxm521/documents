@@ -1,5 +1,3 @@
-
-
 ## 通知无限滚动效果
 
 ### 一、效果预览
@@ -120,3 +118,48 @@ export default {
 来源：掘金
 
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+## pointer-events
+
+**`pointer-events`** CSS 属性指定在什么情况下 (如果有) 某个特定的图形元素可以成为鼠标事件的
+
+```css
+/* Keyword values */
+pointer-events: auto;
+pointer-events: none;
+pointer-events: visiblePainted; /* SVG only */
+pointer-events: visibleFill;    /* SVG only */
+pointer-events: visibleStroke;  /* SVG only */
+pointer-events: visible;        /* SVG only */
+pointer-events: painted;        /* SVG only */
+pointer-events: fill;           /* SVG only */
+pointer-events: stroke;         /* SVG only */
+pointer-events: all;            /* SVG only */
+
+/* Global values */
+pointer-events: inherit;
+pointer-events: initial;
+pointer-events: unset;
+```
+
+| [初始值](https://developer.mozilla.org/zh-CN/docs/Web/CSS/initial_value) | `auto`       |
+| :----------------------------------------------------------- | :----------- |
+| 适用元素                                                     | all elements |
+| [是否是继承属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/inheritance) | yes          |
+| [计算值](https://developer.mozilla.org/zh-CN/docs/Web/CSS/computed_value) | as specified |
+| Animation type                                               | discrete     |
+
+`pointer-events`属性被指定为从下面的值列表中选择的一个关键字。
+
+- `auto`
+
+  与`pointer-events`属性未指定时的表现效果相同，对于SVG内容，该值与`visiblePainted`效果相同
+
+- `none`
+
+  元素永远不会成为鼠标事件的[target](https://developer.mozilla.org/en-US/docs/Web/API/event.target)。但是，当其后代元素的`pointer-events`属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶段触发父元素的事件侦听器。
+
+### 运用场景
+
+给元素添加`mask`遮罩层时，不影响底部元素的事件。
+
