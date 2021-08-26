@@ -8,7 +8,7 @@
     
     <meta name="description" content="">
     
-    <link rel="preload" href="/assets/css/0.styles.c026dc41.css" as="style"><link rel="preload" href="/assets/js/app.c39a87fa.js" as="script"><link rel="preload" href="/assets/js/2.2bbee74d.js" as="script"><link rel="preload" href="/assets/js/13.98179a96.js" as="script"><link rel="prefetch" href="/assets/js/10.49680b6f.js"><link rel="prefetch" href="/assets/js/11.7cd12607.js"><link rel="prefetch" href="/assets/js/12.773c51e7.js"><link rel="prefetch" href="/assets/js/14.0c74343a.js"><link rel="prefetch" href="/assets/js/15.6b4f4333.js"><link rel="prefetch" href="/assets/js/16.a7376640.js"><link rel="prefetch" href="/assets/js/17.f6c60d5a.js"><link rel="prefetch" href="/assets/js/18.812a32e6.js"><link rel="prefetch" href="/assets/js/19.b588ed6c.js"><link rel="prefetch" href="/assets/js/20.f15dddd0.js"><link rel="prefetch" href="/assets/js/21.8c54fd60.js"><link rel="prefetch" href="/assets/js/3.1a8b4bf2.js"><link rel="prefetch" href="/assets/js/4.179659c8.js"><link rel="prefetch" href="/assets/js/5.3af4ba96.js"><link rel="prefetch" href="/assets/js/6.07b26dfc.js"><link rel="prefetch" href="/assets/js/7.8ed6ab7a.js"><link rel="prefetch" href="/assets/js/8.a07c0f47.js"><link rel="prefetch" href="/assets/js/9.5e41b601.js">
+    <link rel="preload" href="/assets/css/0.styles.c026dc41.css" as="style"><link rel="preload" href="/assets/js/app.eb5971e5.js" as="script"><link rel="preload" href="/assets/js/2.2bbee74d.js" as="script"><link rel="preload" href="/assets/js/13.1f849f78.js" as="script"><link rel="prefetch" href="/assets/js/10.49680b6f.js"><link rel="prefetch" href="/assets/js/11.7cd12607.js"><link rel="prefetch" href="/assets/js/12.773c51e7.js"><link rel="prefetch" href="/assets/js/14.0c74343a.js"><link rel="prefetch" href="/assets/js/15.6b4f4333.js"><link rel="prefetch" href="/assets/js/16.a7376640.js"><link rel="prefetch" href="/assets/js/17.00450290.js"><link rel="prefetch" href="/assets/js/18.812a32e6.js"><link rel="prefetch" href="/assets/js/19.b588ed6c.js"><link rel="prefetch" href="/assets/js/20.f15dddd0.js"><link rel="prefetch" href="/assets/js/21.8c54fd60.js"><link rel="prefetch" href="/assets/js/3.1a8b4bf2.js"><link rel="prefetch" href="/assets/js/4.179659c8.js"><link rel="prefetch" href="/assets/js/5.3af4ba96.js"><link rel="prefetch" href="/assets/js/6.07b26dfc.js"><link rel="prefetch" href="/assets/js/7.b41a49ad.js"><link rel="prefetch" href="/assets/js/8.60141527.js"><link rel="prefetch" href="/assets/js/9.4e2177c9.js">
     <link rel="stylesheet" href="/assets/css/0.styles.c026dc41.css">
   </head>
   <body>
@@ -281,6 +281,7 @@ a<span class="token punctuation">.</span><span class="token function">push</span
 <span class="token function">reduceRight</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">//依次处理数组的每个成员，最终累计为一个值。从右到左（从最后一个成员到第一个成员）</span>
 <span class="token function">indexOf</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>   <span class="token comment">//返回给定元素在数组中第一次出现的位置，如果没有出现则返回-1。可以接受第二个参数，表示搜索的开始位置</span>
 <span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">//返回给定元素在数组中最后一次出现的位置，如果没有出现则返回-1。</span>
+<span class="token function">findIndex</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//方法返回传入一个测试条件（函数）符合条件的数组第一个元素位置。 传入一个函数</span>
 </code></pre></div><h3 id="_3-3-number对象"><a href="#_3-3-number对象" class="header-anchor">#</a> <strong>3.3 Number对象</strong></h3> <h4 id="_1-生成对象"><a href="#_1-生成对象" class="header-anchor">#</a> <strong>（1）生成对象</strong></h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> n <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Number</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre></div><h4 id="_2-number对象的属性"><a href="#_2-number对象的属性" class="header-anchor">#</a> <strong>（2）Number对象的属性</strong></h4> <div class="language-js extra-class"><pre class="language-js"><code>Number<span class="token punctuation">.</span><span class="token constant">POSITIVE_INFINITY</span>：正的无限，指向<span class="token number">Infinity</span>。  
 Number<span class="token punctuation">.</span><span class="token constant">NEGATIVE_INFINITY</span>：负的无限，指向<span class="token operator">-</span><span class="token number">Infinity</span>。  
@@ -370,7 +371,7 @@ console<span class="token punctuation">.</span><span class="token function">grou
 console<span class="token punctuation">.</span><span class="token function">trace</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">//显示当前执行的代码在堆栈中的调用路径。</span>
 console<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">//用于清除当前控制台的所有输出，将光标回置到第一行。</span>
 
-</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2021/08/17 星期二  12:42:39</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2021/08/26 星期四  09:42:14</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/%E5%89%8D%E7%AB%AF/JavaScript/" class="prev router-link-active">
         JavaScript
@@ -379,6 +380,6 @@ console<span class="token punctuation">.</span><span class="token function">clea
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"><!----></div></div>
-    <script src="/assets/js/app.c39a87fa.js" defer></script><script src="/assets/js/2.2bbee74d.js" defer></script><script src="/assets/js/13.98179a96.js" defer></script>
+    <script src="/assets/js/app.eb5971e5.js" defer></script><script src="/assets/js/2.2bbee74d.js" defer></script><script src="/assets/js/13.1f849f78.js" defer></script>
   </body>
 </html>
