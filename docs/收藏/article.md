@@ -30,6 +30,10 @@
 
 - [decimal](https://mikemcl.github.io/decimal.js/#toFixed) js数字精度处理的插件文档
 
+### 2021-08-27
+
+- [DIff算法看不懂就一起来砍我(带图)](https://juejin.cn/post/7000266544181674014)  掘金上关于虚拟dom和diff算法的文章
+
 
 
 

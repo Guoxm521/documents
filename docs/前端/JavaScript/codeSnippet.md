@@ -178,3 +178,69 @@ function group(array, subGroupLength) {
 </script>
 ```
 
+## 防抖
+
+```js
+/**
+ *
+ * @param {*} func 要进行debouce的函数
+ * @param {*} wait 等待时间,默认500ms
+ * @param {*} immediate 是否立即执行
+ */
+export function debounce(func, wait=500, immediate=false) {
+    var timeout
+    return function() {
+        var context = this
+        var args = arguments
+
+        if (timeout) clearTimeout(timeout)
+        if (immediate) {
+            // 如果已经执行过，不再执行
+            var callNow = !timeout
+            timeout = setTimeout(function() {
+                timeout = null
+            }, wait)
+            if (callNow) func.apply(context, args)
+        } else {
+            timeout = setTimeout(function() {
+                func.apply(context, args)
+            }, wait)
+        }
+    }
+}
+```
+
+## 节流
+
+```js
+function throttle(func, wait, options = {}) {
+  let timeout,
+    previous = 0
+
+  return function() {
+    let now = +new Date()
+    let remain = wait - (now - previous)
+
+    if (remain < 0) {
+      if (previous === 0 && !options.begin) {
+        previous = now
+        return
+      }
+
+      if (timeout) {
+        clearTimeout(timeout)
+        timeout = null
+      }
+
+      previous = now
+      func.call(this, arguments)
+    } else if (!timeout && options.end) {
+      timeout = setTimeout(() => {
+        func.call(this, arguments)
+        timeout = null
+      }, wait)
+    }
+  }
+}
+```
+
