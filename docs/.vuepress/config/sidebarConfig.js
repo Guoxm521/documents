@@ -12,6 +12,10 @@ module.exports = {
 			title: "自定义指令",
 			path: "vue自定义指令",
 		},
+		{
+			title: "优雅的使用svg图片",
+			path: "优雅的使用svg图片",
+		},
 	],
 	"/前端/JavaScript/": [
 		{

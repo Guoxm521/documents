@@ -68,6 +68,7 @@
 - [现代 Javascript 教程](https://zh.javascript.info/) 关于 JS 的详细教程 ，多读读
 - [Docker 从入门到实践](https://vuepress.mirror.docker-practice.com/) docker 学习网站
 - [30daysofjs](http://30daysofjs.michaeleinsohn.com/)  30天JS练习网站
+- [git-scm](https://git-scm.com/book/zh/v2) git操作命令手册
 
 
 

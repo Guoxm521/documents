@@ -9,8 +9,7 @@ module.exports = {
 	themeConfig: {
 		base: "/documents/",
 		logo: "/logo.png",
-		// displayAllHeaders: true,
-
+		// displayAllHeaders: true, // 默认值：false
 		lastUpdated: "更新时间",
 		category: false,
 		tag: false,
