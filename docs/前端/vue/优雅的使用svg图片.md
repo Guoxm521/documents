@@ -2,6 +2,8 @@
 
  首先将所有的`svg`文件放入同一的文件夹当中,
 
+![](https://gxming.oss-cn-shenzhen.aliyuncs.com/my_study_notes1.png)
+
 ## 安装插件
 
 `svg-sprite-loader `会把你的 svg 塞到一个个 `symbol `中，合成一个大的 svg。
@@ -84,6 +86,8 @@ npm i svg-sprite-loader svgo-loader -D
 ## 统一引入svg图片
 
 在src下新建icons文件夹，新建index.js文件（要注意路径的配置）
+
+![](https://gxming.oss-cn-shenzhen.aliyuncs.com/my_study_notes2.png)
 
 ```js
 import Vue from "vue";
