@@ -11,24 +11,16 @@
 ## CSS
 
 - [YOU-nedd-to-know-css](https://lhammer.cn/You-need-to-know-css/#/zh-cn/) CSS 的各种效果
-
 - [animista](https://animista.net/) 不错的 css 动画库 方便直接复制代码
-
 - [css tricks](https://qishaoxuan.github.io/css_tricks/) 该项目总结了一些常用的 CSS 样式
-
 - [chokcoco](https://chokcoco.github.io/CSS-Inspiration/#/./init) 该项目总结了一些常用的 CSS 样式
-
 - [spinkit](https://tobiasahlin.com/spinkit/) 加载动画
-
 - [animate](https://animate.style/) 跨浏览器的 Css3 动画库
-
 - [贝塞尔曲线生成器](https://cubic-bezier.com/#.17,.67,.83,.67)  实时调节生成贝塞尔曲线参数
-
 - [css-triangle generator](http://apps.eky.hk/css-triangle-generator/)  帮你快速用 css 做出三角形
-
 - [nenumorphism](https://neumorphism.io/#823a3a)  手动调节生成css阴影样式
-
 - [shapedivider](https://www.shapedivider.app/) 自定义形状分割背景图案
+- [CSS inspiration](https://csscoco.com/inspiration/#/)  css寻找灵感的地方
 
 ## 颜色
 
@@ -69,6 +61,7 @@
 - [Docker 从入门到实践](https://vuepress.mirror.docker-practice.com/) docker 学习网站
 - [30daysofjs](http://30daysofjs.michaeleinsohn.com/)  30天JS练习网站
 - [git-scm](https://git-scm.com/book/zh/v2) git操作命令手册
+- [electron-vue](https://simulatedgreg.gitbooks.io/electron-vue/content/cn/)  基于 vue (基本上是它听起来的样子) 来构造 electron 应用程序的样板代码。
 
 
 

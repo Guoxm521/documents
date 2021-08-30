@@ -34,6 +34,10 @@
 
 - [DIff算法看不懂就一起来砍我(带图)](https://juejin.cn/post/7000266544181674014)  掘金上关于虚拟dom和diff算法的文章
 
+### 2021-08-30
+
+- [electron-vue](https://simulatedgreg.gitbooks.io/electron-vue/content/cn/)  基于 vue (基本上是它听起来的样子) 来构造 electron 应用程序的样板代码。
+
 
 
 
