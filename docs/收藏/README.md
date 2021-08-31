@@ -53,6 +53,10 @@
 
 - [npkill](https://npkill.js.org/) 快速查找和轻松删除 node*modules 文件夹的工具*
 
+- [vue-baidu-map](https://dafrok.github.io/vue-baidu-map/#/)  基于vue2的百度地图
+
+- [regulex](https://jex.im/regulex/#!flags=&re=%5E(a%7Cb)*%3F%24)  可视化正则表达式调试工具
+
   
 
 ## 教程网站

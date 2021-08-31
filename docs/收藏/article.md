@@ -38,7 +38,10 @@
 
 - [electron-vue](https://simulatedgreg.gitbooks.io/electron-vue/content/cn/)  基于 vue (基本上是它听起来的样子) 来构造 electron 应用程序的样板代码。
 
+### 2021-08-31
 
+- [ES6的class类(语法篇)](https://juejin.cn/post/7000891889465425957)  掘金文章
+- [ES6的class类(继承篇)](https://juejin.cn/post/7001284277291712526) 掘金文章
 
 
 
