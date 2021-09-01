@@ -43,5 +43,9 @@
 - [ES6的class类(语法篇)](https://juejin.cn/post/7000891889465425957)  掘金文章
 - [ES6的class类(继承篇)](https://juejin.cn/post/7001284277291712526) 掘金文章
 
+### 2021-09-01
+
+- [百度云618数据大屏网址](https://sugar.aipage.com/dashboard/5f81db321ff3e080e9f09168c923854f)   闲暇时可以学习一下它设计这种数据大屏的思路
+
 
 

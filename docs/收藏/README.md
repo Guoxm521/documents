@@ -3,6 +3,10 @@
 - [awesome-bookmarks](https://panjiachen.github.io/awesome-bookmarks/) 一位大佬的收藏夹网站
 - [码力全开资源库](https://maliquankai.com/designnav/) 独立开发者/设计干货/优质利器/工具资源...
 
+## 博客网站
+
+[MARKSZのBlog](https://molunerfinn.com/about/)  picgo软件作者，学习的榜样
+
 ## JS插件
 
 - [decimal](https://mikemcl.github.io/decimal.js/#toFixed) JavaScript的任意精度Decimal类型。
@@ -56,6 +60,8 @@
 - [vue-baidu-map](https://dafrok.github.io/vue-baidu-map/#/)  基于vue2的百度地图
 
 - [regulex](https://jex.im/regulex/#!flags=&re=%5E(a%7Cb)*%3F%24)  可视化正则表达式调试工具
+
+- [makeapie](https://www.makeapie.com/explore.html)  寻找echart灵感的网站
 
   
 
