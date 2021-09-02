@@ -25,6 +25,7 @@
 ### 2021-08-16
 
 - [echart迁徙地图](https://blog.csdn.net/m0_49304996/article/details/118702290?spm=1001.2014.3001.5501)  在vue当中使用echart实现迁徙地图的功能
+- [一文搞定echarts地图轮播高亮](https://juejin.cn/post/6997978246839042079#heading-6)  掘金文章
 
 ### 2021-08-25
 

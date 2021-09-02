@@ -63,6 +63,8 @@
 
 - [makeapie](https://www.makeapie.com/explore.html)  寻找echart灵感的网站
 
+- [地图选择器](http://datav.aliyun.com/tools/atlas/index.html) 地图选择生成json文件
+
   
 
 ## 教程网站
