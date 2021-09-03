@@ -11,6 +11,8 @@
 
 - [decimal](https://mikemcl.github.io/decimal.js/#toFixed) JavaScript的任意精度Decimal类型。
 - [今日诗词](https://www.jinrishici.com/)  每次返回一句诗词，根据时间、地点、天气、事件智能推荐
+- [BetterScroll.js](https://better-scroll.github.io/docs/zh-CN/)   为移动端（已支持 PC）各种滚动场景提供丝滑的滚动效果。
+- [store.js](https://www.npmjs.com/package/storejs)  store.js 是一个兼容所有浏览器的 LocalStorage 包装器
 
 ## CSS
 
@@ -43,6 +45,8 @@
 
 - [tinypng](https://tinypng.com/) PNG 图片和 JPEG 图片的压缩
 
+- [squoosh](https://squoosh.app/) 图片压缩网站 对比 [tinypng](https://link.juejin.cn/?target=https%3A%2F%2Ftinypng.com%2F) 有【更好的】压缩效果：
+
 - [Cool Backgrounds](https://coolbackgrounds.io/) 好看的背景图片生成下载网站
 
 - [菜鸟工具](https://c.runoob.com/) 为开发人员提供的在线工具
@@ -74,6 +78,8 @@
 - [30daysofjs](http://30daysofjs.michaeleinsohn.com/)  30天JS练习网站
 - [git-scm](https://git-scm.com/book/zh/v2) git操作命令手册
 - [electron-vue](https://simulatedgreg.gitbooks.io/electron-vue/content/cn/)  基于 vue (基本上是它听起来的样子) 来构造 electron 应用程序的样板代码。
+- [DevDocs](https://devdocs.io/)  是 Web 开发技术文档，是非常不错的学习手册！(英文的)
+- [iHateRegex](https://ihateregex.io/)  正则表达式查询
 
 
 
@@ -89,6 +95,8 @@
 
 - [make a pie](https://www.makeapie.com/explore.html) 一个分享可视化作品的网站，可以借鉴学习🎉🎉🎉
 
+- [Carbon](https://link.juejin.cn/?target=https%3A%2F%2Fcarbon.now.sh%2F) 好看的代码生成网站
+
 ## 设计相关
 
 - [uigradients](https://uigradients.com/#SummerDog) 渐变色网站
@@ -98,6 +106,8 @@
 - [design.youzan](http://design.youzan.com/) 有赞设计原则
 - [产品大牛](http://www.pmdaniu.com/) 什么有很多完整的产品原型可以借鉴
 - [磨刀](https://modao.cc/pricing) 快速出 ui 原型
+- [Undraw](https://link.juejin.cn/?target=https%3A%2F%2Fundraw.co%2F)  SVG 插图资源是海量的
+- [Dribbble](https://link.juejin.cn/?target=https%3A%2F%2Fdribbble.com%2F)  寻找网页设计灵感，认准 Dribbble!!!
 
 ## 实用
 
