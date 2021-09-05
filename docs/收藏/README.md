@@ -2,10 +2,11 @@
 
 - [awesome-bookmarks](https://panjiachen.github.io/awesome-bookmarks/) 一位大佬的收藏夹网站
 - [码力全开资源库](https://maliquankai.com/designnav/) 独立开发者/设计干货/优质利器/工具资源...
+- [技术胖的收藏夹](./jspang.md)
 
 ## 博客网站
 
-[MARKSZのBlog](https://molunerfinn.com/about/)  picgo软件作者，学习的榜样
+- [MARKSZのBlog](https://molunerfinn.com/about/)  picgo软件作者，学习的榜样
 
 ## JS插件
 
@@ -69,6 +70,10 @@
 
 - [地图选择器](http://datav.aliyun.com/tools/atlas/index.html) 地图选择生成json文件
 
+- [ tool.lu  |  程序员在线工具大全   ](https://tool.lu/)
+
+- [CODEIF | 变量方法起名工具  人工智能加持  ](https://unbug.github.io/codelf)
+
   
 
 ## 教程网站
@@ -80,6 +85,7 @@
 - [electron-vue](https://simulatedgreg.gitbooks.io/electron-vue/content/cn/)  基于 vue (基本上是它听起来的样子) 来构造 electron 应用程序的样板代码。
 - [DevDocs](https://devdocs.io/)  是 Web 开发技术文档，是非常不错的学习手册！(英文的)
 - [iHateRegex](https://ihateregex.io/)  正则表达式查询
+- [nginx-tutorial](https://dunwu.github.io/nginx-tutorial/#/)  一个Nginx极简教程
 
 
 

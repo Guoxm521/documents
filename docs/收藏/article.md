@@ -48,5 +48,7 @@
 
 - [百度云618数据大屏网址](https://sugar.aipage.com/dashboard/5f81db321ff3e080e9f09168c923854f)   闲暇时可以学习一下它设计这种数据大屏的思路
 
+### 2021-09-04
 
+- [nginx教程](https://juejin.cn/post/6844903944267759624#heading-2)  掘金一篇关于nginx的教程文章
 
