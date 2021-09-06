@@ -68,5 +68,9 @@ module.exports = {
 			title: "文章",
 			path: "article",
 		},
+		{
+			title: "up主技术胖收藏夹",
+			path: "jspang",
+		},
 	],
 };
