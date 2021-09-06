@@ -244,3 +244,98 @@ function throttle(func, wait, options = {}) {
 }
 ```
 
+## 开启全屏
+
+```js
+// 全屏
+export function handleAllscreen() {
+	let element = document.documentElement;
+	var requestMethod =
+		element.requestFullScreen || //W3C
+		element.webkitRequestFullScreen || //Chrome等
+		element.mozRequestFullScreen || //FireFox
+		element.msRequestFullScreen; //IE11
+	if (requestMethod) {
+		requestMethod.call(element);
+	} else if (typeof window.ActiveXObject !== "undefined") {
+		var wscript = new ActiveXObject("WScript.Shell");
+		if (wscript !== null) {
+			wscript.SendKeys("{F11}");
+		}
+	}
+}
+```
+
+## 退出全屏
+
+```js
+//退出全屏
+export function handleOutFullCreeen() {
+	let element = document;
+	let requestMethod =
+		element.cancelFullScreen ||
+		element.webkitCancelFullScreen ||
+		element.mozCancelFullScreen ||
+		element.exitFullScreen;
+	if (requestMethod) {
+		requestMethod.call(element);
+	} else if (typeof window.ActiveXObject !== "undefined") {
+		var wscript = new ActiveXObject("WScript.Shell");
+		if (wscript !== null) {
+			wscript.SendKeys("{F11}");
+		}
+	}
+}
+
+```
+
+## 上下滚动
+
+```js
+const cubic = (value) => Math.pow(value, 3);
+const easeInOutCubic = (value) =>
+	value < 0.5 ? cubic(value * 2) / 2 : 1 - cubic((1 - value) * 2) / 2;
+// 向上移动
+export function handleScrollup(value) {
+	const el = value;
+	if (el.scrollTop == 0) {
+		Message.warning("已到达顶部");
+		return;
+	}
+	const beginTime = Date.now();
+	const beginValue = el.scrollTop;
+	const rAF = window.requestAnimationFrame || ((func) => setTimeout(func, 16));
+	const frameFunc = () => {
+		const progress = (Date.now() - beginTime) / 500;
+		if (progress < 1) {
+			el.scrollTop = beginValue * (1 - easeInOutCubic(progress));
+			rAF(frameFunc);
+		} else {
+			el.scrollTop = 0;
+		}
+	};
+	rAF(frameFunc);
+}
+// 向下移动
+export function handleScrolldown(value) {
+	const el = value;
+	let clientHeight = el.clientHeight;
+	let scrollTop = el.scrollTop;
+	let scrollHeight = el.scrollHeight;
+	if (scrollTop + clientHeight == scrollHeight) {
+		Message.warning("已到达底部");
+	}
+	const beginTime = Date.now();
+	const beginValue = el.scrollTop;
+	const rAF = window.requestAnimationFrame || ((func) => setTimeout(func, 16));
+	const frameFunc = () => {
+		const progress = (Date.now() - beginTime) / 500;
+		if (progress < 1) {
+			el.scrollTop = el.scrollTop + 10;
+			rAF(frameFunc);
+		}
+	};
+	rAF(frameFunc);
+}
+```
+
