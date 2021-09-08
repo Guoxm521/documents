@@ -46,7 +46,7 @@
 
 - [tinypng](https://tinypng.com/) PNG 图片和 JPEG 图片的压缩
 
-- [squoosh](https://squoosh.app/) 图片压缩网站 对比 [tinypng](https://link.juejin.cn/?target=https%3A%2F%2Ftinypng.com%2F) 有【更好的】压缩效果：
+- [squoosh](https://squoosh.app/) 图片压缩网站 对比 [tinypng](https://tinypng.com/) 有【更好的】压缩效果：
 
 - [Cool Backgrounds](https://coolbackgrounds.io/) 好看的背景图片生成下载网站
 
@@ -101,7 +101,7 @@
 
 - [make a pie](https://www.makeapie.com/explore.html) 一个分享可视化作品的网站，可以借鉴学习🎉🎉🎉
 
-- [Carbon](https://link.juejin.cn/?target=https%3A%2F%2Fcarbon.now.sh%2F) 好看的代码生成网站
+- [Carbon](https://carbon.now.sh/) 好看的代码生成网站
 
 ## 设计相关
 
@@ -112,8 +112,8 @@
 - [design.youzan](http://design.youzan.com/) 有赞设计原则
 - [产品大牛](http://www.pmdaniu.com/) 什么有很多完整的产品原型可以借鉴
 - [磨刀](https://modao.cc/pricing) 快速出 ui 原型
-- [Undraw](https://link.juejin.cn/?target=https%3A%2F%2Fundraw.co%2F)  SVG 插图资源是海量的
-- [Dribbble](https://link.juejin.cn/?target=https%3A%2F%2Fdribbble.com%2F)  寻找网页设计灵感，认准 Dribbble!!!
+- [Undraw](https://undraw.co/)  SVG 插图资源是海量的
+- [Dribbble](https://dribbble.com/)  寻找网页设计灵感，认准 Dribbble!!!
 
 ## 实用
 
