@@ -52,3 +52,7 @@
 
 - [nginx教程](https://juejin.cn/post/6844903944267759624#heading-2)  掘金一篇关于nginx的教程文章
 
+### 2021-09-09
+
+- [gulp本地开发和上线打包记录](https://www.rinbowli.cn/article/5ff2c62f2191750ca0499915)
+
