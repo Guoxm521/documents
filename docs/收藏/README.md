@@ -121,3 +121,10 @@
 - [奇迹秀工具箱](http://www.qijishow.com/down/index.html#) 各种软件下载网址
 - [易词云](https://www.yciyun.com/) 词云生成器
 
+## TS教程
+
+- [typeScript 入门教程](http://ts.xcatliu.com/introduction/what-is-typescript.html)
+- [深入理解typeScript](https://jkchao.github.io/typescript-book-chinese/) 
+- [typeScript官网](https://www.tslang.cn/docs/handbook/basic-types.html)
+- [函数式编程指北](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
+
