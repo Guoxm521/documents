@@ -670,3 +670,65 @@ git reset --hard <commit-id>  #彻底回退到指定commit-id的状态，暂存�
 
 ```
 
+## 电脑配置用户名
+
+### 1.配置用户名
+
+```bash
+git config  --global user.name 'UserName'
+git config  --global user.email 'Useremail'
+```
+
+### 2.查看用户名与邮箱
+
+```bash
+git config  --global user.name   --- 用户名
+git config  --global user.email  --- 邮箱
+```
+
+### 3.生成ssh keys
+
+```bash
+ssh-keygen  -t rsa -C 'useEmail'
+```
+
+上一个步骤成功的话，一般会在 `C:\Users\Administrator`目录下生成 `.ssh` 文件夹，用记事本打开里面的 `id_rsa.pub` 后，复制里面的内容
+
+4.复制公钥
+
+```bash
+cat ~/.ssh/id_rsa.pub
+```
+
+### 4.配置git ssh key
+
+1、进入个人信息页面
+2、选中 SSH and GPG keys
+3、 New SSH keys
+
+## 忽略文件 .gitignore
+
+```bash
+# 此行为注释 会被Git忽略
+
+# 忽略 node_modules/ 目录下所有的文件
+node_modules
+
+
+# 忽略所有.vscode结尾的文件
+.vscode
+
+# 忽略所有.md结尾的文件
+*.md
+
+# 但README.md 除外
+!README.md
+
+# 会忽略 doc/something.txt 但不会忽略doc/images/arch.txt
+doc/*.txt
+
+# 忽略 doc/ 目录下所有扩展名为txt文件
+
+doc/**/*.txt
+```
+

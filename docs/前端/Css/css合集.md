@@ -163,3 +163,43 @@ pointer-events: unset;
 
 给元素添加`mask`遮罩层时，不影响底部元素的事件。
 
+## 清除浮动
+
+```css
+// 清除浮动
+.clearfix:after {
+      content: "\00A0";
+      display: block;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      clear: both;
+      font-size: 0;
+      line-height: 0;
+      overflow: hidden;
+}
+.clearfix {
+      zoom: 1;
+}
+```
+
+## input 占位符号
+
+```css
+input::-webkit-input-placeholder {
+  color: green;
+  background-color: #f9f7f7;
+  font-size: 14px;
+}
+input::-moz-input-placeholder {
+  color: green;
+  background-color: #f9f7f7;
+  font-size: 14px;
+}
+input::-ms-input-placeholder {
+  color: green;
+  background-color: #f9f7f7;
+  font-size: 14px;
+}
+```
+
