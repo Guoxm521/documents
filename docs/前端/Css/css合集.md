@@ -203,3 +203,21 @@ input::-ms-input-placeholder {
 }
 ```
 
+## 清除滚动条
+
+```css
+@mixin hiddle_scroll_bar {
+    &::-webkit-scrollbar {
+        display: none;
+        /* Chrome Safari */
+    }
+
+    scrollbar-width: none;
+    /* firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+```
+
