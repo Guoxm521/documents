@@ -690,6 +690,7 @@ git config  --global user.email  --- 邮箱
 
 ```bash
 ssh-keygen  -t rsa -C 'useEmail'
+ssh-keygen  -t rsa -C 'useEmail' -f ~/.ssh/gitlab_id_rsa_1   //指定生成秘钥名称
 ```
 
 上一个步骤成功的话，一般会在 `C:\Users\Administrator`目录下生成 `.ssh` 文件夹，用记事本打开里面的 `id_rsa.pub` 后，复制里面的内容
