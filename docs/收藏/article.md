@@ -1,3 +1,7 @@
+## 周末学习计划
+
+1. 构建前端的npm私有包
+
 ### 2021-08-06
 
 - [30-js-concepts](https://github.com/stephentian/33-js-concepts) JavaScript开发者应懂的33个概念
@@ -56,3 +60,6 @@
 
 - [gulp本地开发和上线打包记录](https://www.rinbowli.cn/article/5ff2c62f2191750ca0499915)
 
+### 2021-11-5
+
+[记录windows中docker的基本使用方法](https://juejin.cn/post/6844903844451713031#comment)
