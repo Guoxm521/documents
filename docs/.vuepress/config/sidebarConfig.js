@@ -55,8 +55,12 @@ module.exports = {
 			path: "杂七杂八",
 		},
 		{
-			title: "Git",
+			title: "Git操作",
 			path: "Git操作",
+		},
+		{
+			title: "发布npm包",
+			path: "发布npm包",
 		},
 	],
 	"/收藏/": [
