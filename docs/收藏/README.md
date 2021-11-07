@@ -128,3 +128,19 @@
 - [typeScript官网](https://www.tslang.cn/docs/handbook/basic-types.html)
 - [函数式编程指北](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
 
+## 工具类轮子
+
+-  lodash.js ：  https://www.lodashjs.com/
+
+- Day.js  ： https://dayjs.fenxianglu.cn/ 
+-  timeago.js ：  https://github.com/hustcc/timeago.js
+- echarts  ：  https://echarts.apache.org/zh/index.html
+-  Meditor.md  :  https://pandao.github.io/editor.md/
+-  validator.js :   https://github.com/validatorjs/validator.js
+
+- vue-draggable ：  https://www.itxst.com/vue-draggable/tutorial.html
+-  vue-qr :   https://www.npmjs.com/package/vue-qr
+-  vue-cropper :   https://github.com/xyxiao001/vue-cropper
+-  vue-lazyload :   https://www.npmjs.com/package/vue-lazyload
+-  vue-simple-upload :   https://github.com/saivarunk/vue-simple-upload
+- vxe-table
