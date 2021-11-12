@@ -74,6 +74,8 @@
 
 - [CODEIF | 变量方法起名工具  人工智能加持  ](https://unbug.github.io/codelf)
 
+- [非图片的字符串生成工具](http://patorjk.com/software/taag) console.log在控制台输出好看的字符
+
   
 
 ## 教程网站
