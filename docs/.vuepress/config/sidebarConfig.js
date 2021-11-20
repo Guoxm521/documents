@@ -34,6 +34,10 @@ module.exports = {
 			title: "packageJson文件",
 			path: "packageJson",
 		},
+		{
+			title: "vue 批量导出word压缩包",
+			path: "vue 批量导出word压缩包",
+		},
 	],
 	"/前端/Css/": [
 		{

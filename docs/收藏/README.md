@@ -14,6 +14,7 @@
 - [今日诗词](https://www.jinrishici.com/)  每次返回一句诗词，根据时间、地点、天气、事件智能推荐
 - [BetterScroll.js](https://better-scroll.github.io/docs/zh-CN/)   为移动端（已支持 PC）各种滚动场景提供丝滑的滚动效果。
 - [store.js](https://www.npmjs.com/package/storejs)  store.js 是一个兼容所有浏览器的 LocalStorage 包装器
+- [mockjs](http://mockjs.com/) 生成随机数据，拦截 Ajax 请求
 
 ## JS
 

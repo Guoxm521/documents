@@ -375,10 +375,5 @@ function sum(str1, str2) {
 sum('987654321111234','99900334444') // '987754221445678'
 ```
 
-## vue   导出 word
-
-- ​	[vue实现前台生成word并下载，并且可实现批量打包下载](https://blog.csdn.net/baidu_36668721/article/details/115211615?spm=1001.2014.3001.5501)
-- [vue + word 导出word](https://gitee.com/xhxdd/vue-export-word)
-
 
 
