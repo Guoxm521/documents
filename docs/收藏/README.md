@@ -15,6 +15,20 @@
 - [BetterScroll.js](https://better-scroll.github.io/docs/zh-CN/)   为移动端（已支持 PC）各种滚动场景提供丝滑的滚动效果。
 - [store.js](https://www.npmjs.com/package/storejs)  store.js 是一个兼容所有浏览器的 LocalStorage 包装器
 
+## JS
+
+- [30-seconds-of-code 网站](https://github.com/30-seconds/30-seconds-of-code)
+- [33-js-concepts 网站](https://github.com/leonardomso/33-js-concepts)
+- [ javascript-questions  网站:](https://github.com/lydiahallie/javascript-questions)
+- [JavaScript 30  网站：](https://github.com/wesbos/JavaScript30)
+- [ES6 入门教程 网站](https://es6.ruanyifeng.com/)
+- [JavaScript 教程 网站](https://wangdoc.com/javascript/)
+- [MDN  网站](https://developer.mozilla.org/zh-CN/)
+- [clean-code-javascript 网站：](https://github.com/ryanmcdermott/clean-code-javascript)
+- [TypeScript 入门教程 网站：](https://ts.xcatliu.com)
+
+- [w3school   网站](https://www.w3school.com.cn/js/index.asp)
+
 ## CSS
 
 - [YOU-nedd-to-know-css](https://lhammer.cn/You-need-to-know-css/#/zh-cn/) CSS 的各种效果
