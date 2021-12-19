@@ -70,6 +70,10 @@ module.exports = {
 			title: "docker学习",
 			path: "docker学习",
 		},
+		{
+			title: "MySQL",
+			path: "MySQL",
+		},
 	],
 	"/收藏/": [
 		{

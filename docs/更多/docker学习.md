@@ -210,3 +210,18 @@ docker image save busybox:latest -o mybusybox.image
 docker image load -i .\mybusybox.image
 ```
 
+
+
+### 使用nginx
+
+命令：docker run --name nginx -p 80:80 -v /home/docker-nginx/nginx.conf:/etc/nginx/nginx.conf -v /home/docker-nginx/log:/var/log/nginx -v /home/docker-nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+
+解释下上面的命令：
+
+--name 给你启动的容器起个名字，以后可以使用这个名字启动或者停止容器
+
+-p 映射端口，将docker宿主机的80端口和容器的80端口进行绑定
+
+-v 挂载文件用的，第一个-v 表示将你本地的nginx.conf覆盖你要起启动的容器的nginx.conf文件，第二个表示将日志文件进行挂载，就是把nginx服务器的日志写到你docker宿主机的/home/docker-nginx/log/下面
+
+# 
