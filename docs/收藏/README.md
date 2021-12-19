@@ -8,6 +8,10 @@
 
 - [MARKSZのBlog](https://molunerfinn.com/about/)  picgo软件作者，学习的榜样
 
+- ###### [前端导航网站](http://nav.poetries.top/)
+
+- [美团技术团队](https://tech.meituan.com/)
+
 ## JS插件
 
 - [decimal](https://mikemcl.github.io/decimal.js/#toFixed) JavaScript的任意精度Decimal类型。
@@ -132,6 +136,10 @@
 - [Undraw](https://undraw.co/)  SVG 插图资源是海量的
 - [Dribbble](https://dribbble.com/)  寻找网页设计灵感，认准 Dribbble!!!
 - [美叶](https://www.meiye.art/) ui设计页面
+- [设计导航](http://hao.shejidaren.com/) 
+- [Adobe color](https://color.adobe.com/zh/create/color-wheel) 
+- [collectui](https://collectui.com/designs)  ui设计参考网站
+- [uisdc](https://hao.uisdc.com/) 设计师导航
 
 ## 实用
 
