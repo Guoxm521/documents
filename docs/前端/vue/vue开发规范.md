@@ -9,7 +9,7 @@
 
 ### 1.1 项目文件命名
 
-#### 1.1.1 项目名
+#### 1.1.1 项目名1
 
 全部采用小写方式， 以**短横线**分隔。 例：`my-project-name`。
 
@@ -1725,7 +1725,11 @@ Book.prototype = {
 - 大型团队多人协作项目推荐 JavaScript 代码末尾加分号。
 - 小型个人创新练手项目可尝试使用 JavaScript 代码末尾不加分号的风格，更加清爽简练。
 
-## 五、文章来源
+## 五、提交规范
+
+https://www.npmjs.com/package/cz-conventional-emoji
+
+## 六、文章来源
 
 作者：卡喵妹
 链接：https://juejin.cn/post/6987349513836953607
