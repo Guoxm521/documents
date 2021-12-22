@@ -153,6 +153,24 @@ ALTER TABLE [table] DROP PRIMARY KEY;
   ALTER TABLE stu6 MODIFY id INT;
   ```
 
+## 四、基本查询
+
+- #### 简单查询
+
+  ```sql
+  SELECT  *  FROM product;  -- 查
+  SELECT pname 	c  FROM product WHERE pname='三只松鼠';
+  ```
+
   
 
+- #### 运算符操作
+
+- #### 排序查询
+
+- #### 聚合查询
+
+- #### 分组查询
+
+- #### 分页查询
 
