@@ -351,6 +351,8 @@ SELECT deptno,name,COUNT(1) AS total FROM dept3 INNER JOIN emp3  ON dept3.deptno
 > 外连接分为左外连接（left outer join）、右外连接(right outer join)，满外连接(full outer join)。
 > 注意：oracle里面有full join,可是在mysql对full join支持的不好。我们可以使用union来达到目的。
 
+![image-20211226112451882](https://gxming.oss-cn-shenzhen.aliyuncs.com/my_study_notesimage-20211226112451882.png)
+
 1. 左外连接
 
    ```sql
