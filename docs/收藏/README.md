@@ -170,3 +170,13 @@
 -  vue-lazyload :   https://www.npmjs.com/package/vue-lazyload
 -  vue-simple-upload :   https://github.com/saivarunk/vue-simple-upload
 - vxe-table
+
+
+
+## 技术社区
+
+- [hitup](https://hitup.wondertools.top/#/)
+- [少数派](https://sspai.com/)
+- [前端周报](https://github.com/FrontEndGitHub/FrontEndGitHub)
+- [阮一峰周报](https://github.com/ruanyf/weekly)
+
