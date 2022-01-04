@@ -255,7 +255,10 @@ select 字段1,字段2… from 表名 group by 分组字段 having 分组条件;
 #### 分页查询
 
 ```sql
--- 方式1-显示前n条select 字段1，字段2... from 表明 limit n-- 方式2-分页显示select 字段1，字段2... from 表明 limit m,nm: 整数，表示从第几条索引开始，计算方式 （当前页-1）*每页显示条数n: 整数，表示查询多少条数据
+-- 方式1-显示前n条
+select 字段1，字段2... from 表明 limit n
+-- 方式2-分页显示
+select 字段1，字段2... from 表明 limit m,nm: 整数，表示从第几条索引开始，计算方式 （当前页-1）*每页显示条数n: 整数，表示查询多少条数据
 ```
 
 #### INSERT INTO SELECT 
@@ -271,7 +274,26 @@ insert into Table2(field1,field2,…) select value1,value2,… from Table1 或�
 #### 创建数据
 
 ```sql
-CREATE TABLE IF NOT EXISTS dept3(	deptno VARCHAR(20) PRIMARY KEY,	name VARCHAR(20))-- 创建员工表CREATE TABLE IF NOT EXISTS emp3(  eid VARCHAR(20) PRIMARY KEY , -- 员工编号  ename VARCHAR(20), -- 员工名字  age INT,  -- 员工年龄  dept_id VARCHAR(20)  -- 员工所属部门);insert into dept3 values('1001','研发部');insert into dept3 values('1002','销售部');insert into dept3 values('1003','财务部');insert into dept3 values('1004','人事部');insert into emp3 values('1','乔峰',20, '1001');insert into emp3 values('2','段誉',21, '1001');insert into emp3 values('3','虚竹',23, '1001');insert into emp3 values('4','阿紫',18, '1001');insert into emp3 values('5','扫地僧',85, '1002');insert into emp3 values('6','李秋水',33, '1002');insert into emp3 values('7','鸠摩智',50, '1002'); insert into emp3 values('8','天山童姥',60, '1003');insert into emp3 values('9','慕容博',58, '1003');insert into emp3 values('10','丁春秋',71, '1005');
+CREATE TABLE IF NOT EXISTS dept3(	deptno VARCHAR(20) PRIMARY KEY,	name VARCHAR(20))
+-- 创建员工表
+CREATE TABLE IF NOT EXISTS emp3(  eid VARCHAR(20) PRIMARY KEY , -- 员工编号  
+                                ename VARCHAR(20), -- 员工名字  
+                                age INT,  -- 员工年龄  
+                                dept_id VARCHAR(20)  -- 员工所属部门);
+                                insert into dept3 values('1001','研发部');
+                                insert into dept3 values('1002','销售部');
+                                insert into dept3 values('1003','财务部');
+                                insert into dept3 values('1004','人事部');
+                                insert into emp3 values('1','乔峰',20, '1001');
+                                insert into emp3 values('2','段誉',21, '1001');
+                                insert into emp3 values('3','虚竹',23, '1001');
+                                insert into emp3 values('4','阿紫',18, '1001');
+                                insert into emp3 values('5','扫地僧',85, '1002');
+                                insert into emp3 values('6','李秋水',33, '1002');
+                                insert into emp3 values('7','鸠摩智',50, '1002');
+                                insert into emp3 values('8','天山童姥',60, '1003');
+                                insert into emp3 values('9','慕容博',58, '1003');
+                                insert into emp3 values('10','丁春秋',71, '1005');
 ```
 
 #### 交叉连接查询
@@ -282,7 +304,8 @@ CREATE TABLE IF NOT EXISTS dept3(	deptno VARCHAR(20) PRIMARY KEY,	name VARCHAR(2
 4. 笛卡尔积会产生很多冗余的数据，后期的其他查询可以在该集合的基础上进行条件筛选
 
 ```sql
--- 交叉查询SELECT * FROM dept3,emp3;
+-- 交叉查询
+SELECT * FROM dept3,emp3;
 ```
 
 #### 内连接查询
@@ -290,7 +313,15 @@ CREATE TABLE IF NOT EXISTS dept3(	deptno VARCHAR(20) PRIMARY KEY,	name VARCHAR(2
 ​		内连接查询 求多张表的交集
 
 ```sql
-隐式内连接（SQL92标准）：select * from A,B where 条件; 显示内连接（SQL99标准）：select * from A inner join B on 条件;-- 内连接查询-- 查询每个部门的所属员工 SELECT * FROM dept3 INNER JOIN emp3 WHERE dept3.deptno = emp3.dept_id;SELECT * FROM dept3,emp3 WHERE deptno  = dept_id;-- 查询研发部和销售部的所有员工SELECT * FROM dept3 INNER JOIN emp3 WHERE dept3.deptno = emp3.dept_id AND dept3.name IN('研发部','销售部');SELECT * FROM dept3 INNER JOIN emp3 WHERE dept3.deptno = emp3.dept_id AND ( dept3.name ='研发部' || dept3.name ='销售部'); -- 查询每个部门的人数 并且升序排序SELECT deptno,COUNT(1) AS total_count FROM dept3,emp3 WHERE dept3.deptno = emp3.dept_id GROUP BY deptno ORDER BY total_count;-- 查询人数大于等于3的部门，并按人数降序SELECT deptno,name,COUNT(1) AS total FROM dept3 INNER JOIN emp3  ON dept3.deptno = emp3.dept_id GROUP BY deptno HAVING total >= 3 ORDER BY total DESC;
+隐式内连接（SQL92标准）：select * from A,B where 条件; 显示内连接（SQL99标准）：select * from A inner join B on 条件;
+-- 内连接查询-- 查询每个部门的所属员工 
+SELECT * FROM dept3 INNER JOIN emp3 WHERE dept3.deptno = emp3.dept_id;SELECT * FROM dept3,emp3 WHERE deptno  = dept_id;
+-- 查询研发部和销售部的所有员工
+SELECT * FROM dept3 INNER JOIN emp3 WHERE dept3.deptno = emp3.dept_id AND dept3.name IN('研发部','销售部');SELECT * FROM dept3 INNER JOIN emp3 WHERE dept3.deptno = emp3.dept_id AND ( dept3.name ='研发部' || dept3.name ='销售部'); 
+-- 查询每个部门的人数 并且升序排序
+SELECT deptno,COUNT(1) AS total_count FROM dept3,emp3 WHERE dept3.deptno = emp3.dept_id GROUP BY deptno ORDER BY total_count;
+-- 查询人数大于等于3的部门，并按人数降序
+SELECT deptno,name,COUNT(1) AS total FROM dept3 INNER JOIN emp3  ON dept3.deptno = emp3.dept_id GROUP BY deptno HAVING total >= 3 ORDER BY total DESC;
 ```
 
 #### 外连接查询
@@ -303,7 +334,8 @@ CREATE TABLE IF NOT EXISTS dept3(	deptno VARCHAR(20) PRIMARY KEY,	name VARCHAR(2
 1. 左外连接
 
    ```sql
-   left outer joinselect * from A left outer join B on 条件;--  查询哪些部门有员工  哪些没有员工SELECT * FROM dept3 LEFT OUTER JOIN emp3 ON dept3.deptno = emp3.dept_id;
+   left outer joinselect * from A left outer join B on 条件;--  查询哪些部门有员工  哪些没有员工
+   SELECT * FROM dept3 LEFT OUTER JOIN emp3 ON dept3.deptno = emp3.dept_id;
    ```
 
 2. 右外连接
@@ -315,7 +347,8 @@ CREATE TABLE IF NOT EXISTS dept3(	deptno VARCHAR(20) PRIMARY KEY,	name VARCHAR(2
 3. 满外连接
 
    ```sql
-   full outer joinselect * from A full outer join B on 条件;-- 使用union关键字实现左外连接和右外连接的并集SELECT * FROM dept3 LEFT OUTER JOIN emp3 ON dept3.deptno = emp3.dept_idUNIONSELECT * FROM dept3 RIGHT OUTER JOIN emp3 ON dept3.deptno = emp3.dept_id;
+   full outer joinselect * from A full outer join B on 条件;-- 使用union关键字实现左外连接和右外连接的并集
+   SELECT * FROM dept3 LEFT OUTER JOIN emp3 ON dept3.deptno = emp3.dept_idUNIONSELECT * FROM dept3 RIGHT OUTER JOIN emp3 ON dept3.deptno = emp3.dept_id;
    ```
 
 #### 子查询
@@ -330,7 +363,10 @@ CREATE TABLE IF NOT EXISTS dept3(	deptno VARCHAR(20) PRIMARY KEY,	name VARCHAR(2
   - 多行多列：查询返回的结果是一张临时表
 
   ```sql
-  -- 查询年龄最大的员工信息，显示信息包含员工号、员工名字，员工年龄SELECT eid,ename,age FROM emp3 WHERE age = (SELECT MAX(age) from emp3);-- 查询研发部20岁以下的员工信息,包括员工号、员工名字，部门名字SELECT eid,ename,age,name FROM (SELECT * FROM dept3 WHERE name = '研发部')t1,(SELECT * FROM emp3 WHERE age < 20) t2;
+  -- 查询年龄最大的员工信息，显示信息包含员工号、员工名字，员工年龄
+  SELECT eid,ename,age FROM emp3 WHERE age = (SELECT MAX(age) from emp3);
+  -- 查询研发部20岁以下的员工信息,包括员工号、员工名字，部门名字
+  SELECT eid,ename,age,name FROM (SELECT * FROM dept3 WHERE name = '研发部')t1,(SELECT * FROM emp3 WHERE age < 20) t2;
   ```
 
   
@@ -347,7 +383,11 @@ CREATE TABLE IF NOT EXISTS dept3(	deptno VARCHAR(20) PRIMARY KEY,	name VARCHAR(2
     注意，EXISTS关键字，比IN关键字的运算效率高，因此，在实际开发中，特别是大数据量时，推荐使用EXISTS关键字
 
   ```sql
-  --查询年龄大于1003部门所有年龄的员工信息SELECT * FROM emp3 WHERE age > ALL(SELECT age FROM emp3 WHERE dept_id = '1003');-- 查询研发部和销售部的员工信息，包含员工号、员工名字SELECT eid,ename FROM emp3 WHERE dept_id IN (SELECT deptno FROM dept3 WHERE name IN ('研发部','销售部'));-- 查询60岁以上的员工  有则输出SELECT * FROM emp3  AS a WHERE EXISTS(SELECT * FROM emp3 AS b WHERE a.age > 60);
+  --查询年龄大于1003部门所有年龄的员工信息SELECT * FROM emp3 WHERE age > ALL(SELECT age FROM emp3 WHERE dept_id = '1003');
+  -- 查询研发部和销售部的员工信息，包含员工号、员工名字
+  SELECT eid,ename FROM emp3 WHERE dept_id IN (SELECT deptno FROM dept3 WHERE name IN ('研发部','销售部'));
+  -- 查询60岁以上的员工  有则输出
+  SELECT * FROM emp3  AS a WHERE EXISTS(SELECT * FROM emp3 AS b WHERE a.age > 60);
   ```
 
 #### 表自关联
