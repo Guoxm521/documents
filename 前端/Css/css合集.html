@@ -8,7 +8,7 @@
     
     <meta name="description" content="">
     
-    <link rel="preload" href="/assets/css/0.styles.c026dc41.css" as="style"><link rel="preload" href="/assets/js/app.a1c75295.js" as="script"><link rel="preload" href="/assets/js/2.0ecc2c56.js" as="script"><link rel="preload" href="/assets/js/8.9ee3aa58.js" as="script"><link rel="prefetch" href="/assets/js/10.ce95ba69.js"><link rel="prefetch" href="/assets/js/11.0c579928.js"><link rel="prefetch" href="/assets/js/12.491ec8dd.js"><link rel="prefetch" href="/assets/js/13.3fd600ab.js"><link rel="prefetch" href="/assets/js/14.45cb1d71.js"><link rel="prefetch" href="/assets/js/15.0e070fff.js"><link rel="prefetch" href="/assets/js/16.53585b35.js"><link rel="prefetch" href="/assets/js/17.0a4fad8c.js"><link rel="prefetch" href="/assets/js/18.350eb79b.js"><link rel="prefetch" href="/assets/js/19.3d6e4d07.js"><link rel="prefetch" href="/assets/js/20.e846326a.js"><link rel="prefetch" href="/assets/js/21.47e2dceb.js"><link rel="prefetch" href="/assets/js/22.6af8f751.js"><link rel="prefetch" href="/assets/js/23.c7e3a0d9.js"><link rel="prefetch" href="/assets/js/24.3e1a1fd3.js"><link rel="prefetch" href="/assets/js/25.5d5b6c59.js"><link rel="prefetch" href="/assets/js/26.2381ff64.js"><link rel="prefetch" href="/assets/js/27.595c1366.js"><link rel="prefetch" href="/assets/js/3.69057267.js"><link rel="prefetch" href="/assets/js/4.b7b11b9d.js"><link rel="prefetch" href="/assets/js/5.0992a5ae.js"><link rel="prefetch" href="/assets/js/6.a93660e7.js"><link rel="prefetch" href="/assets/js/7.a6f174f9.js"><link rel="prefetch" href="/assets/js/9.7e41ac70.js">
+    <link rel="preload" href="/assets/css/0.styles.c026dc41.css" as="style"><link rel="preload" href="/assets/js/app.374addf4.js" as="script"><link rel="preload" href="/assets/js/2.0ecc2c56.js" as="script"><link rel="preload" href="/assets/js/8.a8fa7adf.js" as="script"><link rel="prefetch" href="/assets/js/10.26828de3.js"><link rel="prefetch" href="/assets/js/11.17a873d8.js"><link rel="prefetch" href="/assets/js/12.491ec8dd.js"><link rel="prefetch" href="/assets/js/13.3fd600ab.js"><link rel="prefetch" href="/assets/js/14.2e9394ee.js"><link rel="prefetch" href="/assets/js/15.2ed01859.js"><link rel="prefetch" href="/assets/js/16.7de9f538.js"><link rel="prefetch" href="/assets/js/17.68bb3a96.js"><link rel="prefetch" href="/assets/js/18.3de0b925.js"><link rel="prefetch" href="/assets/js/19.c7c88814.js"><link rel="prefetch" href="/assets/js/20.e846326a.js"><link rel="prefetch" href="/assets/js/21.47e2dceb.js"><link rel="prefetch" href="/assets/js/22.6af8f751.js"><link rel="prefetch" href="/assets/js/23.c7e3a0d9.js"><link rel="prefetch" href="/assets/js/24.e6075142.js"><link rel="prefetch" href="/assets/js/25.4a8b5654.js"><link rel="prefetch" href="/assets/js/26.2381ff64.js"><link rel="prefetch" href="/assets/js/27.595c1366.js"><link rel="prefetch" href="/assets/js/3.69057267.js"><link rel="prefetch" href="/assets/js/4.b7b11b9d.js"><link rel="prefetch" href="/assets/js/5.0992a5ae.js"><link rel="prefetch" href="/assets/js/6.a93660e7.js"><link rel="prefetch" href="/assets/js/7.a6f174f9.js"><link rel="prefetch" href="/assets/js/9.7e41ac70.js">
     <link rel="stylesheet" href="/assets/css/0.styles.c026dc41.css">
   </head>
   <body>
@@ -89,16 +89,16 @@
 <span class="token punctuation">}</span>
 复制代码
 </code></pre></div><p><strong>Q1：因为滚动内容一般都不是固定的，需要接口获取，所以内容区的宽度也就无法确定，这里使用 CSS3 的新特性 width: fit-content，使宽度自适应内部内容，至于为什么这里需要设置宽度属性，见下文</strong></p> <p><strong>Q2：设置动画。由于内容区实际有 AB 两份，B 是 A 的副本，所以一段动画的终点就是内容区向左位移 50%（内容区 width 的 50%），这也就解释了 Q1 中为什么一定要设置宽度属性了：如果不设置，width 的值不会随内容撑开，此时的 50%是父容器 width 的 50%，终点值就错了</strong></p> <p><strong>Q3：为什么 animation 不采用简写形式，而是拆开？ 因为 animation-duration 动画时长不能固定，如果接口获取到的数据很多，动画时长固定 5s，那滚动地得有多快？所以 animation-duration 采用属性绑定形式，根据数据长度进行延长 :style=&quot;animation-duration: ${luckyUsers.length * 4}s;&quot; 具体乘几看自己喜欢。 我也试过采用简写形式进行 style 属性绑定，结果发现动画不生效。</strong></p> <h4 id="_3、js-部分"><a href="#_3、js-部分" class="header-anchor">#</a> 3、JS 部分</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
-	name<span class="token operator">:</span> <span class="token string">&quot;app&quot;</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;app&quot;</span><span class="token punctuation">,</span>
 	<span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 		<span class="token keyword">return</span> <span class="token punctuation">{</span>
-			luckyUsers<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+			<span class="token literal-property property">luckyUsers</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 		<span class="token punctuation">}</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span><span class="token punctuation">,</span>
 	<span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 		<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getLuckyUsersList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span><span class="token punctuation">,</span>
-	methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
 		<span class="token function">getLuckyUsersList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 			<span class="token comment">//调接口拿取数据</span>
 			<span class="token keyword">this</span><span class="token punctuation">.</span>luckyUsers <span class="token operator">=</span> <span class="token punctuation">[</span>
@@ -174,6 +174,6 @@
       <a href="/前端/Css/css常用命名.html" class="prev">
         css常用命名
       </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
-    <script src="/assets/js/app.a1c75295.js" defer></script><script src="/assets/js/2.0ecc2c56.js" defer></script><script src="/assets/js/8.9ee3aa58.js" defer></script>
+    <script src="/assets/js/app.374addf4.js" defer></script><script src="/assets/js/2.0ecc2c56.js" defer></script><script src="/assets/js/8.a8fa7adf.js" defer></script>
   </body>
 </html>
