@@ -12,6 +12,18 @@
 
 - [美团技术团队](https://tech.meituan.com/)
 
+- [TNT-Weekly](https://github.com/tnfe/TNT-Weekly)
+
+- [ruanyf/weekly](https://github.com/ruanyf/weekly)
+
+- [有赞技术团队](https://tech.youzan.com/)
+
+- [腾讯云实验室](https://cloud.tencent.com/developer/labs/gallery)
+
+- [bestofjs.org/](https://bestofjs.org/)
+
+- https://risingstars.js.org/2020/en
+
 ## JS插件
 
 - [decimal](https://mikemcl.github.io/decimal.js/#toFixed) JavaScript的任意精度Decimal类型。
@@ -19,6 +31,7 @@
 - [BetterScroll.js](https://better-scroll.github.io/docs/zh-CN/)   为移动端（已支持 PC）各种滚动场景提供丝滑的滚动效果。
 - [store.js](https://www.npmjs.com/package/storejs)  store.js 是一个兼容所有浏览器的 LocalStorage 包装器
 - [mockjs](http://mockjs.com/) 生成随机数据，拦截 Ajax 请求
+- [在线工具](https://tool.lu/)
 
 ## JS
 
@@ -31,8 +44,8 @@
 - [MDN  网站](https://developer.mozilla.org/zh-CN/)
 - [clean-code-javascript 网站：](https://github.com/ryanmcdermott/clean-code-javascript)
 - [TypeScript 入门教程 网站：](https://ts.xcatliu.com)
-
 - [w3school   网站](https://www.w3school.com.cn/js/index.asp)
+- [lighthouse](https://github.com/GoogleChrome/lighthouse)
 
 ## CSS
 

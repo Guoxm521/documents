@@ -475,4 +475,24 @@ SELECT ename FROM emp;
   -- 删除视图时，只能删除视图的定义，不会删除数据。
   ```
 
-  
+
+## 七、函数
+
+#### 数学函数
+
+| **函数名**                             | **描述**                    | **实例**                                                     |
+| -------------------------------------- | --------------------------- | ------------------------------------------------------------ |
+| **ABS(x)**                             | 返回 x 的绝对值             | 返回 -1 的绝对值：SELECT ABS(-1) -- 返回1                    |
+| **CEIL(x)**                            | 返回大于或等于 x 的最小整数 | SELECT CEIL(1.5) -- 返回2                                    |
+| **FLOOR(x)**                           | 返回小于或等于 x 的最大整数 | 小于或等于 1.5 的整数：SELECT FLOOR(1.5) -- 返回1            |
+| **GREATEST(expr1, expr2, expr3, ...)** | 返回列表中的最大值          | 返回以下数字列表中的最大值：SELECT GREATEST(3, 12, 34, 8, 25); -- 34返回以下字符串列表中的最大值：SELECT GREATEST("Google", "Runoob", "Apple");  -- Runoob |
+| **LEAST(expr1, expr2, expr3, ...)**    | 返回列表中的最小值          | 返回以下数字列表中的最小值：SELECT LEAST(3, 12, 34, 8, 25); -- 3返回以下字符串列表中的最小值：SELECT LEAST("Google", "Runoob", "Apple");  -- Apple |
+| **MAX(expression)** | 返回字段 expression 中的最大值 | 返回数据表 Products 中字段 Price 的最大值：SELECT MAX(Price) AS LargestPrice FROM Products; |
+| **MIN(expression)** | 返回字段 expression 中的最小值 | 返回数据表 Products 中字段 Price 的最小值：SELECT MIN(Price) AS MinPrice FROM Products; |
+| **MOD(x,y)**        | 返回 x 除以 y 以后的余数       | 5 除于 2 的余数：SELECT MOD(5,2) -- 1                        |
+| **PI()**            | 返回圆周率(3.141593）          | SELECT PI() --3.141593                                       |
+| **POW(x,y)**        | 返回 x 的 y 次方               | 2 的 3 次方：SELECT POW(2,3) -- 8                            |
+| **RAND()**        | 返回 0 到 1 的随机数                                         | SELECT RAND() --0.93099315644334    |
+| **ROUND(x)**      | 返回离 x 最近的整数（遵循四舍五入）                          | SELECT ROUND(1.23456) --1           |
+| **ROUND(x,y)**    | 返回指定位数的小数（遵循四舍五入）                           | SELECT ROUND(1.23456,3) –1.235      |
+| **TRUNCATE(x,y)** | 返回数值 x 保留到小数点后 y 位的值（与 ROUND 最大的区别是不会进行四舍五入） | SELECT TRUNCATE(1.23456,3) -- 1.234 |
