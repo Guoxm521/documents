@@ -74,3 +74,6 @@
 - [cz-conventional-emoji](https://www.npmjs.com/package/cz-conventional-emoji)
 - [VS Code 是如何优化启动性能的](https://fed.taobao.org/blog/taofed/do71ct/wpsf10/?spm=taofed.blogs.blog-list.1.31905ac8ZCJlFf)
 
+### 2022-01-13
+
+- [写一个cli工具](https://mp.weixin.qq.com/s/Il0oA09wNw8gag94WabbqQ)
