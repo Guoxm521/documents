@@ -385,5 +385,16 @@ SELECT deptno,name,COUNT(1) AS total FROM dept3 INNER JOIN emp3  ON dept3.deptno
 
 #### 表自关联
 
+## 六、操作
 
+#### 导入vsv格式数据
+
+```sql
+DELETE FROM gxm_poetry_tang;  
+truncate table gxm_poetry_tang;
+SET GLOBAL local_infile=1
+load data local  infile 'E:/tang.csv' into table gxm_poetry_tang  fields terminated by ',' optionally enclosed by '"'   lines terminated by '\r\n' (title,dynasty,author,content);
+SHOW VARIABLES LIKE "secure_file_priv"
+SELECT * from gxm_poetry_tang WHERE author = '李白' AND title = '静夜思';
+```
 
