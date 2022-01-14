@@ -392,13 +392,6 @@ SELECT deptno,name,COUNT(1) AS total FROM dept3 INNER JOIN emp3  ON dept3.deptno
 
 #### 表自关联
 
-## 六、操作
-- MySQL有时在信息查询时需要进行对表自身进行关联查询，即一张表自己和自己关联，一张表当成多张表来用。注意自关联时表必须给表起别名。
-
-  ```sql
-  select 字段列表 from 表1 a , 表1 b where 条件;或者 select 字段列表 from 表1 a [left] join 表1 b on 条件;SELECT b.eid,b.ename,b.manager_id,a.ename FROM t_sanguo AS a, t_sanguo AS b WHERE a.eid = b.manager_id;
-  ```
-
 ## 六、视图
 
 #### 定义
@@ -507,3 +500,12 @@ SELECT * from gxm_poetry_tang WHERE author = '李白' AND title = '静夜思';
 | **ROUND(x)**      | 返回离 x 最近的整数（遵循四舍五入）                          | SELECT ROUND(1.23456) --1           |
 | **ROUND(x,y)**    | 返回指定位数的小数（遵循四舍五入）                           | SELECT ROUND(1.23456,3) –1.235      |
 | **TRUNCATE(x,y)** | 返回数值 x 保留到小数点后 y 位的值（与 ROUND 最大的区别是不会进行四舍五入） | SELECT TRUNCATE(1.23456,3) -- 1.234 |
+
+## 八、操作
+
+- MySQL有时在信息查询时需要进行对表自身进行关联查询，即一张表自己和自己关联，一张表当成多张表来用。注意自关联时表必须给表起别名。
+
+  ```sql
+  select 字段列表 from 表1 a , 表1 b where 条件;或者 select 字段列表 from 表1 a [left] join 表1 b on 条件;SELECT b.eid,b.ename,b.manager_id,a.ename FROM t_sanguo AS a, t_sanguo AS b WHERE a.eid = b.manager_id;
+  ```
+
