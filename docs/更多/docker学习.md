@@ -212,6 +212,8 @@ docker image load -i .\mybusybox.image
 
 
 
+## 三、实际操作
+
 ### 使用nginx
 
 命令：docker run --name nginx -p 80:80 -v /home/docker-nginx/nginx.conf:/etc/nginx/nginx.conf -v /home/docker-nginx/log:/var/log/nginx -v /home/docker-nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf -d nginx
@@ -224,4 +226,60 @@ docker image load -i .\mybusybox.image
 
 -v 挂载文件用的，第一个-v 表示将你本地的nginx.conf覆盖你要起启动的容器的nginx.conf文件，第二个表示将日志文件进行挂载，就是把nginx服务器的日志写到你docker宿主机的/home/docker-nginx/log/下面
 
-# 
+### 安装mysql
+
+- **docker search mysql** 查询mysql
+
+- **docker pull mysql**  拉去镜像  ，也可以指定版本镜像`docker pull mysql:8.0.27`
+
+- **docker images**  查看镜像
+
+- 在opt目录下创建新文件夹
+
+  ```shell
+  命令：cd /opt/
+  命令：mkdir mysql_docker
+  命令：cd mysql_docker/
+  命令：echo $PWD
+  ```
+
+- 启动mysql容器
+
+  ```
+  docker run --name mysqlDemoServer -v $PWD/conf:/etc/mysql/conf.d -v $PWD/logs:/logs -v $PWD/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d -i -p 3306:3306 mysql:latest
+  ```
+
+  | Options | Mean                                               |
+  | ------- | -------------------------------------------------- |
+  | -i      | 以交互模式运行容器，通常与 -t 同时使用；           |
+  | -t      | 为容器重新分配一个伪输入终端，通常与 -i 同时使用； |
+  | -d      | 后台运行容器，并返回容器ID；                       |
+
+- 进入mysql 容器 ，并登入mysql
+
+  `命令：`**docker exec -it mysqlserver bash**
+
+  `命令：`**mysql -uroot -p**
+
+- 开启远程访问权限 
+
+  > 须先到服务器开启3306端口
+
+  `命令：`**use mysql;**
+
+  `命令：`**select host,user from user;**
+
+  `命令：`**ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';**
+
+  `命令：`**flush privileges;**
+
+- 查看日志 **docker logs -f --tail 10 a4dac74d48f7**
+
+- 查看进程 **docker ps -a**
+
+- 重启docker **systemctl restart docker**
+
+- 查看docker是否启动成功 **ps -ef|grep docker**
+
+- 关闭docker **systemctl stop docker**
+
