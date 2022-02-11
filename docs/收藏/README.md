@@ -172,19 +172,18 @@
 ## 工具类轮子
 
 -  lodash.js ：  https://www.lodashjs.com/
-
-- Day.js  ： https://dayjs.fenxianglu.cn/ 
+-  Day.js  ： https://dayjs.fenxianglu.cn/ 
 -  timeago.js ：  https://github.com/hustcc/timeago.js
-- echarts  ：  https://echarts.apache.org/zh/index.html
+-  echarts  ：  https://echarts.apache.org/zh/index.html
 -  Meditor.md  :  https://pandao.github.io/editor.md/
 -  validator.js :   https://github.com/validatorjs/validator.js
-
-- vue-draggable ：  https://www.itxst.com/vue-draggable/tutorial.html
+-  vue-draggable ：  https://www.itxst.com/vue-draggable/tutorial.html
 -  vue-qr :   https://www.npmjs.com/package/vue-qr
 -  vue-cropper :   https://github.com/xyxiao001/vue-cropper
 -  vue-lazyload :   https://www.npmjs.com/package/vue-lazyload
 -  vue-simple-upload :   https://github.com/saivarunk/vue-simple-upload
-- vxe-table
+-  lucky-canvas:https://100px.net/
+- vxe-table:https://vxetable.cn/
 
 
 
@@ -205,3 +204,5 @@ icon：https://remixicon.com/ 、https://iconic.app/aerial/ 、 https://fontawes
 动画库：vue版本https://motion.vueuse.org/ 、react版本https://motion.ant.design/language/transition-cn
 美工吧：https://www.meigong8.com/
 css指南集合：https://tsejx.github.io/css-guidebook/concept/selector/ 、https://chokcoco.github.io/CSS-Inspiration/#/
+
+xd资源导航网站  https://xd.94xy.com/resources.html

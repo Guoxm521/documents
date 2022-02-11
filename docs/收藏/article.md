@@ -60,11 +60,11 @@
 
 - [gulp本地开发和上线打包记录](https://www.rinbowli.cn/article/5ff2c62f2191750ca0499915)
 
-### 2021-11-5
+### 2021-11-05
 
 - [记录windows中docker的基本使用方法](https://juejin.cn/post/6844903844451713031#comment)
 
-### 2021-1-18
+### 2021-01-18
 
 - ​	[vue实现前台生成word并下载，并且可实现批量打包下载](https://blog.csdn.net/baidu_36668721/article/details/115211615?spm=1001.2014.3001.5501)
 - [vue + word 导出word](https://gitee.com/xhxdd/vue-export-word)
@@ -74,10 +74,14 @@
 - [cz-conventional-emoji](https://www.npmjs.com/package/cz-conventional-emoji)
 - [VS Code 是如何优化启动性能的](https://fed.taobao.org/blog/taofed/do71ct/wpsf10/?spm=taofed.blogs.blog-list.1.31905ac8ZCJlFf)
 
-#### 2021-12-27
+### 2021-12-27
 
 - [git-cz](https://www.npmjs.com/package/git-cz) npm 代码规范插件
 
 ### 2022-01-13
 
 - [写一个cli工具](https://mp.weixin.qq.com/s/Il0oA09wNw8gag94WabbqQ)
+
+### 2022-02-10
+
+- [10个常用的github仓库](https://mp.weixin.qq.com/s/v6cn8ezmtVqd77xPqfY5NA) 微信文章
