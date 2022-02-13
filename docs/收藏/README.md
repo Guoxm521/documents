@@ -2,15 +2,15 @@
 
 ### 01.工具轮子
 
--   [lodash.js ](https://www.lodashjs.com/)
+-  [lodash.js ](https://www.lodashjs.com/)
 -  [Day.js  ](https://dayjs.fenxianglu.cn/)
 -  [timeago.js ](https://github.com/hustcc/timeago.js)
 -  [Meditor.md](https://pandao.github.io/editor.md/)
 -  [validator.js ](https://github.com/validatorjs/validator.js)
--   [vue-draggable](https://www.itxst.com/vue-draggable/tutorial.html)
+-  [vue-draggable](https://www.itxst.com/vue-draggable/tutorial.html)
 -  [vue-cropper ](https://github.com/xyxiao001/vue-cropper)
 -  [vue-lazyload](https://www.npmjs.com/package/vue-lazyload)
--   [vue-simple-upload ](https://github.com/saivarunk/vue-simple-upload)
+-  [vue-simple-upload ](https://github.com/saivarunk/vue-simple-upload)
 -  [vxe-table](https://gitee.com/xuliangzhan_admin/vxe-table)
 -  [echarts](https://echarts.apache.org/zh/index.html)
 -  [decimal | JavaScript的任意精度Decimal类型](https://mikemcl.github.io/decimal.js/#toFixed)
