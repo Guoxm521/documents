@@ -144,12 +144,12 @@
 ### 02.图标&图片&SVG
 
 - [iconfont | 阿里巴巴矢量图标库](https://www.iconfont.cn/)
-
 - [ikonate | 免费的icons图标库](https://ikonate.com/) 
 - https://remixicon.com/
 - [Undraw | SVG 插图资源是海量的](https://undraw.co/)  
 - [Aerial — Iconic | 图标库](https://iconic.app/aerial/)
 - [igoutu | 插画图标库，部分免费](https://igoutu.cn/illustrations/style--pale)
+- [免费的人物插画库](https://www.openpeeps.com/?ref=prototyprio)
 
 ### 03.设计工具
 
@@ -172,10 +172,12 @@
 - [少数派](https://sspai.com/)
 - [前端周报](https://github.com/FrontEndGitHub/FrontEndGitHub)
 - [阮一峰周报](https://github.com/ruanyf/weekly)
+- [那些免费的砖 | 开发设计相关的资源网站](https://www.thosefree.com/)
 
 ## 七、综合导航
 
 - [设计导航](http://hao.shejidaren.com/) 
+- [mf设计师导航](https://mfchange.cn/index.html)
 - [uisdc](https://hao.uisdc.com/) 设计师导航
 - [美工吧  设计相关](https://www.meigong8.com/)
 - [考拉新媒体](https://www.kaolamedia.com/)
