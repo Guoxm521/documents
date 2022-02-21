@@ -136,6 +136,7 @@ docker container rm <name or ID>
 - 容器的列出（up和exit）：`docker container ls -a` 简写方法` docker ps -a`
 - 容器的停止 ：` docker container stop `简写方法 `docker stop`
 - 容器的删除：`docker container rm` 简写方法` docker rm`
+- 容器重命名 `docker rename [old_name|container ID] Information-platform-demo`
 
 ### 查看所有的容器ID
 
