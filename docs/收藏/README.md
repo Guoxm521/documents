@@ -42,7 +42,7 @@
 
 - [npkill](https://npkill.js.org/) 快速查找和轻松删除 node*modules 文件夹的工具*
 - [regulex](https://jex.im/regulex/#!flags=&re=%5E(a%7Cb)*%3F%24)  可视化正则表达式调试工具
-- [makeapie](https://www.makeapie.com/explore.html)  寻找echart灵感的网站
+- [makeapie](https://www.makeapie.cn)  寻找echart灵感的网站
 - [地图选择器](http://datav.aliyun.com/tools/atlas/index.html) 地图选择生成json文件
 - [ tool.lu  |  程序员在线工具大全   ](https://tool.lu/)
 - [CODEIF | 变量方法起名工具  人工智能加持  ](https://unbug.github.io/codelf)
