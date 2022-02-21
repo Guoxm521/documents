@@ -85,3 +85,8 @@
 ### 2022-02-10
 
 - [10个常用的github仓库](https://mp.weixin.qq.com/s/v6cn8ezmtVqd77xPqfY5NA) 微信文章
+
+### 2022-02-11
+
+- https://vvbin.cn/next/#/dashboard/workbench
+- https://soybean.pro/#/dashboard/analysis
