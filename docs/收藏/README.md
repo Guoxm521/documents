@@ -123,21 +123,6 @@
 - https://tsejx.github.io/css-guidebook/concept/selector/)
 - [XD软件插件下载](https://xd.94xy.com/)
 
-<<<<<<< HEAD
--  lodash.js ：  https://www.lodashjs.com/
--  Day.js  ： https://dayjs.fenxianglu.cn/ 
--  timeago.js ：  https://github.com/hustcc/timeago.js
--  echarts  ：  https://echarts.apache.org/zh/index.html
--  Meditor.md  :  https://pandao.github.io/editor.md/
--  validator.js :   https://github.com/validatorjs/validator.js
--  vue-draggable ：  https://www.itxst.com/vue-draggable/tutorial.html
--  vue-qr :   https://www.npmjs.com/package/vue-qr
--  vue-cropper :   https://github.com/xyxiao001/vue-cropper
--  vue-lazyload :   https://www.npmjs.com/package/vue-lazyload
--  vue-simple-upload :   https://github.com/saivarunk/vue-simple-upload
--  lucky-canvas:https://100px.net/
-- vxe-table:https://vxetable.cn/
-=======
 ## 五、UI设计
 
 ### 01.颜色相关
@@ -155,7 +140,7 @@
 - [uigradients](https://uigradients.com/#SummerDog) 渐变色网站
 - [Adobe color](https://color.adobe.com/zh/create/color-wheel) 
 - [arco.design](https://arco.design/palette/list)
->>>>>>> 02502a3e62d9f0fa0f53f918b9fe4efb88bc0730
+
 
 ### 02.图标&图片&SVG
 
@@ -213,16 +198,3 @@
 - [科技爱好者周刊 | 阮一峰每周的周刊](https://github.com/ruanyf/weekly)
 - [中国数字科技馆](https://www.cdstm.cn/)
 
-<<<<<<< HEAD
-pure-admin源码地址：https://github.com/xiaoxian521/vue-pure-admin 或 https://gitee.com/yiming_chang/vue-pure-admin （小手点点star哦😄）
-站酷：https://www.zcool.com.cn/search/folder/fix?word=%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F
-icon：https://remixicon.com/ 、https://iconic.app/aerial/ 、 https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free
-调色板：https://arco.design/palette/list
-插画：https://undraw.co/illustrations 、 https://icons8.cn/illustrations/style--pale
-动画库：vue版本https://motion.vueuse.org/ 、react版本https://motion.ant.design/language/transition-cn
-美工吧：https://www.meigong8.com/
-css指南集合：https://tsejx.github.io/css-guidebook/concept/selector/ 、https://chokcoco.github.io/CSS-Inspiration/#/
-
-xd资源导航网站  https://xd.94xy.com/resources.html
-=======
->>>>>>> 02502a3e62d9f0fa0f53f918b9fe4efb88bc0730
