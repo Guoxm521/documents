@@ -97,3 +97,8 @@
 
 - [写给前端的 Docker 上手指南 | 微信文章](https://mp.weixin.qq.com/s/5LLX__x-yamgR83e0NKAtA)
 - [阿里低代码引擎](http://lowcode-engine.cn/)
+
+### 2022-02-27
+
+- [Vite2 + Vue3 + TypeScript + Pinia 搭建一套企业级的开发脚手架 | 掘金文章](https://juejin.cn/post/7036745610954801166)
+

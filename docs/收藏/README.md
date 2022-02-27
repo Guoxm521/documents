@@ -151,6 +151,7 @@
 - [Aerial — Iconic | 图标库](https://iconic.app/aerial/)
 - [igoutu | 插画图标库，部分免费](https://igoutu.cn/illustrations/style--pale)
 - [免费的人物插画库](https://www.openpeeps.com/?ref=prototyprio)
+- [iconpark | 丰富多彩的资源库免费使用图标网站](https://iconpark.oceanengine.com/home)
 
 ### 03.设计工具
 
