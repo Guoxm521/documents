@@ -110,4 +110,6 @@
 ### 2022-03-11
 
 - [45个git常用场景 | 微信文章](https://mp.weixin.qq.com/s/0PKUY7Nh2oSqiwovL6zG8A)
+- [安装electron，与安装失败问题的解决方案](https://blog.yodfz.com/frontEnd/2020/11/35.html)
+- [前端杂烩 | 掘金文章   强烈推荐](https://juejin.cn/post/7069468539412807693#heading-27)
 
