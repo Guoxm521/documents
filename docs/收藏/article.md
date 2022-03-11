@@ -103,6 +103,11 @@
 
 - [Vite2 + Vue3 + TypeScript + Pinia 搭建一套企业级的开发脚手架 | 掘金文章](https://juejin.cn/post/7036745610954801166)
 
+### 2022-03-06
+
+- [vue3 父子组件传值(v-model避坑指南)](https://blog.csdn.net/dujing_15620553271/article/details/116130968)
+
 ### 2022-03-11
 
 - [45个git常用场景 | 微信文章](https://mp.weixin.qq.com/s/0PKUY7Nh2oSqiwovL6zG8A)
+
