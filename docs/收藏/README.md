@@ -19,6 +19,8 @@
 -  [mockjs｜生成随机数据，拦截 Ajax 请求](http://mockjs.com/) 
 -  [今日诗词｜每次返回一句诗词，根据时间、地点、天气、事件智能推荐](https://www.jinrishici.com/)  
 -  [motion vue｜vue组件动画库](https://motion.vueuse.org/) 
+-  [v-md-edtior | vue3的markdown编辑器](https://www.npmjs.com/package/@kangc/v-md-editor)
+-  [md-editor-v3 |　vue3的markdown富文本编辑器](https://imzbf.github.io/md-editor-v3/index)
 
 ### 02.文档教程
 
@@ -155,6 +157,7 @@
 - [igoutu | 插画图标库，部分免费](https://igoutu.cn/illustrations/style--pale)
 - [免费的人物插画库](https://www.openpeeps.com/?ref=prototyprio)
 - [iconpark | 丰富多彩的资源库免费使用图标网站](https://iconpark.oceanengine.com/home)
+- [storySet | 免费的插画图片网站](https://storyset.com/)
 
 ### 03.设计工具
 
@@ -203,3 +206,11 @@
 - [科技爱好者周刊 | 阮一峰每周的周刊](https://github.com/ruanyf/weekly)
 - [中国数字科技馆](https://www.cdstm.cn/)
 
+
+
+## 九、TODO
+
+- [mochajs | 前端测试网站](https://mochajs.cn/#installation)
+- [jest | 前端测试框架](https://www.jestjs.cn/)
+
+- [Sentry  错误日志监控 ](https://zhuanlan.zhihu.com/p/161276192)

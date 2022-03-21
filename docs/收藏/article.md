@@ -113,3 +113,15 @@
 - [安装electron，与安装失败问题的解决方案](https://blog.yodfz.com/frontEnd/2020/11/35.html)
 - [前端杂烩 | 掘金文章   强烈推荐](https://juejin.cn/post/7069468539412807693#heading-27)
 
+### 2022-03-16
+
+- [knexjs |　数据库的查询工具](https://knexjs.org/)
+
+### 2022-03-18
+
+- [pdman | 数据库管理项目  gitee](https://gitee.com/robergroup/pdman)
+
+### 2022-03-21
+
+- [微前端qiankun+docker+nginx配合gitlab-ci/cd的自动化部署的实现 | 掘金文章](https://juejin.cn/post/6981339862901194759)
+
