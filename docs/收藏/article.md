@@ -125,3 +125,6 @@
 
 - [微前端qiankun+docker+nginx配合gitlab-ci/cd的自动化部署的实现 | 掘金文章](https://juejin.cn/post/6981339862901194759)
 
+### 2022-04-05
+
+- [go-gin-example](https://github.com/eddycjy/go-gin-example.git)

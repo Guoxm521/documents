@@ -80,6 +80,7 @@
 - [DevDocs](https://devdocs.io/)  是 Web 开发技术文档，是非常不错的学习手册！(英文的)
 - [iHateRegex](https://ihateregex.io/)  正则表达式查询
 - [nginx-tutorial](https://dunwu.github.io/nginx-tutorial/#/)  一个Nginx极简教程
+- [jstips | js相关的小技巧](https://www.jstips.co/zh_CN/javascript/)
 
 ### 02.TS教程
 
@@ -173,6 +174,7 @@
 - [美叶](https://www.meiye.art/) ui设计页面
 - [collectui](https://collectui.com/designs)  ui设计参考网站
 - [站酷网](https://www.zcool.com.cn/home)
+- [好学UI](https://hao.xueui.cn)
 
 ## 六、技术社区
 

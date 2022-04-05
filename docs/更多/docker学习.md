@@ -273,6 +273,34 @@ nginx项目配置：
 
 -v 挂载文件用的，第一个-v 表示将你本地的nginx.conf覆盖你要起启动的容器的nginx.conf文件，第二个表示将日志文件进行挂载，就是把nginx服务器的日志写到你docker宿主机的/home/docker-nginx/log/下面
 
+**nginx容器  代理到宿主机服务**
+
+1. 在安装Docker的时候，会在宿主机安装一个虚拟网关 docker0，查询docker0的IP地址
+
+   ```js
+   ip addr show docker0
+   ```
+
+2. ```js
+   # 注意 upstream 没有http, 这里的ip就是上面对于docker来说宿主机的ip
+    upstream music {
+           server 172.17.0.1:8080;
+       }
+       server {
+           listen 80;
+           # 如果由域名配置为域名即可，如果没有域名配置为本机ip地址
+           # 如果想要外部访问就配置为本机的外网ip
+           server_name xx.xx.xx.xx;
+           location / {
+               proxy_set_header Host $host:$server_port;
+               proxy_set_header X-Real-Ip $remote_addr;
+               proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+               # 这里就是上面的upstream
+               proxy_pass http://music;
+           }
+       }
+   ```
+
 ### 安装mysql
 
 - **docker search mysql** 查询mysql
