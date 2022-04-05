@@ -128,3 +128,4 @@
 ### 2022-04-05
 
 - [go-gin-example](https://github.com/eddycjy/go-gin-example.git)
+- [go-gin-example-demo](https://eddycjy.com/posts/)
