@@ -217,7 +217,53 @@ docker image load -i .\mybusybox.image
 
 ### 使用nginx
 
-命令：docker run --name nginx -p 80:80 -v /home/docker-nginx/nginx.conf:/etc/nginx/nginx.conf -v /home/docker-nginx/log:/var/log/nginx -v /home/docker-nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+命令：
+
+```nginx
+一：
+docker run --name nginx -p 80:80 -v /home/docker-nginx/nginx.conf:/etc/nginx/nginx.conf -v /home/docker-nginx/log:/var/log/nginx -v /home/docker-nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf -d nginx
+二：
+docker run --name nginx -p 80:80 
+	-v $PWD/nginx.conf:/etc/nginx/nginx.conf
+            -v  $PWD/html:/html  
+            -v $PWD/logs:/var/log/nginx 
+            -v $PWD/conf.d/default.conf:/etc/nginx/conf.d/default.conf 
+            -d nginx
+```
+
+nginx项目配置：
+
+注意：`nginx.conf`配置文件映射到`docker`容器内部，`server `中的`root`路径配置也是相对与容器内部的，所以这里直接将`html`路径映射到容器的根目录 
+
+```js
+    server {
+        listen       80;
+        server_name  demo.gxming.top;
+        charset utf-8; 
+        location / {
+            root   /html/demo-web;
+            index  index.html index.htm;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+
+    server {
+        listen       80;
+        server_name  api.gxming.top;
+        charset utf-8;
+        location / {
+            root   /html/api-demo;
+            index  index.html index.htm;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+```
 
 解释下上面的命令：
 
@@ -226,6 +272,34 @@ docker image load -i .\mybusybox.image
 -p 映射端口，将docker宿主机的80端口和容器的80端口进行绑定
 
 -v 挂载文件用的，第一个-v 表示将你本地的nginx.conf覆盖你要起启动的容器的nginx.conf文件，第二个表示将日志文件进行挂载，就是把nginx服务器的日志写到你docker宿主机的/home/docker-nginx/log/下面
+
+**nginx容器  代理到宿主机服务**
+
+1. 在安装Docker的时候，会在宿主机安装一个虚拟网关 docker0，查询docker0的IP地址
+
+   ```js
+   ip addr show docker0
+   ```
+
+2. ```js
+   # 注意 upstream 没有http, 这里的ip就是上面对于docker来说宿主机的ip
+    upstream music {
+           server 172.17.0.1:8080;
+       }
+       server {
+           listen 80;
+           # 如果由域名配置为域名即可，如果没有域名配置为本机ip地址
+           # 如果想要外部访问就配置为本机的外网ip
+           server_name xx.xx.xx.xx;
+           location / {
+               proxy_set_header Host $host:$server_port;
+               proxy_set_header X-Real-Ip $remote_addr;
+               proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+               # 这里就是上面的upstream
+               proxy_pass http://music;
+           }
+       }
+   ```
 
 ### 安装mysql
 
@@ -283,4 +357,10 @@ docker image load -i .\mybusybox.image
 - 查看docker是否启动成功 **ps -ef|grep docker**
 
 - 关闭docker **systemctl stop docker**
+
+### 安装redis
+
+```jsx
+docker run -p 6379:6379 --name redis -v $PWD/redis.conf:/etc/redis/redis.conf -v $PWD/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes
+```
 
