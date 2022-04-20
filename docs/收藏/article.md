@@ -130,3 +130,12 @@
 
 - [go-gin-example](https://github.com/eddycjy/go-gin-example.git)
 - [go-gin-example-demo](https://eddycjy.com/posts/)
+
+### 2022-04-12
+
+- [手摸手教你docker+jenkins+gitlab部署你的前端项目  | 微信文章](https://mp.weixin.qq.com/s/MF041YTTgvRSx1015PVr7w)
+- [微前端qiankun+docker+nginx配合gitlab-ci/cd的自动化部署的实现](https://mp.weixin.qq.com/s/VGQWivxKZ5OD1nLxw8vudQ)
+
+### 2022-04-13
+
+- [怎么实现大文件快速上传 | 微信文章](https://mp.weixin.qq.com/s/OSJzh1qK4ziY8C3zrySd_A)
