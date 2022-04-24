@@ -377,5 +377,50 @@ function sum(str1, str2) {
 sum('987654321111234','99900334444') // '987754221445678'
 ```
 
+## 一键复制
+
+```js
+copyToClipboard(content) {
+      if (window.clipboardData) {
+        window.clipboardData.setData("text", content);
+      } else {
+        (function(content) {
+          document.oncopy = function(e) {
+            e.clipboardData.setData("text", content);
+            e.preventDefault();
+            document.oncopy = null;
+          };
+        })(content);
+        document.execCommand("Copy");
+      }
+    }
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
