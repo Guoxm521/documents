@@ -24,6 +24,8 @@
 
 ### 02.文档教程
 
+- [fe poetries  经典面试网站 ](https://interview2.poetries.top/)
+
 - [30daysofjs](http://30daysofjs.michaeleinsohn.com/)  30天JS练习网站
 - [30-seconds-of-code 网站](https://github.com/30-seconds/30-seconds-of-code)
 - [33-js-concepts 网站](https://github.com/leonardomso/33-js-concepts)

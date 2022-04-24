@@ -396,11 +396,29 @@ copyToClipboard(content) {
     }
 ```
 
+## element Table组件  合并行和列
 
-
-
-
-
+```js
+  private objectSpanMethod({ row, column, rowIndex, columnIndex }) {
+    const dataProvider = this.table_data
+    if (columnIndex === 1 || columnIndex === 5) {
+      const prevRow = dataProvider[rowIndex - 1]
+      let nextRow = dataProvider[rowIndex + 1]
+      if (prevRow && prevRow.index === row.index) {
+        return { rowspan: 0, colspan: 0 }
+      } else {
+        let rowspan = 1
+        while (nextRow && nextRow.index === row.index) {
+          rowspan++
+          nextRow = dataProvider[rowspan + rowIndex]
+        }
+        if (rowspan > 1) {
+          return { rowspan, colspan: 1 }
+        }
+      }
+    } 
+  }
+```
 
 
 
