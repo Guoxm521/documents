@@ -21,6 +21,7 @@
 -  [motion vue｜vue组件动画库](https://motion.vueuse.org/) 
 -  [v-md-edtior | vue3的markdown编辑器](https://www.npmjs.com/package/@kangc/v-md-editor)
 -  [md-editor-v3 |　vue3的markdown富文本编辑器](https://imzbf.github.io/md-editor-v3/index)
+-  [vue datav  数据大屏组件](http://datav.jiaminghi.com/)
 
 ### 02.文档教程
 
