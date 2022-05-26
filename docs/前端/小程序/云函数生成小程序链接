@@ -1,0 +1,28 @@
+## 一、背景
+
+在小程序中生成`urllink`，前端方面运用云函数生成，便可以使用
+
+## 二、步骤
+
+- ### 构建云函数
+
+  在云函数下面新建一个函数，函数内容如下，配置的路径需要在项目中已存在
+
+  ![image-20220526144812301](https://gxm-blog-oss.oss-cn-shenzhen.aliyuncs.com/image-20220526144812301.png)
+
+​	`config.json`配置如下
+
+​	  ![	](https://gxm-blog-oss.oss-cn-shenzhen.aliyuncs.com/image-20220526144949447.png)
+
+- 方法调用
+
+  ![image-20220526145219231](https://gxm-blog-oss.oss-cn-shenzhen.aliyuncs.com/image-20220526145219231.png)
+
+## 三、注意
+
+云函数生成之后右击文件夹，上传并部署云函数才能成功调用返回
+
+[官方文档](https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/url-link/urllink.generate.html)
+
+[静态网站调用云函数cloud.openapi.urlscheme.generate返回结果不对?](https://developers.weixin.qq.com/community/minihome/doc/000c24e08a8e48e3d11c961f551c00)
+
