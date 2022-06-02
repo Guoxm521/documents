@@ -26,7 +26,6 @@
 ### 02.文档教程
 
 - [fe poetries  经典面试网站 ](https://interview2.poetries.top/)
-
 - [30daysofjs](http://30daysofjs.michaeleinsohn.com/)  30天JS练习网站
 - [30-seconds-of-code 网站](https://github.com/30-seconds/30-seconds-of-code)
 - [33-js-concepts 网站](https://github.com/leonardomso/33-js-concepts)
@@ -45,6 +44,9 @@
 - [linux命令](https://www.linuxcool.com/)
 - [varharrie | 一个开箱即用的API模拟服务器](https://varharrie.github.io/mokia/)
 - [db-tutorial | 数据库学习网站](https://dunwu.github.io/db-tutorial/)
+- [go中文文档](https://studygolang.com/pkgdoc)
+
+
 
 ### 03.开发工具
 
@@ -187,6 +189,7 @@
 - [阮一峰周报](https://github.com/ruanyf/weekly)
 - [那些免费的砖 | 开发设计相关的资源网站](https://www.thosefree.com/)
 - [前端早早聊](https://www.zaozao.run/)
+- [腾讯云开发者实验室](https://cloud.tencent.com/lab/labslist)
 
 ## 七、综合导航
 
@@ -217,5 +220,5 @@
 
 - [mochajs | 前端测试网站](https://mochajs.cn/#installation)
 - [jest | 前端测试框架](https://www.jestjs.cn/)
-
 - [Sentry  错误日志监控 ](https://zhuanlan.zhihu.com/p/161276192)
+- [cxy521](http://www.cxy521.com/)
