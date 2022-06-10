@@ -364,3 +364,39 @@ nginx项目配置：
 docker run -p 6379:6379 --name redis -v $PWD/redis.conf:/etc/redis/redis.conf -v $PWD/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes
 ```
 
+## 四、构建镜像
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
