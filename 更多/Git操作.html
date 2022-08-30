@@ -8,7 +8,7 @@
     
     <meta name="description" content="">
     
-    <link rel="preload" href="/assets/css/0.styles.1af85722.css" as="style"><link rel="preload" href="/assets/js/app.db78a0dc.js" as="script"><link rel="preload" href="/assets/js/2.56ef416d.js" as="script"><link rel="preload" href="/assets/js/25.a5d9ae1b.js" as="script"><link rel="prefetch" href="/assets/js/10.a4b2344b.js"><link rel="prefetch" href="/assets/js/11.11b83501.js"><link rel="prefetch" href="/assets/js/12.124657eb.js"><link rel="prefetch" href="/assets/js/13.9879fe15.js"><link rel="prefetch" href="/assets/js/14.c1cc9bd1.js"><link rel="prefetch" href="/assets/js/15.ce8e0caf.js"><link rel="prefetch" href="/assets/js/16.8460b073.js"><link rel="prefetch" href="/assets/js/17.59fce69a.js"><link rel="prefetch" href="/assets/js/18.9cd597d1.js"><link rel="prefetch" href="/assets/js/19.1b44e685.js"><link rel="prefetch" href="/assets/js/20.d8cf31ac.js"><link rel="prefetch" href="/assets/js/21.b06ed2b4.js"><link rel="prefetch" href="/assets/js/22.1bfca481.js"><link rel="prefetch" href="/assets/js/23.4ea100bb.js"><link rel="prefetch" href="/assets/js/24.d8864160.js"><link rel="prefetch" href="/assets/js/26.60fa8151.js"><link rel="prefetch" href="/assets/js/27.a253a02f.js"><link rel="prefetch" href="/assets/js/28.0662d1d0.js"><link rel="prefetch" href="/assets/js/29.319f328a.js"><link rel="prefetch" href="/assets/js/3.815f01c5.js"><link rel="prefetch" href="/assets/js/4.7650366d.js"><link rel="prefetch" href="/assets/js/5.2d022fa2.js"><link rel="prefetch" href="/assets/js/6.5b3f985d.js"><link rel="prefetch" href="/assets/js/7.6b7c307c.js"><link rel="prefetch" href="/assets/js/8.d76d9c09.js"><link rel="prefetch" href="/assets/js/9.82f33807.js">
+    <link rel="preload" href="/assets/css/0.styles.1af85722.css" as="style"><link rel="preload" href="/assets/js/app.326c0c7d.js" as="script"><link rel="preload" href="/assets/js/2.98ca1dd2.js" as="script"><link rel="preload" href="/assets/js/25.b92980a3.js" as="script"><link rel="prefetch" href="/assets/js/10.786b215d.js"><link rel="prefetch" href="/assets/js/11.aadfbb49.js"><link rel="prefetch" href="/assets/js/12.c5c078b1.js"><link rel="prefetch" href="/assets/js/13.66bde044.js"><link rel="prefetch" href="/assets/js/14.235f833d.js"><link rel="prefetch" href="/assets/js/15.796a33a0.js"><link rel="prefetch" href="/assets/js/16.6c228361.js"><link rel="prefetch" href="/assets/js/17.657e4636.js"><link rel="prefetch" href="/assets/js/18.f0a4fc8a.js"><link rel="prefetch" href="/assets/js/19.5f494f1a.js"><link rel="prefetch" href="/assets/js/20.5b0c76bf.js"><link rel="prefetch" href="/assets/js/21.a61a2ae8.js"><link rel="prefetch" href="/assets/js/22.2a6c3bdb.js"><link rel="prefetch" href="/assets/js/23.0ad3e1da.js"><link rel="prefetch" href="/assets/js/24.cf06049f.js"><link rel="prefetch" href="/assets/js/26.2bed0dd0.js"><link rel="prefetch" href="/assets/js/27.94ffd455.js"><link rel="prefetch" href="/assets/js/28.cba8e5b4.js"><link rel="prefetch" href="/assets/js/29.21fc8918.js"><link rel="prefetch" href="/assets/js/3.6a545ca3.js"><link rel="prefetch" href="/assets/js/4.3dda4857.js"><link rel="prefetch" href="/assets/js/5.172230b5.js"><link rel="prefetch" href="/assets/js/6.82924391.js"><link rel="prefetch" href="/assets/js/7.e73bd6ef.js"><link rel="prefetch" href="/assets/js/8.ccb2ed73.js"><link rel="prefetch" href="/assets/js/9.a5b3bf4b.js">
     <link rel="stylesheet" href="/assets/css/0.styles.1af85722.css">
   </head>
   <body>
@@ -52,34 +52,34 @@ $ <span class="token function">git</span> init <span class="token punctuation">[
 
 <span class="token comment"># 在指定目录创建一个空的 Git 仓库。运行这个命令会创建一个名为 directory，只包含 .git 子目录的空目录。</span>
 
-$ <span class="token function">git</span> init --bare <span class="token operator">&lt;</span>directory<span class="token operator">&gt;</span>
+$ <span class="token function">git</span> init <span class="token parameter variable">--bare</span> <span class="token operator">&lt;</span>directory<span class="token operator">&gt;</span>
 
 <span class="token comment"># 下载一个项目和它的整个代码历史</span>
 <span class="token comment"># 这个命令就是将一个版本库拷贝到另一个目录中，同时也将分支都拷贝到新的版本库中。这样就可以在新的版本库中提交到远程分支</span>
 $ <span class="token function">git</span> clone <span class="token punctuation">[</span>url<span class="token punctuation">]</span>
 </code></pre></div><h2 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h2> <p>更改设置。可以是版本库的设置，也可以是系统的或全局的</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 显示当前的Git配置</span>
-$ <span class="token function">git</span> config --list
+$ <span class="token function">git</span> config <span class="token parameter variable">--list</span>
 
 <span class="token comment"># 编辑Git配置文件</span>
-$ <span class="token function">git</span> config -e <span class="token punctuation">[</span>--global<span class="token punctuation">]</span>
+$ <span class="token function">git</span> config <span class="token parameter variable">-e</span> <span class="token punctuation">[</span>--global<span class="token punctuation">]</span>
 
 <span class="token comment"># 输出、设置基本的全局变量</span>
-$ <span class="token function">git</span> config --global user.email
-$ <span class="token function">git</span> config --global user.name
+$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email
+$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name
 
-$ <span class="token function">git</span> config --global user.email <span class="token string">&quot;MyEmail@gmail.com&quot;</span>
-$ <span class="token function">git</span> config --global user.name <span class="token string">&quot;My Name&quot;</span>
+$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">&quot;MyEmail@gmail.com&quot;</span>
+$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">&quot;My Name&quot;</span>
 
 <span class="token comment"># 定义当前用户所有提交使用的作者邮箱。</span>
-$ <span class="token function">git</span> config --global alias.<span class="token operator">&lt;</span>alias-name<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>git-command<span class="token operator">&gt;</span>
+$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.<span class="token operator">&lt;</span>alias-name<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>git-command<span class="token operator">&gt;</span>
 
 <span class="token comment"># 为Git命令创建一个快捷方式（别名）。</span>
-$ <span class="token function">git</span> config --system core.editor <span class="token operator">&lt;</span>editor<span class="token operator">&gt;</span>
+$ <span class="token function">git</span> config <span class="token parameter variable">--system</span> core.editor <span class="token operator">&lt;</span>editor<span class="token operator">&gt;</span>
 </code></pre></div><h2 id="帮助"><a href="#帮助" class="header-anchor">#</a> 帮助</h2> <p>git 内置了对命令非常详细的解释，可以供我们快速查阅</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 查找可用命令</span>
 $ <span class="token function">git</span> <span class="token builtin class-name">help</span>
 
 <span class="token comment"># 查找所有可用命令</span>
-$ <span class="token function">git</span> <span class="token builtin class-name">help</span> -a
+$ <span class="token function">git</span> <span class="token builtin class-name">help</span> <span class="token parameter variable">-a</span>
 
 <span class="token comment"># 在文档当中查找特定的命令</span>
 <span class="token comment"># git help &lt;命令&gt;</span>
@@ -92,32 +92,32 @@ $ <span class="token function">git</span> status
 <span class="token comment"># 查看其他的git status的用法</span>
 $ <span class="token function">git</span> <span class="token builtin class-name">help</span> status
 </code></pre></div><h2 id="信息"><a href="#信息" class="header-anchor">#</a> 信息</h2> <p>获取某些文件，某些分支，某次提交等 git 信息</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 显示commit历史，以及每次commit发生变更的文件</span>
-$ <span class="token function">git</span> log --stat
+$ <span class="token function">git</span> log <span class="token parameter variable">--stat</span>
 
 <span class="token comment"># 搜索提交历史，根据关键词</span>
-$ <span class="token function">git</span> log -S <span class="token punctuation">[</span>keyword<span class="token punctuation">]</span>
+$ <span class="token function">git</span> log <span class="token parameter variable">-S</span> <span class="token punctuation">[</span>keyword<span class="token punctuation">]</span>
 
 <span class="token comment"># 显示某个commit之后的所有变动，每个commit占据一行</span>
-$ <span class="token function">git</span> log <span class="token punctuation">[</span>tag<span class="token punctuation">]</span> HEAD --pretty<span class="token operator">=</span>format:%s
+$ <span class="token function">git</span> log <span class="token punctuation">[</span>tag<span class="token punctuation">]</span> HEAD <span class="token parameter variable">--pretty</span><span class="token operator">=</span>format:%s
 
 <span class="token comment"># 显示某个commit之后的所有变动，其&quot;提交说明&quot;必须符合搜索条件</span>
-$ <span class="token function">git</span> log <span class="token punctuation">[</span>tag<span class="token punctuation">]</span> HEAD --grep feature
+$ <span class="token function">git</span> log <span class="token punctuation">[</span>tag<span class="token punctuation">]</span> HEAD <span class="token parameter variable">--grep</span> feature
 
 <span class="token comment"># 显示某个文件的版本历史，包括文件改名</span>
-$ <span class="token function">git</span> log --follow <span class="token punctuation">[</span>file<span class="token punctuation">]</span>
+$ <span class="token function">git</span> log <span class="token parameter variable">--follow</span> <span class="token punctuation">[</span>file<span class="token punctuation">]</span>
 $ <span class="token function">git</span> whatchanged <span class="token punctuation">[</span>file<span class="token punctuation">]</span>
 
 <span class="token comment"># 显示指定文件相关的每一次diff</span>
-$ <span class="token function">git</span> log -p <span class="token punctuation">[</span>file<span class="token punctuation">]</span>
+$ <span class="token function">git</span> log <span class="token parameter variable">-p</span> <span class="token punctuation">[</span>file<span class="token punctuation">]</span>
 
 <span class="token comment"># 显示过去5次提交</span>
-$ <span class="token function">git</span> log -5 --pretty --oneline
+$ <span class="token function">git</span> log <span class="token parameter variable">-5</span> <span class="token parameter variable">--pretty</span> <span class="token parameter variable">--oneline</span>
 
 <span class="token comment"># 显示本地commit  但是未推送到远程的commit信息</span>
 $ <span class="token function">git</span> branchname ^origin/branchname
 
 <span class="token comment"># 显示所有提交过的用户，按提交次数排序</span>
-$ <span class="token function">git</span> shortlog -sn
+$ <span class="token function">git</span> shortlog <span class="token parameter variable">-sn</span>
 
 <span class="token comment"># 显示指定文件是什么人在什么时间修改过</span>
 $ <span class="token function">git</span> blame <span class="token punctuation">[</span>file<span class="token punctuation">]</span>
@@ -126,7 +126,7 @@ $ <span class="token function">git</span> blame <span class="token punctuation">
 $ <span class="token function">git</span> <span class="token function">diff</span>
 
 <span class="token comment"># 显示暂存区和上一个commit的差异</span>
-$ <span class="token function">git</span> <span class="token function">diff</span> --cached <span class="token punctuation">[</span>file<span class="token punctuation">]</span>
+$ <span class="token function">git</span> <span class="token function">diff</span> <span class="token parameter variable">--cached</span> <span class="token punctuation">[</span>file<span class="token punctuation">]</span>
 
 <span class="token comment"># 显示工作区与当前分支最新commit之间的差异</span>
 $ <span class="token function">git</span> <span class="token function">diff</span> HEAD
@@ -135,16 +135,16 @@ $ <span class="token function">git</span> <span class="token function">diff</spa
 $ <span class="token function">git</span> <span class="token function">diff</span> <span class="token punctuation">[</span>first-branch<span class="token punctuation">]</span><span class="token punctuation">..</span>.<span class="token punctuation">[</span>second-branch<span class="token punctuation">]</span>
 
 <span class="token comment"># 显示今天你写了多少行代码</span>
-$ <span class="token function">git</span> <span class="token function">diff</span> --shortstat <span class="token string">&quot;@{0 day ago}&quot;</span>
+$ <span class="token function">git</span> <span class="token function">diff</span> <span class="token parameter variable">--shortstat</span> <span class="token string">&quot;@{0 day ago}&quot;</span>
 
 <span class="token comment"># 比较暂存区和版本库差异</span>
-$ <span class="token function">git</span> <span class="token function">diff</span> --staged
+$ <span class="token function">git</span> <span class="token function">diff</span> <span class="token parameter variable">--staged</span>
 
 <span class="token comment"># 比较暂存区和版本库差异</span>
-$ <span class="token function">git</span> <span class="token function">diff</span> --cached
+$ <span class="token function">git</span> <span class="token function">diff</span> <span class="token parameter variable">--cached</span>
 
 <span class="token comment"># 仅仅比较统计信息</span>
-$ <span class="token function">git</span> <span class="token function">diff</span> --stat
+$ <span class="token function">git</span> <span class="token function">diff</span> <span class="token parameter variable">--stat</span>
 
 <span class="token comment"># 显示某次提交的元数据和内容变化</span>
 $ <span class="token function">git</span> show <span class="token punctuation">[</span>commit<span class="token punctuation">]</span>
@@ -159,16 +159,16 @@ $ <span class="token function">git</span> show <span class="token punctuation">[
 $ <span class="token function">git</span> reflog
 
 <span class="token comment"># 查看远程分支</span>
-$ <span class="token function">git</span> br -r
+$ <span class="token function">git</span> br <span class="token parameter variable">-r</span>
 
 <span class="token comment"># 创建新的分支</span>
 $ <span class="token function">git</span> br <span class="token operator">&lt;</span>new_branch<span class="token operator">&gt;</span>
 
 <span class="token comment"># 查看各个分支最后提交信息</span>
-$ <span class="token function">git</span> br -v
+$ <span class="token function">git</span> br <span class="token parameter variable">-v</span>
 
 <span class="token comment"># 查看已经被合并到当前分支的分支</span>
-$ <span class="token function">git</span> br --merged
+$ <span class="token function">git</span> br <span class="token parameter variable">--merged</span>
 
 <span class="token comment"># 查看尚未被合并到当前分支的分支</span>
 $ <span class="token function">git</span> br --no-merged
@@ -192,7 +192,7 @@ $ <span class="token function">git</span> <span class="token function">add</span
 
 <span class="token comment"># 添加每个变化前，都会要求确认</span>
 <span class="token comment"># 对于同一个文件的多处变化，可以实现分次提交</span>
-$ <span class="token function">git</span> <span class="token function">add</span> -p
+$ <span class="token function">git</span> <span class="token function">add</span> <span class="token parameter variable">-p</span>
 </code></pre></div><h2 id="删除"><a href="#删除" class="header-anchor">#</a> 删除</h2> <p>rm 和上面的 add 命令相反，从工作空间中去掉某个文件</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 移除 HelloWorld.js</span>
 $ <span class="token function">git</span> <span class="token function">rm</span> HelloWorld.js
 
@@ -203,16 +203,16 @@ $ <span class="token function">git</span> <span class="token function">rm</span>
 $ <span class="token function">git</span> <span class="token function">rm</span> <span class="token punctuation">[</span>file1<span class="token punctuation">]</span> <span class="token punctuation">[</span>file2<span class="token punctuation">]</span> <span class="token punctuation">..</span>.
 
 <span class="token comment"># 停止追踪指定文件，但该文件会保留在工作区</span>
-$ <span class="token function">git</span> <span class="token function">rm</span> --cached <span class="token punctuation">[</span>file<span class="token punctuation">]</span>
+$ <span class="token function">git</span> <span class="token function">rm</span> <span class="token parameter variable">--cached</span> <span class="token punctuation">[</span>file<span class="token punctuation">]</span>
 </code></pre></div><h2 id="分支"><a href="#分支" class="header-anchor">#</a> 分支</h2> <p>管理分支，可以通过下列命令对分支进行增删改查切换等</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 查看所有的分支和远程分支</span>
-$ <span class="token function">git</span> branch -a
+$ <span class="token function">git</span> branch <span class="token parameter variable">-a</span>
 
 <span class="token comment"># 创建一个新的分支</span>
 $ <span class="token function">git</span> branch <span class="token punctuation">[</span>branch-name<span class="token punctuation">]</span>
 
 <span class="token comment"># 重命名分支</span>
 <span class="token comment"># git branch -m &lt;旧名称&gt; &lt;新名称&gt;</span>
-$ <span class="token function">git</span> branch -m <span class="token punctuation">[</span>branch-name<span class="token punctuation">]</span> <span class="token punctuation">[</span>new-branch-name<span class="token punctuation">]</span>
+$ <span class="token function">git</span> branch <span class="token parameter variable">-m</span> <span class="token punctuation">[</span>branch-name<span class="token punctuation">]</span> <span class="token punctuation">[</span>new-branch-name<span class="token punctuation">]</span>
 
 <span class="token comment"># 编辑分支的介绍</span>
 $ <span class="token function">git</span> branch <span class="token punctuation">[</span>branch-name<span class="token punctuation">]</span> --edit-description
@@ -221,19 +221,19 @@ $ <span class="token function">git</span> branch <span class="token punctuation"
 $ <span class="token function">git</span> branch
 
 <span class="token comment"># 列出所有远程分支</span>
-$ <span class="token function">git</span> branch -r
+$ <span class="token function">git</span> branch <span class="token parameter variable">-r</span>
 
 <span class="token comment"># 新建一个分支，但依然停留在当前分支</span>
 $ <span class="token function">git</span> branch <span class="token punctuation">[</span>branch-name<span class="token punctuation">]</span>
 
 <span class="token comment"># 新建一个分支，并切换到该分支</span>
-$ <span class="token function">git</span> checkout -b <span class="token punctuation">[</span>branch<span class="token punctuation">]</span>
+$ <span class="token function">git</span> checkout <span class="token parameter variable">-b</span> <span class="token punctuation">[</span>branch<span class="token punctuation">]</span>
 
 <span class="token comment"># 新建一个分支，指向指定commit</span>
 $ <span class="token function">git</span> branch <span class="token punctuation">[</span>branch<span class="token punctuation">]</span> <span class="token punctuation">[</span>commit<span class="token punctuation">]</span>
 
 <span class="token comment"># 新建一个分支，与指定的远程分支建立追踪关系</span>
-$ <span class="token function">git</span> branch --track <span class="token punctuation">[</span>branch<span class="token punctuation">]</span> <span class="token punctuation">[</span>remote-branch<span class="token punctuation">]</span>
+$ <span class="token function">git</span> branch <span class="token parameter variable">--track</span> <span class="token punctuation">[</span>branch<span class="token punctuation">]</span> <span class="token punctuation">[</span>remote-branch<span class="token punctuation">]</span>
 
 <span class="token comment"># 切换到指定分支，并更新工作区</span>
 $ <span class="token function">git</span> checkout <span class="token punctuation">[</span>branch-name<span class="token punctuation">]</span>
@@ -251,43 +251,43 @@ $ <span class="token function">git</span> merge <span class="token punctuation">
 $ <span class="token function">git</span> cherry-pick <span class="token punctuation">[</span>commit<span class="token punctuation">]</span>
 
 <span class="token comment"># 删除分支</span>
-$ <span class="token function">git</span> branch -d <span class="token punctuation">[</span>branch-name<span class="token punctuation">]</span>
+$ <span class="token function">git</span> branch <span class="token parameter variable">-d</span> <span class="token punctuation">[</span>branch-name<span class="token punctuation">]</span>
 
 <span class="token comment"># 删除远程分支</span>
-$ <span class="token function">git</span> push origin --delete <span class="token punctuation">[</span>branch-name<span class="token punctuation">]</span>
-$ <span class="token function">git</span> branch -dr <span class="token punctuation">[</span>remote/branch<span class="token punctuation">]</span>
+$ <span class="token function">git</span> push origin <span class="token parameter variable">--delete</span> <span class="token punctuation">[</span>branch-name<span class="token punctuation">]</span>
+$ <span class="token function">git</span> branch <span class="token parameter variable">-dr</span> <span class="token punctuation">[</span>remote/branch<span class="token punctuation">]</span>
 
 <span class="token comment"># 切换到某个分支</span>
 $ <span class="token function">git</span> co <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span>
 
 <span class="token comment"># 创建新的分支，并且切换过去</span>
-$ <span class="token function">git</span> co -b <span class="token operator">&lt;</span>new_branch<span class="token operator">&gt;</span>
+$ <span class="token function">git</span> co <span class="token parameter variable">-b</span> <span class="token operator">&lt;</span>new_branch<span class="token operator">&gt;</span>
 
 <span class="token comment"># 基于branch创建新的new_branch</span>
-$ <span class="token function">git</span> co -b <span class="token operator">&lt;</span>new_branch<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span>
+$ <span class="token function">git</span> co <span class="token parameter variable">-b</span> <span class="token operator">&lt;</span>new_branch<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span>
 
 <span class="token comment"># 把某次历史提交记录checkout出来，但无分支信息，切换到其他分支会自动删除</span>
 $ <span class="token function">git</span> co <span class="token variable">$id</span>
 
 <span class="token comment"># 把某次历史提交记录checkout出来，创建成一个分支</span>
-$ <span class="token function">git</span> co <span class="token variable">$id</span> -b <span class="token operator">&lt;</span>new_branch<span class="token operator">&gt;</span>
+$ <span class="token function">git</span> co <span class="token variable">$id</span> <span class="token parameter variable">-b</span> <span class="token operator">&lt;</span>new_branch<span class="token operator">&gt;</span>
 
 <span class="token comment"># 删除某个分支</span>
-$ <span class="token function">git</span> br -d <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span>
+$ <span class="token function">git</span> br <span class="token parameter variable">-d</span> <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span>
 
 <span class="token comment"># 强制删除某个分支 (未被合并的分支被删除的时候需要强制)</span>
-$ <span class="token function">git</span> br -D <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span>
+$ <span class="token function">git</span> br <span class="token parameter variable">-D</span> <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span>
 </code></pre></div><h2 id="检出"><a href="#检出" class="header-anchor">#</a> 检出</h2> <p>将当前工作空间更新到索引所标识的或者某一特定的工作空间</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 检出一个版本库，默认将更新到master分支</span>
 $ <span class="token function">git</span> checkout
 <span class="token comment"># 检出到一个特定的分支</span>
 $ <span class="token function">git</span> checkout branchName
 <span class="token comment"># 新建一个分支，并且切换过去，相当于&quot;git branch &lt;名字&gt;; git checkout &lt;名字&gt;&quot;</span>
-$ <span class="token function">git</span> checkout -b newBranch
+$ <span class="token function">git</span> checkout <span class="token parameter variable">-b</span> newBranch
 </code></pre></div><h2 id="远程同步"><a href="#远程同步" class="header-anchor">#</a> 远程同步</h2> <p>远程同步的远端分支</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 下载远程仓库的所有变动</span>
 $ <span class="token function">git</span> fetch <span class="token punctuation">[</span>remote<span class="token punctuation">]</span>
 
 <span class="token comment"># 显示所有远程仓库</span>
-$ <span class="token function">git</span> remote -v
+$ <span class="token function">git</span> remote <span class="token parameter variable">-v</span>
 
 <span class="token comment"># 显示某个远程仓库的信息</span>
 $ <span class="token function">git</span> remote show <span class="token punctuation">[</span>remote<span class="token punctuation">]</span>
@@ -296,7 +296,7 @@ $ <span class="token function">git</span> remote show <span class="token punctua
 $ <span class="token function">git</span> remote <span class="token function">add</span> <span class="token punctuation">[</span>shortname<span class="token punctuation">]</span> <span class="token punctuation">[</span>url<span class="token punctuation">]</span>
 
 <span class="token comment"># 查看远程服务器地址和仓库名称</span>
-$ <span class="token function">git</span> remote -v
+$ <span class="token function">git</span> remote <span class="token parameter variable">-v</span>
 
 <span class="token comment"># 添加远程仓库地址</span>
 $ <span class="token function">git</span> remote <span class="token function">add</span> origin git@ github:xxx/xxx.git
@@ -314,10 +314,10 @@ $ <span class="token function">git</span> remote <span class="token function">rm
 $ <span class="token function">git</span> push <span class="token punctuation">[</span>remote<span class="token punctuation">]</span> <span class="token punctuation">[</span>branch<span class="token punctuation">]</span>
 
 <span class="token comment"># 强行推送当前分支到远程仓库，即使有冲突</span>
-$ <span class="token function">git</span> push <span class="token punctuation">[</span>remote<span class="token punctuation">]</span> --force
+$ <span class="token function">git</span> push <span class="token punctuation">[</span>remote<span class="token punctuation">]</span> <span class="token parameter variable">--force</span>
 
 <span class="token comment"># 推送所有分支到远程仓库</span>
-$ <span class="token function">git</span> push <span class="token punctuation">[</span>remote<span class="token punctuation">]</span> --all
+$ <span class="token function">git</span> push <span class="token punctuation">[</span>remote<span class="token punctuation">]</span> <span class="token parameter variable">--all</span>
 </code></pre></div><h2 id="撤销"><a href="#撤销" class="header-anchor">#</a> 撤销</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 恢复暂存区的指定文件到工作区</span>
 $ <span class="token function">git</span> checkout <span class="token punctuation">[</span>file<span class="token punctuation">]</span>
 
@@ -331,16 +331,16 @@ $ <span class="token function">git</span> checkout <span class="token builtin cl
 $ <span class="token function">git</span> reset <span class="token punctuation">[</span>file<span class="token punctuation">]</span>
 
 <span class="token comment"># 重置暂存区与工作区，与上一次commit保持一致</span>
-$ <span class="token function">git</span> reset --hard
+$ <span class="token function">git</span> reset <span class="token parameter variable">--hard</span>
 
 <span class="token comment"># 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</span>
 $ <span class="token function">git</span> reset <span class="token punctuation">[</span>commit<span class="token punctuation">]</span>
 
 <span class="token comment"># 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</span>
-$ <span class="token function">git</span> reset --hard <span class="token punctuation">[</span>commit<span class="token punctuation">]</span>
+$ <span class="token function">git</span> reset <span class="token parameter variable">--hard</span> <span class="token punctuation">[</span>commit<span class="token punctuation">]</span>
 
 <span class="token comment"># 重置当前HEAD为指定commit，但保持暂存区和工作区不变</span>
-$ <span class="token function">git</span> reset --keep <span class="token punctuation">[</span>commit<span class="token punctuation">]</span>
+$ <span class="token function">git</span> reset <span class="token parameter variable">--keep</span> <span class="token punctuation">[</span>commit<span class="token punctuation">]</span>
 
 <span class="token comment"># 新建一个commit，用来撤销指定commit</span>
 <span class="token comment"># 后者的所有变化都将被前者抵消，并且应用到当前分支</span>
@@ -362,62 +362,62 @@ $ <span class="token function">git</span> stash apply
 <span class="token comment"># 删除暂存区</span>
 $ <span class="token function">git</span> stash drop
 </code></pre></div><h2 id="commit"><a href="#commit" class="header-anchor">#</a> commit</h2> <p>将当前索引的更改保存为一个新的提交，这个提交包括用户做出的更改与信息</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 提交暂存区到仓库区附带提交信息</span>
-$ <span class="token function">git</span> commit -m <span class="token punctuation">[</span>message<span class="token punctuation">]</span>
+$ <span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token punctuation">[</span>message<span class="token punctuation">]</span>
 
 <span class="token comment"># 提交暂存区的指定文件到仓库区</span>
-$ <span class="token function">git</span> commit <span class="token punctuation">[</span>file1<span class="token punctuation">]</span> <span class="token punctuation">[</span>file2<span class="token punctuation">]</span> <span class="token punctuation">..</span>. -m <span class="token punctuation">[</span>message<span class="token punctuation">]</span>
+$ <span class="token function">git</span> commit <span class="token punctuation">[</span>file1<span class="token punctuation">]</span> <span class="token punctuation">[</span>file2<span class="token punctuation">]</span> <span class="token punctuation">..</span>. <span class="token parameter variable">-m</span> <span class="token punctuation">[</span>message<span class="token punctuation">]</span>
 
 <span class="token comment"># 提交工作区自上次commit之后的变化，直接到仓库区</span>
-$ <span class="token function">git</span> commit -a
+$ <span class="token function">git</span> commit <span class="token parameter variable">-a</span>
 
 <span class="token comment"># 提交时显示所有diff信息</span>
-$ <span class="token function">git</span> commit -v
+$ <span class="token function">git</span> commit <span class="token parameter variable">-v</span>
 
 <span class="token comment"># 使用一次新的commit，替代上一次提交</span>
 <span class="token comment"># 如果代码没有任何新变化，则用来改写上一次commit的提交信息</span>
-$ <span class="token function">git</span> commit --amend -m <span class="token punctuation">[</span>message<span class="token punctuation">]</span>
+$ <span class="token function">git</span> commit <span class="token parameter variable">--amend</span> <span class="token parameter variable">-m</span> <span class="token punctuation">[</span>message<span class="token punctuation">]</span>
 
 <span class="token comment"># 重做上一次commit，并包括指定文件的新变化</span>
-$ <span class="token function">git</span> commit --amend <span class="token punctuation">[</span>file1<span class="token punctuation">]</span> <span class="token punctuation">[</span>file2<span class="token punctuation">]</span> <span class="token punctuation">..</span>.
+$ <span class="token function">git</span> commit <span class="token parameter variable">--amend</span> <span class="token punctuation">[</span>file1<span class="token punctuation">]</span> <span class="token punctuation">[</span>file2<span class="token punctuation">]</span> <span class="token punctuation">..</span>.
 </code></pre></div><h2 id="diff"><a href="#diff" class="header-anchor">#</a> diff</h2> <p>显示当前工作空间和提交的不同</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 显示工作目录和索引的不同</span>
 $ <span class="token function">git</span> <span class="token function">diff</span>
 
 <span class="token comment"># 显示索引和最近一次提交的不同</span>
-$ <span class="token function">git</span> <span class="token function">diff</span> --cached
+$ <span class="token function">git</span> <span class="token function">diff</span> <span class="token parameter variable">--cached</span>
 
 <span class="token comment"># 显示工作目录和最近一次提交的不同</span>
 $ <span class="token function">git</span> <span class="token function">diff</span> HEAD
 </code></pre></div><h2 id="grep"><a href="#grep" class="header-anchor">#</a> grep</h2> <p>可以在版本库中快速查找</p> <p>可选配置：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 感谢Travis Jeffery提供的以下用法：</span>
 <span class="token comment"># 在搜索结果中显示行号</span>
-$ <span class="token function">git</span> config --global grep.lineNumber <span class="token boolean">true</span>
+$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> grep.lineNumber <span class="token boolean">true</span>
 
 <span class="token comment"># 是搜索结果可读性更好</span>
-$ <span class="token function">git</span> config --global alias.g <span class="token string">&quot;grep --break --heading --line-number&quot;</span>
+$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> alias.g <span class="token string">&quot;grep --break --heading --line-number&quot;</span>
 <span class="token comment"># 在所有的java中查找variableName</span>
 $ <span class="token function">git</span> <span class="token function">grep</span> <span class="token string">'variableName'</span> -- <span class="token string">'*.java'</span>
 
 <span class="token comment"># 搜索包含 &quot;arrayListName&quot; 和, &quot;add&quot; 或 &quot;remove&quot; 的所有行</span>
-$ <span class="token function">git</span> <span class="token function">grep</span> -e <span class="token string">'arrayListName'</span> --and <span class="token punctuation">\</span><span class="token punctuation">(</span> -e <span class="token function">add</span> -e remove <span class="token punctuation">\</span><span class="token punctuation">)</span>
+$ <span class="token function">git</span> <span class="token function">grep</span> <span class="token parameter variable">-e</span> <span class="token string">'arrayListName'</span> <span class="token parameter variable">--and</span> <span class="token punctuation">\</span><span class="token punctuation">(</span> <span class="token parameter variable">-e</span> <span class="token function">add</span> <span class="token parameter variable">-e</span> remove <span class="token punctuation">\</span><span class="token punctuation">)</span>
 </code></pre></div><h2 id="log"><a href="#log" class="header-anchor">#</a> log</h2> <p>显示这个版本库的所有提交</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 显示所有提交</span>
 $ <span class="token function">git</span> log
 
 <span class="token comment"># 显示某几条提交信息</span>
-$ <span class="token function">git</span> log -n <span class="token number">10</span>
+$ <span class="token function">git</span> log <span class="token parameter variable">-n</span> <span class="token number">10</span>
 
 <span class="token comment"># 仅显示合并提交</span>
-$ <span class="token function">git</span> log --merges
+$ <span class="token function">git</span> log <span class="token parameter variable">--merges</span>
 
 <span class="token comment"># 查看该文件每次提交记录</span>
 $ <span class="token function">git</span> log <span class="token operator">&lt;</span>file<span class="token operator">&gt;</span>
 
 <span class="token comment"># 查看每次详细修改内容的diff</span>
-$ <span class="token function">git</span> log -p <span class="token operator">&lt;</span>file<span class="token operator">&gt;</span>
+$ <span class="token function">git</span> log <span class="token parameter variable">-p</span> <span class="token operator">&lt;</span>file<span class="token operator">&gt;</span>
 
 <span class="token comment"># 查看最近两次详细修改内容的diff</span>
-$ <span class="token function">git</span> log -p -2
+$ <span class="token function">git</span> log <span class="token parameter variable">-p</span> <span class="token parameter variable">-2</span>
 
 <span class="token comment">#查看提交统计信息</span>
-$ <span class="token function">git</span> log --stat
+$ <span class="token function">git</span> log <span class="token parameter variable">--stat</span>
 </code></pre></div><h2 id="merge"><a href="#merge" class="header-anchor">#</a> merge</h2> <p>合并就是将外部的提交合并到自己的分支中</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 将其他分支合并到当前分支</span>
 $ <span class="token function">git</span> merge branchName
 
@@ -435,7 +435,7 @@ $ <span class="token function">git</span> <span class="token function">mv</span>
 
 <span class="token comment"># 强制重命名或移动</span>
 <span class="token comment"># 这个文件已经存在，将要覆盖掉</span>
-$ <span class="token function">git</span> <span class="token function">mv</span> -f myFile existingFile
+$ <span class="token function">git</span> <span class="token function">mv</span> <span class="token parameter variable">-f</span> myFile existingFile
 </code></pre></div><h2 id="tag"><a href="#tag" class="header-anchor">#</a> tag</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 列出所有tag</span>
 $ <span class="token function">git</span> tag
 
@@ -446,7 +446,7 @@ $ <span class="token function">git</span> tag <span class="token punctuation">[<
 $ <span class="token function">git</span> tag <span class="token punctuation">[</span>tag<span class="token punctuation">]</span> <span class="token punctuation">[</span>commit<span class="token punctuation">]</span>
 
 <span class="token comment"># 删除本地tag</span>
-$ <span class="token function">git</span> tag -d <span class="token punctuation">[</span>tag<span class="token punctuation">]</span>
+$ <span class="token function">git</span> tag <span class="token parameter variable">-d</span> <span class="token punctuation">[</span>tag<span class="token punctuation">]</span>
 
 <span class="token comment"># 删除远程tag</span>
 $ <span class="token function">git</span> push origin :refs/tags/<span class="token punctuation">[</span>tagName<span class="token punctuation">]</span>
@@ -458,10 +458,10 @@ $ <span class="token function">git</span> show <span class="token punctuation">[
 $ <span class="token function">git</span> push <span class="token punctuation">[</span>remote<span class="token punctuation">]</span> <span class="token punctuation">[</span>tag<span class="token punctuation">]</span>
 
 <span class="token comment"># 提交所有tag</span>
-$ <span class="token function">git</span> push <span class="token punctuation">[</span>remote<span class="token punctuation">]</span> --tags
+$ <span class="token function">git</span> push <span class="token punctuation">[</span>remote<span class="token punctuation">]</span> <span class="token parameter variable">--tags</span>
 
 <span class="token comment"># 新建一个分支，指向某个tag</span>
-$ <span class="token function">git</span> checkout -b <span class="token punctuation">[</span>branch<span class="token punctuation">]</span> <span class="token punctuation">[</span>tag<span class="token punctuation">]</span>
+$ <span class="token function">git</span> checkout <span class="token parameter variable">-b</span> <span class="token punctuation">[</span>branch<span class="token punctuation">]</span> <span class="token punctuation">[</span>tag<span class="token punctuation">]</span>
 </code></pre></div><h2 id="pull"><a href="#pull" class="header-anchor">#</a> pull</h2> <p>从远端版本库合并到当前分支</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 从远端origin的master分支更新版本库</span>
 <span class="token comment"># git pull &lt;远端&gt; &lt;分支&gt;</span>
 $ <span class="token function">git</span> pull origin master
@@ -471,14 +471,14 @@ $ <span class="token function">git</span> pull --no-ff
 </code></pre></div><h2 id="ci"><a href="#ci" class="header-anchor">#</a> ci</h2> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> ci <span class="token operator">&lt;</span>file<span class="token operator">&gt;</span>
 $ <span class="token function">git</span> ci <span class="token builtin class-name">.</span>
 <span class="token comment"># 将git add, git rm和git ci等操作都合并在一起做</span>
-$ <span class="token function">git</span> ci -a
-$ <span class="token function">git</span> ci -am <span class="token string">&quot;some comments&quot;</span>
+$ <span class="token function">git</span> ci <span class="token parameter variable">-a</span>
+$ <span class="token function">git</span> ci <span class="token parameter variable">-am</span> <span class="token string">&quot;some comments&quot;</span>
 <span class="token comment"># 修改最后一次提交记录</span>
-$ <span class="token function">git</span> ci --amend
+$ <span class="token function">git</span> ci <span class="token parameter variable">--amend</span>
 </code></pre></div><h2 id="rebase-谨慎使用"><a href="#rebase-谨慎使用" class="header-anchor">#</a> rebase (谨慎使用)</h2> <p>将一个分支上所有的提交历史都应用到另一个分支上<em>不要在一个已经公开的远端分支上使用 rebase</em>.</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 将experimentBranch应用到master上面</span>
 <span class="token comment"># git rebase &lt;basebranch&gt; &lt;topicbranch&gt;</span>
 $ <span class="token function">git</span> rebase master experimentBranch
-</code></pre></div><h3 id="例子"><a href="#例子" class="header-anchor">#</a> 例子</h3> <p>合并最近的的commit，避免出现无用的commit信息</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> rebase -i HEAD~2
+</code></pre></div><h3 id="例子"><a href="#例子" class="header-anchor">#</a> 例子</h3> <p>合并最近的的commit，避免出现无用的commit信息</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> rebase <span class="token parameter variable">-i</span> HEAD~2
 </code></pre></div><p>需要合并几条数据  只需要更改后面的数字，然后会自动进入vi编辑模式</p> <div class="language-bash extra-class"><pre class="language-bash"><code>pick e0b28b9 <span class="token builtin class-name">test</span> <span class="token number">1</span>
 pick 670239a <span class="token builtin class-name">test</span> <span class="token number">2</span>
 
@@ -510,7 +510,7 @@ pick 670239a <span class="token builtin class-name">test</span> <span class="tok
 $ <span class="token function">git</span> reset
 
 <span class="token comment"># 使 staging 区域恢复到上次提交时的状态，覆盖现在的工作目录</span>
-$ <span class="token function">git</span> reset --hard
+$ <span class="token function">git</span> reset <span class="token parameter variable">--hard</span>
 
 <span class="token comment"># 将当前分支恢复到某次提交，不改变现在的工作目录</span>
 <span class="token comment"># 在工作目录中所有的改变仍然存在</span>
@@ -518,7 +518,7 @@ $ <span class="token function">git</span> reset dha78as
 
 <span class="token comment"># 将当前分支恢复到某次提交，覆盖现在的工作目录</span>
 <span class="token comment"># 并且删除所有未提交的改变和指定提交之后的所有提交</span>
-$ <span class="token function">git</span> reset --hard dha78as
+$ <span class="token function">git</span> reset <span class="token parameter variable">--hard</span> dha78as
 </code></pre></div><h2 id="其他"><a href="#其他" class="header-anchor">#</a> 其他</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 生成一个可供发布的压缩包</span>
 $ <span class="token function">git</span> archive
 
@@ -526,24 +526,24 @@ $ <span class="token function">git</span> archive
 $ <span class="token function">git</span> apply <span class="token punctuation">..</span>/sync.patch
 
 <span class="token comment"># 测试补丁能否成功</span>
-$ <span class="token function">git</span> apply --check <span class="token punctuation">..</span>/sync.patch
+$ <span class="token function">git</span> apply <span class="token parameter variable">--check</span> <span class="token punctuation">..</span>/sync.patch
 
 <span class="token comment"># 查看Git的版本</span>
-$ <span class="token function">git</span> --version
+$ <span class="token function">git</span> <span class="token parameter variable">--version</span>
 </code></pre></div><h2 id="常用的一些方法技巧"><a href="#常用的一些方法技巧" class="header-anchor">#</a> 常用的一些方法技巧</h2> <h3 id="回到某个-commit-的状态-并删除后面的-commit"><a href="#回到某个-commit-的状态-并删除后面的-commit" class="header-anchor">#</a> 回到某个 commit 的状态，并删除后面的 commit</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> reset <span class="token operator">&lt;</span>commit-id<span class="token operator">&gt;</span>  <span class="token comment">#默认就是-mixed参数。</span>
 
-<span class="token function">git</span> reset --mixed HEAD^  <span class="token comment">#回退至上个版本，它将重置HEAD到另外一个commit,并且重置暂存区以便和HEAD相匹配，但是也到此为止。工作区不会被更改。</span>
+<span class="token function">git</span> reset <span class="token parameter variable">--mixed</span> HEAD^  <span class="token comment">#回退至上个版本，它将重置HEAD到另外一个commit,并且重置暂存区以便和HEAD相匹配，但是也到此为止。工作区不会被更改。</span>
 
-<span class="token function">git</span> reset --soft HEAD~3  <span class="token comment">#回退至三个版本之前，只回退了commit的信息，暂存区和工作区与回退之前保持一致。如果还要提交，直接commit即可  </span>
+<span class="token function">git</span> reset <span class="token parameter variable">--soft</span> HEAD~3  <span class="token comment">#回退至三个版本之前，只回退了commit的信息，暂存区和工作区与回退之前保持一致。如果还要提交，直接commit即可  </span>
 
-<span class="token function">git</span> reset --hard <span class="token operator">&lt;</span>commit-id<span class="token operator">&gt;</span>  <span class="token comment">#彻底回退到指定commit-id的状态，暂存区和工作区也会变为指定commit-id版本的内容</span>
+<span class="token function">git</span> reset <span class="token parameter variable">--hard</span> <span class="token operator">&lt;</span>commit-id<span class="token operator">&gt;</span>  <span class="token comment">#彻底回退到指定commit-id的状态，暂存区和工作区也会变为指定commit-id版本的内容</span>
 
-</code></pre></div><h2 id="电脑配置用户名"><a href="#电脑配置用户名" class="header-anchor">#</a> 电脑配置用户名</h2> <h3 id="_1-配置用户名"><a href="#_1-配置用户名" class="header-anchor">#</a> 1.配置用户名</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> config  --global user.name <span class="token string">'UserName'</span>
-<span class="token function">git</span> config  --global user.email <span class="token string">'Useremail'</span>
-</code></pre></div><h3 id="_2-查看用户名与邮箱"><a href="#_2-查看用户名与邮箱" class="header-anchor">#</a> 2.查看用户名与邮箱</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> config  --global user.name   --- 用户名
-<span class="token function">git</span> config  --global user.email  --- 邮箱
-</code></pre></div><h3 id="_3-生成ssh-keys"><a href="#_3-生成ssh-keys" class="header-anchor">#</a> 3.生成ssh keys</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>ssh-keygen  -t rsa -C <span class="token string">'useEmail'</span>
-ssh-keygen  -t rsa -C <span class="token string">'useEmail'</span> -f ~/.ssh/gitlab_id_rsa_1   //指定生成秘钥名称
+</code></pre></div><h2 id="电脑配置用户名"><a href="#电脑配置用户名" class="header-anchor">#</a> 电脑配置用户名</h2> <h3 id="_1-配置用户名"><a href="#_1-配置用户名" class="header-anchor">#</a> 1.配置用户名</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> config  <span class="token parameter variable">--global</span> user.name <span class="token string">'UserName'</span>
+<span class="token function">git</span> config  <span class="token parameter variable">--global</span> user.email <span class="token string">'Useremail'</span>
+</code></pre></div><h3 id="_2-查看用户名与邮箱"><a href="#_2-查看用户名与邮箱" class="header-anchor">#</a> 2.查看用户名与邮箱</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> config  <span class="token parameter variable">--global</span> user.name   --- 用户名
+<span class="token function">git</span> config  <span class="token parameter variable">--global</span> user.email  --- 邮箱
+</code></pre></div><h3 id="_3-生成ssh-keys"><a href="#_3-生成ssh-keys" class="header-anchor">#</a> 3.生成ssh keys</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>ssh-keygen  <span class="token parameter variable">-t</span> rsa <span class="token parameter variable">-C</span> <span class="token string">'useEmail'</span>
+ssh-keygen  <span class="token parameter variable">-t</span> rsa <span class="token parameter variable">-C</span> <span class="token string">'useEmail'</span> <span class="token parameter variable">-f</span> ~/.ssh/gitlab_id_rsa_1   //指定生成秘钥名称
 </code></pre></div><p>上一个步骤成功的话，一般会在 <code>C:\Users\Administrator</code>目录下生成 <code>.ssh</code> 文件夹，用记事本打开里面的 <code>id_rsa.pub</code> 后，复制里面的内容</p> <p>4.复制公钥</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">cat</span> ~/.ssh/id_rsa.pub
 </code></pre></div><h3 id="_4-配置git-ssh-key"><a href="#_4-配置git-ssh-key" class="header-anchor">#</a> 4.配置git ssh key</h3> <p>1、进入个人信息页面
 2、选中 SSH and GPG keys
@@ -568,7 +568,7 @@ doc/*.txt
 <span class="token comment"># 忽略 doc/ 目录下所有扩展名为txt文件</span>
 
 doc/**/*.txt
-</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2021/11/12 星期五  10:47:53</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2021/12/07 星期二  05:57:09</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/更多/杂七杂八.html" class="prev">
         杂七杂八
@@ -577,6 +577,6 @@ doc/**/*.txt
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"><!----></div></div>
-    <script src="/assets/js/app.db78a0dc.js" defer></script><script src="/assets/js/2.56ef416d.js" defer></script><script src="/assets/js/25.a5d9ae1b.js" defer></script>
+    <script src="/assets/js/app.326c0c7d.js" defer></script><script src="/assets/js/2.98ca1dd2.js" defer></script><script src="/assets/js/25.b92980a3.js" defer></script>
   </body>
 </html>
