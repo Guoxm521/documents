@@ -190,13 +190,14 @@ https://github.com/jiujuan/go-collection
 ### 2022-09-20
 
 - [awesome-cheatsheets](https://github.com/skywind3000/awesome-cheatsheets)
-- [[hezhizheng/go-gin-chat: Golang(Gin)+websocket 的多人聊天室 | go 聊天室 | golang 聊天室 (github.com)](https://github.com/hezhizheng/go-gin-chat)](https://github.com/hezhizheng/go-gin-chat)
 
 ### 2022-09-28
 
 - [Gin 使用 websocket](https://www.cnblogs.com/leffss/p/12218791.html)
 
+### 2022-09-29
 
+- [Golang+Vue轻松构建Web应用 | 掘金](https://juejin.cn/post/7058155520372736014)
 
 
 
