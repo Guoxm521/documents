@@ -203,12 +203,8 @@ https://github.com/jiujuan/go-collection
 
 - [github+vue+mysql 全栈博客](https://github.com/wejectchen/Ginblog)
 - https://github.com/vitejs/awesome-vite
-
-
-
-
-
-
+- [kone-net/go-chat](https://github.com/kone-net/go-chat)
+- [CocaineCong/gin-chat-demo](https://github.com/CocaineCong/gin-chat-demo)
 
 
 
