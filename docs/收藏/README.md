@@ -219,6 +219,19 @@
 ## 九、TODO
 
 - [mochajs | 前端测试网站](https://mochajs.cn/#installation)
+
 - [jest | 前端测试框架](https://www.jestjs.cn/)
+
 - [Sentry  错误日志监控 ](https://zhuanlan.zhihu.com/p/161276192)
+
 - [cxy521](http://www.cxy521.com/)
+
+  
+
+## 十、搞笑网站
+
+- [逗比表情包](https://www.dbbqb.com/)
+- [斗图啦](https://dou.yuanmazg.com/doutu?page=1570)
+- [发表情](https://www.fabiaoqing.com/)
+- [小鸡词典](https://jikipedia.com/)
+
