@@ -193,7 +193,7 @@ https://github.com/jiujuan/go-collection
 
 ### 2022-09-28
 
-- [Gin 使用 websocket](https://www.cnblogs.com/leffss/p/12218791.html)
+- [Gin 使用 websocket1](https://www.cnblogs.com/leffss/p/12218791.html)
 
 ### 2022-09-29
 
