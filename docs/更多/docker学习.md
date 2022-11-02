@@ -364,13 +364,32 @@ nginx项目配置：
 docker run -p 6379:6379 --name redis -v $PWD/redis.conf:/etc/redis/redis.conf -v $PWD/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes
 ```
 
-## 四、构建镜像
+## 四、实际操作
 
+### 备份数据库
 
+```jsx
+sudo docker exec 容器 sh -c 'exec mysqldump --all-databases -u账号 -p密码 --all-databases' > /home/music_`date +%F`.sql
+```
 
+### 容器还原
 
+```jsx
+#复制备份文件到容器中的var目录
+sudo docker cp /var/backup/emp_2022-03-17.sql mysql:/var
+#进入容器
+sudo docker exec -it mysql bin/bash
+#进入mysql
+mysql -uroot -p
+#使用备份sql恢复数据库
+source /var/backup/emp_2022-03-15.sql
 
+#或者不进入mysql直接容器中还原
+mysql -uroot -p123456 < /var/backup/emp_2022-03-15.sql
 
+```
+
+> [参考文章](https://blog.csdn.net/weixin_52270081/article/details/123552094)
 
 
 
