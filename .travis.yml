@@ -2,6 +2,7 @@ language: node_js
 node_js:
     - '14'
 install:
+  - yarn config set registry https://registry.npm.taobao.org
   - yarn install # npm ci
 script:
   - yarn docs:build # npm run docs:build
