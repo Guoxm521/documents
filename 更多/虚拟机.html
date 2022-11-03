@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一、CentOS 7 开机直接进命令行模式界面 | 胡萝卜菜</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.1af85722.css" as="style"><link rel="preload" href="/assets/js/app.65d716b8.js" as="script"><link rel="preload" href="/assets/js/2.98ca1dd2.js" as="script"><link rel="preload" href="/assets/js/31.ea9c5229.js" as="script"><link rel="prefetch" href="/assets/js/10.786b215d.js"><link rel="prefetch" href="/assets/js/11.aadfbb49.js"><link rel="prefetch" href="/assets/js/12.c5c078b1.js"><link rel="prefetch" href="/assets/js/13.66bde044.js"><link rel="prefetch" href="/assets/js/14.235f833d.js"><link rel="prefetch" href="/assets/js/15.796a33a0.js"><link rel="prefetch" href="/assets/js/16.6c228361.js"><link rel="prefetch" href="/assets/js/17.657e4636.js"><link rel="prefetch" href="/assets/js/18.f0a4fc8a.js"><link rel="prefetch" href="/assets/js/19.5f494f1a.js"><link rel="prefetch" href="/assets/js/20.af2eb65a.js"><link rel="prefetch" href="/assets/js/21.e3d5d37f.js"><link rel="prefetch" href="/assets/js/22.2a6c3bdb.js"><link rel="prefetch" href="/assets/js/23.7c1affc5.js"><link rel="prefetch" href="/assets/js/24.cf06049f.js"><link rel="prefetch" href="/assets/js/25.b92980a3.js"><link rel="prefetch" href="/assets/js/26.2bed0dd0.js"><link rel="prefetch" href="/assets/js/27.df1520ad.js"><link rel="prefetch" href="/assets/js/28.4d222c03.js"><link rel="prefetch" href="/assets/js/29.36396724.js"><link rel="prefetch" href="/assets/js/3.544c2856.js"><link rel="prefetch" href="/assets/js/30.27123d55.js"><link rel="prefetch" href="/assets/js/4.3dda4857.js"><link rel="prefetch" href="/assets/js/5.172230b5.js"><link rel="prefetch" href="/assets/js/6.82924391.js"><link rel="prefetch" href="/assets/js/7.e73bd6ef.js"><link rel="prefetch" href="/assets/js/8.ccb2ed73.js"><link rel="prefetch" href="/assets/js/9.a5b3bf4b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1af85722.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="胡萝卜菜" class="logo"> <span class="site-name can-hide">胡萝卜菜</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页🎈
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端🐱‍👓" class="dropdown-title"><span class="title">前端🐱‍👓</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端🐱‍👓" class="mobile-dropdown-title"><span class="title">前端🐱‍👓</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/前端/vue/" class="nav-link">
+  vue笔记🤷‍♂️
+</a></li><li class="dropdown-item"><!----> <a href="/前端/Javascript/" class="nav-link">
+  JavaScript笔记🤦‍♀️
+</a></li><li class="dropdown-item"><!----> <a href="/前端/Css/css常用命名.html" class="nav-link">
+  Css😢
+</a></li><li class="dropdown-item"><!----> <a href="/前端/小程序/云函数生成小程序链接.html" class="nav-link">
+  小程序
+</a></li></ul></div></div><div class="nav-item"><a href="/更多/Canvas.html" class="nav-link">
+  更多🐱‍🏍
+</a></div><div class="nav-item"><a href="/收藏/" class="nav-link">
+  收藏❤
+</a></div> <a href="https://github.com/Guoxm521/documents" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页🎈
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端🐱‍👓" class="dropdown-title"><span class="title">前端🐱‍👓</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端🐱‍👓" class="mobile-dropdown-title"><span class="title">前端🐱‍👓</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/前端/vue/" class="nav-link">
+  vue笔记🤷‍♂️
+</a></li><li class="dropdown-item"><!----> <a href="/前端/Javascript/" class="nav-link">
+  JavaScript笔记🤦‍♀️
+</a></li><li class="dropdown-item"><!----> <a href="/前端/Css/css常用命名.html" class="nav-link">
+  Css😢
+</a></li><li class="dropdown-item"><!----> <a href="/前端/小程序/云函数生成小程序链接.html" class="nav-link">
+  小程序
+</a></li></ul></div></div><div class="nav-item"><a href="/更多/Canvas.html" class="nav-link">
+  更多🐱‍🏍
+</a></div><div class="nav-item"><a href="/收藏/" class="nav-link">
+  收藏❤
+</a></div> <a href="https://github.com/Guoxm521/documents" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/更多/Canvas.html" class="sidebar-link">Canvas</a></li><li><a href="/更多/杂七杂八.html" class="sidebar-link">杂七杂八</a></li><li><a href="/更多/Git操作.html" class="sidebar-link">Git操作</a></li><li><a href="/更多/发布npm包.html" class="sidebar-link">发布npm包</a></li><li><a href="/更多/docker学习.html" class="sidebar-link">docker学习</a></li><li><a href="/更多/MySQL.html" class="sidebar-link">MySQL</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h4 id="一、centos-7-开机直接进命令行模式界面"><a href="#一、centos-7-开机直接进命令行模式界面" class="header-anchor">#</a> 一、CentOS 7 开机直接进命令行模式界面</h4> <ol><li><p>切换成root登录</p></li> <li><p>输入 “vi /etc/initab”</p></li> <li><p>在该文件中，将 “id:5:initdefault:” 改成 “id:3:initdefault:</p> <p>但是，在CentOS 7环境下，如果你完成了上述第2步，你将会发现文件内容是下面这样的，没有第3步中的“id:5:initdefault:”：</p></li></ol> <div class="language-shell extra-class"><pre class="language-shell"><code>systemctl set-default multi-user.target   命令行模式界面
+systemctl set-default graphical.target    图形界面
+</code></pre></div><h4 id="二、ssh操作"><a href="#二、ssh操作" class="header-anchor">#</a> 二、ssh操作</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">ssh</span> IP <span class="token parameter variable">-l</span> 用户名   远程登录
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2022/11/03 星期四  02:43:57</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.65d716b8.js" defer></script><script src="/assets/js/2.98ca1dd2.js" defer></script><script src="/assets/js/31.ea9c5229.js" defer></script>
+  </body>
+</html>
