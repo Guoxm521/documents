@@ -60,6 +60,7 @@ Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docke
 
 ```jsx
 sudo systemctl start docker
+systemctl restart docker.service    重启
 ```
 
 开启后，再使用`sudo docker version`来看一下，如果有类似下面的信息，说明已经安装成功了。
@@ -363,6 +364,14 @@ nginx项目配置：
 ```jsx
 docker run -p 6379:6379 --name redis -v $PWD/redis.conf:/etc/redis/redis.conf -v $PWD/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes
 ```
+
+### 安装portainer
+
+```shell
+docker search portainer
+```
+
+
 
 ## 四、实际操作
 
