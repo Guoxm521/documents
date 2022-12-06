@@ -220,9 +220,13 @@ https://github.com/jiujuan/go-collection
 
 [最全面的 Node.js 资源汇总推荐](https://mp.weixin.qq.com/s/1DIDUvGoQcckRq757R9Ohw)
 
+### 2022-12-05
+
+[selenium3自动化测试](https://blog.csdn.net/m0_54850467/article/details/123214205)
+
+[小程序地图](https://github.com/humanlegacy/wechat-miniapp-map)
 
 
-https://blog.csdn.net/m0_54850467/article/details/123214205
 
-
+[github|小程序图片裁剪](https://github.com/1977474741/image-cropper)
 
