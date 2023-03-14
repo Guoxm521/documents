@@ -238,4 +238,21 @@ https://github.com/jiujuan/go-collection
 
 [**Geeker Admin**](https://admin.spicyboy.cn/#/home/index)
 
+### 2023-03-13
+
 [electron  桌面端音乐](https://github.com/lyswhut/lx-music-desktop)
+
+[YesPlayMusic](https://github.com/qier222/YesPlayMusic)
+
+[electron-vue-cloud-music](https://github.com/xiaozhu188/electron-vue-cloud-music)
+
+
+
+
+
+
+
+
+
+
+
