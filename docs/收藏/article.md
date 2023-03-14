@@ -238,3 +238,4 @@ https://github.com/jiujuan/go-collection
 
 [**Geeker Admin**](https://admin.spicyboy.cn/#/home/index)
 
+[electron  桌面端音乐](https://github.com/lyswhut/lx-music-desktop)
