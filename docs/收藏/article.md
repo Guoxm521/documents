@@ -248,7 +248,9 @@ https://github.com/jiujuan/go-collection
 
 
 
+2023-03-21
 
+[gin-vue-admin](https://www.gin-vue-admin.com/guide/start-quickly/initialization.html)
 
 
 
