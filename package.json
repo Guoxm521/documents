@@ -14,14 +14,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.8.2",
-    "@vuepress/plugin-medium-zoom": "^1.8.2",
-    "@vuepress/plugin-search": "^1.8.2",
+    "@vuepress/plugin-back-to-top": "1.8.2",
+    "@vuepress/plugin-medium-zoom": "1.8.2",
+    "@vuepress/plugin-search": "1.8.2",
     "cz-conventional-changelog": "^3.3.0",
     "git-cz": "^4.8.0",
-    "vuepress": "^1.8.2",
-    "vuepress-plugin-auto-sidebar": "^2.3.2",
-    "vuepress-theme-vdoing": "^1.8.3"
+    "vuepress": "1.8.2",
+    "vuepress-plugin-auto-sidebar": "2.3.2",
+    "vuepress-theme-vdoing": "1.8.3"
   },
   "dependencies": {
     "moment": "^2.29.1",

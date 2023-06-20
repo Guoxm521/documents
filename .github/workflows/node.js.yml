@@ -11,7 +11,7 @@ on:
 jobs:
   build-and-deploy:
     # 服务器环境：最新版 Ubuntu
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
       - name: use node
