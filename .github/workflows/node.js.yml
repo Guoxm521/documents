@@ -17,7 +17,7 @@ jobs:
       - name: use node
         uses: actions/setup-node@v2
         with:
-          node-version: 14 # node版本
+          node-version: '14.x' # node版本
           cache: "node"
 
       # 拉取代码
