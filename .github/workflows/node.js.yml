@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14 # node版本
-          cache: "yarn"
+          cache: "node"
 
       # 拉取代码
       - name: Checkout
@@ -28,7 +28,7 @@ jobs:
 
       # 生成静态文件
       - name: Build
-        run: yarn install && yarn run docs:build
+        run: node install && node run docs:build
 
       # 部署到 GitHub Pages
       - name: Deploy
