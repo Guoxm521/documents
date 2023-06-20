@@ -25,6 +25,10 @@ jobs:
         with:
           persist-credentials: false
 
+       # 删除node_module
+      - name: RmNodeModules
+        run: rm -rf node_modules
+
       # 生成静态文件
       - name: Build
         run: npm install --force && node run docs:build
