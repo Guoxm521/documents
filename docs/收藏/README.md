@@ -45,6 +45,7 @@
 - [varharrie | 一个开箱即用的API模拟服务器](https://varharrie.github.io/mokia/)
 - [db-tutorial | 数据库学习网站](https://dunwu.github.io/db-tutorial/)
 - [go中文文档](https://studygolang.com/pkgdoc)
+- [linux-command](https://wangchujiang.com/linux-command/hot.html)
 
 
 
