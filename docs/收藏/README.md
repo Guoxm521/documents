@@ -106,6 +106,7 @@
 - [make a pie](https://www.makeapie.com/explore.html) 一个分享可视化作品的网站，可以借鉴学习🎉🎉🎉
 
 - [Carbon](https://carbon.now.sh/) 好看的代码生成网站
+- [tinywow](https://tinywow.com/tools) 
 
 ## 四、实际工具
 
@@ -131,7 +132,6 @@
 ### 04.软件工具
 
 - [奇迹秀工具箱](http://www.qijishow.com/down/index.html#) 各种软件下载网址
-
 - https://tsejx.github.io/css-guidebook/concept/selector/)
 - [XD软件插件下载](https://xd.94xy.com/)
 
@@ -220,11 +220,8 @@
 ## 九、TODO
 
 - [mochajs | 前端测试网站](https://mochajs.cn/#installation)
-
 - [jest | 前端测试框架](https://www.jestjs.cn/)
-
 - [Sentry  错误日志监控 ](https://zhuanlan.zhihu.com/p/161276192)
-
 - [cxy521](http://www.cxy521.com/)
 
   
